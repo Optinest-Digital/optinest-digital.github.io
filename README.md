@@ -1,1 +1,1 @@
-# optinestdigital
+OptiNest Digital is a boutique digital agency that builds high-performance websites and implements smart SEO strategies to help businesses grow online. We don’t just create websites—we build optimized nests for your brand to thrive.
