@@ -733,6 +733,62 @@ a:hover {
 .btn-white:hover i {
     color: #ffffff !important;
 }
+
+/* Team section responsive adjustments */
+@media (max-width: 767px) {
+    .dtr-team {
+        max-width: none;
+        margin: 0;
+    }
+    
+    .dtr-team-img {
+        height: 160px;
+    }
+    
+    .dtr-team-content h3 {
+        font-size: 16px;
+    }
+    
+    .dtr-team-content p {
+        font-size: 14px;
+    }
+    
+    .dtr-social-circle {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .dtr-social-circle a {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .dtr-team {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .dtr-team-img {
+        height: 280px;
+    }
+}
+
+@media (min-width: 992px) {
+    .dtr-team {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .dtr-team-img {
+        height: 320px;
+    }
+}
 </style>
 </head>
 <body>
@@ -1104,18 +1160,18 @@ a:hover {
                 
                 <!-- heading starts -->
                 <div class="dtr-styled-heading heading-center mb-5">
-                    <h2 class="dtr-section-heading">Some Inspiration</h2>
-                    <p class="text-size-md">Explore our latest creative projects</p>
+                    <h2 class="dtr-section-heading">Our Work</h2>
+                    <p class="text-size-md">Explore our latest digital solutions and success stories</p>
                 </div>
                 <!-- heading ends --> 
                 
                 <!-- portfolio filter starts -->
                 <ul class="dtr-filter-nav clearfix">
                     <li><a class="dtr-filter-all active" data-filter="*" href="#">All Work</a></li>
-                    <li><a data-filter=".filter-product" href="#">Product</a></li>
-                    <li><a data-filter=".filter-creative" href="#">Creative</a></li>
-                    <li><a data-filter=".filter-design" href="#">Design</a></li>
-                    <li><a data-filter=".filter-photography" href="#">Photography</a></li>
+                    <li><a data-filter=".filter-web" href="#">Web Design</a></li>
+                    <li><a data-filter=".filter-seo" href="#">SEO</a></li>
+                    <li><a data-filter=".filter-brand" href="#">Branding</a></li>
+                    <li><a data-filter=".filter-ux" href="#">UI/UX</a></li>
                 </ul>
                 <!-- portfolio filter ends --> 
                 
@@ -1123,31 +1179,31 @@ a:hover {
                 <div class="dtr-portfolio-grid dtr-portfolio-grid-3col dtr-portfolio-style-2 dtr-rounded-img clearfix"> 
                     
                     <!-- portfolio item 1 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-creative all">
+                    <div class="dtr-portfolio-item isotope-item filter-web all">
                         <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/photography_img7.jpg" alt="Creative Web Design Project" loading="lazy">
+                            <img src="assets/images/photography_img7.jpg" alt="E-commerce Website Design Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Creative Web Design Project" aria-label="View Creative Web Design Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg" title="Enlarge Creative Web Design Project" aria-label="Enlarge Creative Web Design Project"></a> 
+                                <a class="media-link" href="#" title="View E-commerce Website Project" aria-label="View E-commerce Website Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg" title="Enlarge E-commerce Website Project" aria-label="Enlarge E-commerce Website Project"></a> 
                             </div>
                         </div>
                     </div>
                     <!-- portfolio item 1 ends --> 
                     
                     <!-- portfolio item 2 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-product all">
+                    <div class="dtr-portfolio-item isotope-item filter-seo all">
                         <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/photography_img13.jpg" alt="E-commerce Product Design" loading="lazy">
+                            <img src="assets/images/photography_img13.jpg" alt="Local SEO Optimization Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View E-commerce Product Design" aria-label="View E-commerce Product Design"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/photography_img13.jpg" title="Enlarge E-commerce Product Design" aria-label="Enlarge E-commerce Product Design"></a> 
+                                <a class="media-link" href="#" title="View Local SEO Project" aria-label="View Local SEO Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img13.jpg" title="Enlarge Local SEO Project" aria-label="Enlarge Local SEO Project"></a> 
                             </div>
                         </div>
                     </div>
                     <!-- portfolio item 2 ends--> 
                     
                     <!-- portfolio item 3 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-design filter-photography all">
+                    <div class="dtr-portfolio-item isotope-item filter-ux all">
                         <div class="dtr-portfolio-content dual-icons"> 
                             <img src="assets/images/photography_img9.jpg" alt="UI/UX Design Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
@@ -1159,36 +1215,36 @@ a:hover {
                     <!-- portfolio item 3 ends --> 
                     
                     <!-- portfolio item 4 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-product filter-photography all">
+                    <div class="dtr-portfolio-item isotope-item filter-brand all">
                         <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/photography_img6.jpg" alt="Brand Identity Design" loading="lazy">
+                            <img src="assets/images/photography_img6.jpg" alt="Brand Identity Design Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Brand Identity Design" aria-label="View Brand Identity Design"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/photography_img6.jpg" title="Enlarge Brand Identity Design" aria-label="Enlarge Brand Identity Design"></a> 
+                                <a class="media-link" href="#" title="View Brand Identity Project" aria-label="View Brand Identity Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img6.jpg" title="Enlarge Brand Identity Project" aria-label="Enlarge Brand Identity Project"></a> 
                             </div>
                         </div>
                     </div>
                     <!-- portfolio item 4 ends --> 
                     
                     <!-- portfolio item 5 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-design all">
+                    <div class="dtr-portfolio-item isotope-item filter-web all">
                         <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/photography_img10.jpg" alt="Website Design Project" loading="lazy">
+                            <img src="assets/images/photography_img10.jpg" alt="Corporate Website Design Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Website Design Project" aria-label="View Website Design Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/photography_img10.jpg" title="Enlarge Website Design Project" aria-label="Enlarge Website Design Project"></a> 
+                                <a class="media-link" href="#" title="View Corporate Website Project" aria-label="View Corporate Website Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img10.jpg" title="Enlarge Corporate Website Project" aria-label="Enlarge Corporate Website Project"></a> 
                             </div>
                         </div>
                     </div>
                     <!-- portfolio item 5 ends --> 
                     
                     <!-- portfolio item 6 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-creative all">
+                    <div class="dtr-portfolio-item isotope-item filter-seo all">
                         <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/photography_img8.jpg" alt="Digital Marketing Campaign" loading="lazy">
+                            <img src="assets/images/photography_img8.jpg" alt="SEO Strategy Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Digital Marketing Campaign" aria-label="View Digital Marketing Campaign"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/photography_img8.jpg" title="Enlarge Digital Marketing Campaign" aria-label="Enlarge Digital Marketing Campaign"></a> 
+                                <a class="media-link" href="#" title="View SEO Strategy Project" aria-label="View SEO Strategy Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img8.jpg" title="Enlarge SEO Strategy Project" aria-label="Enlarge SEO Strategy Project"></a> 
                             </div>
                         </div>
                     </div>
@@ -1217,7 +1273,7 @@ a:hover {
                 <!-- row starts -->
                 <div class="row justify-content-center"> 
                     <!-- column 1 starts -->
-                    <div class="col-6 col-sm-6 col-lg-3 mb-4"> 
+                    <div class="col-6 col-sm-6 col-lg-6 mb-4"> 
                         <!-- member 1 starts -->
                         <div class="dtr-team dtr-rounded-img">
                             <div class="dtr-team-img"> 
@@ -1225,7 +1281,7 @@ a:hover {
                             </div>
                             <div class="dtr-team-content text-center">
                                 <h3 class="dtr-mb-0">David Cottrell</h3>
-                                <p>CEO</p>
+                                <p>CEO & Founder</p>
                                 <div class="dtr-social-circle dtr-team-social">
                                     <ul class="dtr-social dtr-social-list">
                                         <li><a href="#" class="dtr-twitter" target="_blank" title="Follow on Twitter" aria-label="Follow on Twitter"></a></li>
@@ -1241,7 +1297,7 @@ a:hover {
                     <!-- column 1 ends --> 
                     
                     <!-- column 2 starts -->
-                    <div class="col-6 col-sm-6 col-lg-3 mb-4"> 
+                    <div class="col-6 col-sm-6 col-lg-6 mb-4"> 
                         <!-- member 2 starts -->
                         <div class="dtr-team dtr-rounded-img">
                             <div class="dtr-team-img"> 
@@ -1263,54 +1319,6 @@ a:hover {
                         <!-- member 2 ends --> 
                     </div>
                     <!-- column 2 ends --> 
-                    
-                    <!-- column 3 starts -->
-                    <div class="col-6 col-sm-6 col-lg-3 mb-4"> 
-                        <!-- member 3 starts -->
-                        <div class="dtr-team dtr-rounded-img">
-                            <div class="dtr-team-img"> 
-                                <img src="assets/images/team-member3.jpg" alt="Tyrese Harper - Project Lead at OptiNest Digital" loading="lazy"> 
-                            </div>
-                            <div class="dtr-team-content text-center">
-                                <h3 class="dtr-mb-0">Tyrese Harper</h3>
-                                <p>Project Lead</p>
-                                <div class="dtr-social-circle dtr-team-social">
-                                    <ul class="dtr-social dtr-social-list">
-                                        <li><a href="#" class="dtr-twitter" target="_blank" title="Follow on Twitter" aria-label="Follow on Twitter"></a></li>
-                                        <li><a href="#" class="dtr-facebook" target="_blank" title="Follow on Facebook" aria-label="Follow on Facebook"></a></li>
-                                        <li><a href="#" class="dtr-google" target="_blank" title="Follow on Google+" aria-label="Follow on Google+"></a></li>
-                                        <li><a href="#" class="dtr-instagram" target="_blank" title="Follow on Instagram" aria-label="Follow on Instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- member 3 ends --> 
-                    </div>
-                    <!-- column 3 ends --> 
-                    
-                    <!-- column 4 starts -->
-                    <div class="col-6 col-sm-6 col-lg-3 mb-4"> 
-                        <!-- member 4 starts -->
-                        <div class="dtr-team dtr-rounded-img">
-                            <div class="dtr-team-img"> 
-                                <img src="assets/images/team-member4.jpg" alt="Klara Reeves - Creative Head at OptiNest Digital" loading="lazy"> 
-                            </div>
-                            <div class="dtr-team-content text-center">
-                                <h3 class="dtr-mb-0">Klara Reeves</h3>
-                                <p>Creative Head</p>
-                                <div class="dtr-social-circle dtr-team-social">
-                                    <ul class="dtr-social dtr-social-list">
-                                        <li><a href="#" class="dtr-twitter" target="_blank" title="Follow on Twitter" aria-label="Follow on Twitter"></a></li>
-                                        <li><a href="#" class="dtr-facebook" target="_blank" title="Follow on Facebook" aria-label="Follow on Facebook"></a></li>
-                                        <li><a href="#" class="dtr-google" target="_blank" title="Follow on Google+" aria-label="Follow on Google+"></a></li>
-                                        <li><a href="#" class="dtr-instagram" target="_blank" title="Follow on Instagram" aria-label="Follow on Instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- member 4 ends --> 
-                    </div>
-                    <!-- column 4 ends --> 
                 </div>
                 <!-- row ends --> 
             </div>
