@@ -1,1185 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>OptiNest Digital - Web Design & SEO Agency | Where Strategy Meets Simplicity</title>
-    <meta name="title" content="OptiNest Digital - Web Design & SEO Agency | Where Strategy Meets Simplicity">
-    <meta name="description" content="OptiNest Digital is a boutique digital agency specializing in high-performance websites, SEO strategies, and digital marketing solutions.">
-    <meta name="keywords" content="web design, SEO agency, digital marketing, website development, local SEO, brand identity, performance optimization, UI/UX design">
-    <meta name="author" content="OptiNest Digital">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    <meta name="generator" content="OptiNest Digital">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://optinestdigital.com/">
-    <meta property="og:title" content="OptiNest Digital - Web Design & SEO Agency">
-    <meta property="og:description" content="Transform your online presence with our expert web design and SEO services. We build high-performance websites that drive growth and visibility.">
-    <meta property="og:image" content="https://optinestdigital.com/images/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://optinestdigital.com/">
-    <meta property="twitter:title" content="OptiNest Digital - Web Design & SEO Agency">
-    <meta property="twitter:description" content="Transform your online presence with our expert web design and SEO services. We build high-performance websites that drive growth and visibility.">
-    <meta property="twitter:image" content="https://optinestdigital.com/images/twitter-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF6B35">
-    <meta name="msapplication-TileColor" content="#FF6B35">
-    <meta name="theme-color" content="#1A1A1A">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://optinestdigital.com/">
-
-    <!-- Preconnect to required origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "OptiNest Digital",
-        "url": "https://optinestdigital.com",
-        "logo": "https://optinestdigital.com/images/logo.png",
-        "description": "A boutique digital agency specializing in web design and SEO strategies.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-XXX-XXX-XXXX",
-            "contactType": "customer service",
-            "email": "hello@optinestdigital.com"
-        },
-        "sameAs": [
-            "https://twitter.com/OptiNestDigital",
-            "https://www.linkedin.com/company/optinest-digital",
-            "https://www.facebook.com/OptiNestDigital",
-            "https://www.instagram.com/optinest.digital"
-        ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "OptiNest Digital",
-        "url": "https://optinestdigital.com",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://optinestdigital.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Web Design & SEO",
-        "provider": {
-            "@type": "Organization",
-            "name": "OptiNest Digital"
-        },
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Digital Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Web Design & Development"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "SEO & Content Strategy"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Local SEO & Google Maps Optimization"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
-
-    <style>
-        :root {
-            /* Light theme variables */
-            --primary-orange: #FF6B35;
-            --secondary-orange: #FF9F1C;
-            --accent-orange: #FFB74D;
-            --dark-orange: #E64A19;
-            --neutral-gray: #1A1A1A;
-            --deep-navy: #0A1929;
-            --text-primary: #FFFFFF;
-            --text-secondary: #E0E0E0;
-            --text-muted: #B3B3B3;
-            --card-bg: #242424;
-            --header-bg: rgba(26, 26, 26, 0.95);
-            --gradient-start: #1A1A1A;
-            --gradient-end: #2C1810;
-            --glass-bg: rgba(36, 36, 36, 0.8);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --link-color: #4FC3F7;
-            --link-hover: #81D4FA;
-        }
-
-        [data-theme="light"] {
-            --primary-orange: #FF6B35;
-            --secondary-orange: #FF9F1C;
-            --accent-orange: #FFB74D;
-            --dark-orange: #E64A19;
-            --neutral-gray: #F5F5F5;
-            --deep-navy: #E3F2FD;
-            --text-primary: #1A1A1A;
-            --text-secondary: #424242;
-            --text-muted: #757575;
-            --card-bg: #FFFFFF;
-            --header-bg: rgba(245, 245, 245, 0.95);
-            --gradient-start: #F5F5F5;
-            --gradient-end: #E3F2FD;
-            --glass-bg: rgba(255, 255, 255, 0.8);
-            --glass-border: rgba(0, 0, 0, 0.1);
-            --link-color: #1976D2;
-            --link-hover: #2196F3;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--neutral-gray);
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.03) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255, 159, 28, 0.03) 0%, transparent 20%);
-            background-attachment: fixed;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: var(--text-primary);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Enhanced Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
-
-        /* Enhanced Header Styles */
-        header {
-            background-color: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--glass-border);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        header.scrolled {
-            padding: 10px 0;
-            background-color: rgba(26, 26, 26, 0.98);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            color: var(--text-primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--link-color), var(--link-hover));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-primary);
-            font-size: 16px;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--link-color);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-links a:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        .hamburger-line {
-            width: 25px;
-            height: 2px;
-            background-color: var(--text-primary);
-            margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;
-                background: var(--glass-bg);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                justify-content: center;
-                gap: 40px;
-                transition: right 0.3s ease;
-                padding: 20px;
-                border-left: 1px solid var(--glass-border);
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .hamburger.active .hamburger-line:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            .hamburger.active .hamburger-line:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .hamburger-line:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
-
-            .nav-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(3px);
-                z-index: 999;
-            }
-
-            .nav-overlay.active {
-                display: block;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-            padding: 180px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
-            opacity: 0.1;
-            z-index: 0;
-            animation: zoomIn 20s infinite alternate;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-            line-height: 1.2;
-            animation: fadeInUp 1s ease-out;
-            background: none;
-        }
-
-        .hero p {
-            font-size: 24px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 0.2s backwards;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, var(--link-color), var(--link-hover));
-            color: var(--text-primary);
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
-            transform: scale(0);
-            transition: transform 0.5s ease-out;
-        }
-
-        .cta-button:hover::after {
-            transform: scale(1);
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(135deg, var(--link-hover), var(--link-color));
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(79, 195, 247, 0.4);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 100px 0;
-            background-color: var(--neutral-gray);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            padding: 40px;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 107, 53, 0.1),
-                transparent
-            );
-            transform: translateX(-100%);
-            transition: 0.6s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: var(--primary-orange);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .service-card:hover::after {
-            transform: translateX(100%);
-        }
-
-        .service-card h3 {
-            color: var(--text-primary);
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        .service-card p {
-            color: var(--text-secondary);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--deep-navy), var(--neutral-gray));
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: var(--link-color);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
-            background: var(--primary-orange);
-            color: var(--text-primary);
-        }
-
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background-color: var(--deep-navy);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .about-content p {
-            color: var(--text-secondary);
-        }
-
-        .about-image {
-            width: 100%;
-            max-width: 600px;
-            margin: 40px auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            filter: brightness(0.8) contrast(1.1) sepia(0.2);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background-color: var(--neutral-gray);
-        }
-
-        .contact .container {
-            max-width: 800px;
-        }
-
-        .contact h2 {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .contact-form {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            width: 100%;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            font-size: 16px;
-            background-color: rgba(10, 25, 41, 0.5);
-            backdrop-filter: blur(5px);
-            color: var(--text-primary);
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--text-muted);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: var(--link-color);
-            outline: none;
-            transform: translateY(-2px);
-            background: rgba(10, 25, 41, 0.8);
-            box-shadow: 0 5px 15px rgba(79, 195, 247, 0.1);
-        }
-
-        .contact-form .cta-button {
-            width: 100%;
-            padding: 18px;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .contact-form {
-                padding: 30px 20px;
-            }
-
-            .form-group input,
-            .form-group textarea {
-                padding: 12px 15px;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(to bottom, var(--deep-navy), var(--neutral-gray));
-            border-top: 1px solid var(--glass-border);
-            color: var(--text-primary);
-            padding: 80px 0 40px;
-            position: relative;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-section h4 {
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        .footer-section p {
-            color: var(--text-secondary);
-        }
-
-        .footer-section a {
-            color: var(--link-color);
-        }
-
-        .footer-section a:hover {
-            color: var(--link-hover);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            width: 40px;
-            height: 40px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(5px);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .social-links a:hover {
-            transform: translateY(-5px) rotate(360deg);
-            background: var(--link-color);
-            border-color: transparent;
-        }
-
-        /* Accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--link-color);
-            color: var(--text-primary);
-            padding: 8px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-
-        .skip-link:focus {
-            top: 0;
-            box-shadow: 0 0 0 3px var(--link-color);
-        }
-
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-
-        /* Loading Animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--neutral-gray);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid var(--text-secondary);
-            border-top-color: var(--link-color);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            box-shadow: 0 0 20px rgba(79, 195, 247, 0.3);
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Scroll Progress Indicator */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 4px;
-            background: linear-gradient(to right, var(--link-color), var(--link-hover));
-            z-index: 1001;
-            transition: width 0.1s ease;
-            box-shadow: 0 2px 10px rgba(79, 195, 247, 0.3);
-        }
-
-        /* Custom Cursor */
-        .custom-cursor {
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle at center, var(--link-color), transparent);
-            mix-blend-mode: difference;
-            opacity: 0.6;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.2s ease;
-        }
-
-        .custom-cursor.active {
-            transform: scale(2.5);
-            opacity: 0.5;
-        }
-
-        /* Responsive Enhancements */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .service-card {
-                margin: 0 10px;
-            }
-
-            .contact-form {
-                margin: 0 20px;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            .loading,
-            .scroll-progress,
-            .custom-cursor {
-                display: none;
-            }
-
-            body {
-                background: white;
-                color: black;
-            }
-
-            a {
-                color: #0066cc;
-            }
-
-            .service-card,
-            .contact-form {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-        }
-
-        /* Theme Toggle Button */
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            font-size: 24px;
-            color: var(--text-primary);
-            transition: transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 20px;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        .theme-toggle:focus {
-            outline: none;
-        }
-
-        .theme-toggle .icon {
-            transition: transform 0.5s ease;
-        }
-
-        .theme-toggle:hover .icon {
-            transform: rotate(360deg);
-        }
-
-        @media (max-width: 768px) {
-            .theme-toggle {
-                margin-left: 15px;
-                font-size: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Loading Animation -->
-    <div class="loading">
-        <div class="loading-spinner"></div>
-    </div>
-
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress"></div>
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
-
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <header>
-        <nav class="container" role="navigation" aria-label="Main navigation">
-            <a href="https://optinestdigital.com" class="logo" aria-label="OptiNest Digital Home">
-                <div class="logo-icon" aria-hidden="true">O</div>
-                OptiNest Digital
-            </a>
-            <div class="nav-links">
-                <a href="#services" aria-label="Our Services">Services</a>
-                <a href="#about" aria-label="About Us">About</a>
-                <a href="#contact" aria-label="Contact Us">Contact</a>
-                <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <span class="icon">🌙</span>
-                </button>
-            </div>
-            <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="nav-overlay"></div>
-
-    <main id="main-content">
-        <section class="hero" aria-label="Hero section">
-            <div class="container hero-content">
-                <h1 data-aos="fade-up">Build Smarter.<br>Grow Faster.</h1>
-                <p data-aos="fade-up" data-aos-delay="200">Where Strategy Meets Simplicity</p>
-                <a href="#contact" class="cta-button" data-aos="fade-up" data-aos-delay="400" aria-label="Get Started">Get Started</a>
-            </div>
-        </section>
-
-        <section id="services" class="services" aria-label="Our Services">
-            <div class="container">
-                <h2 data-aos="fade-up">Our Services</h2>
-                <div class="services-grid">
-                    <article class="service-card" data-aos="fade-up">
-                        <div class="service-icon" aria-hidden="true">🌐</div>
-                        <h3>Web Design & Development</h3>
-                        <p>High-performance websites that convert visitors into customers.</p>
-                    </article>
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon" aria-hidden="true">📈</div>
-                        <h3>SEO & Content Strategy</h3>
-                        <p>Smart SEO strategies to boost your online visibility.</p>
-                    </article>
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon" aria-hidden="true">🗺️</div>
-                        <h3>Local SEO & Google Maps</h3>
-                        <p>Dominate local search results and attract nearby customers.</p>
-                    </article>
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon" aria-hidden="true">🎨</div>
-                        <h3>Brand Identity & Logo Design</h3>
-                        <p>Create a memorable brand that resonates with your audience.</p>
-                    </article>
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-icon" aria-hidden="true">⚡</div>
-                        <h3>Performance Optimization</h3>
-                        <p>Speed up your website and improve user experience.</p>
-                    </article>
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-icon" aria-hidden="true">👥</div>
-                        <h3>UI/UX Consulting</h3>
-                        <p>Expert guidance to enhance your digital presence.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about" aria-label="About Us">
-            <div class="container">
-                <div class="about-content">
-                    <h2 data-aos="fade-up">About OptiNest Digital</h2>
-                    <p data-aos="fade-up" data-aos-delay="200">OptiNest Digital is a boutique digital agency that builds high-performance websites and implements smart SEO strategies to help businesses grow online. We don't just create websites—we build optimized nests for your brand to thrive.</p>
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-                         alt="Our team collaborating on a digital project" 
-                         class="about-image" 
-                         data-aos="zoom-in" 
-                         data-aos-delay="400"
-                         loading="lazy"
-                         width="600"
-                         height="400">
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact" aria-label="Contact Us">
-            <div class="container">
-                <h2 data-aos="fade-up">Get in Touch</h2>
-                <form class="contact-form" data-aos="fade-up" data-aos-delay="200" action="/submit-form" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section" data-aos="fade-up">
-                    <h4>OptiNest Digital</h4>
-                    <p>Where Strategy Meets Simplicity</p>
-                </div>
-                <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Connect With Us</h4>
-                    <div class="social-links">
-                        <a href="https://twitter.com/OptiNestDigital" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">𝕏</a>
-                        <a href="https://www.linkedin.com/company/optinest-digital" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn">in</a>
-                        <a href="https://www.instagram.com/optinest.digital" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">📸</a>
-                        <a href="https://www.facebook.com/OptiNestDigital" target="_blank" rel="noopener noreferrer" aria-label="Like us on Facebook">f</a>
-                    </div>
-                </div>
-                <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
-                    <h4>Contact</h4>
-                    <p>Email: <a href="mailto:hello@optinestdigital.com">hello@optinestdigital.com</a></p>
-                </div>
-            </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nevo — The Creative Template</title>
+    <meta content="The main homepage" name="description">
+    <!-- Styles-->
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/custom.css">
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header-->
+      <header class="header"><a class="brand" href="index.html"><img class="default" alt="Nevo example image" src="assets/images/logo.svg"><img class="white" alt="Nevo example image" src="assets/images/logo-white.svg"></a>
+        <!-- Navigation-->
+        <ul class="menu main">
+          <li class="menu-item"><a class="menu-link" href="index.html">Home</a>
+            <!-- Dropdown-->
+           
+          </li>
+          <li class="menu-item"><a class="menu-link" href="pages/about-studio.html">About</a>
+           
+          </li>
+          
+          <li class="menu-item has-dropdown"><a class="menu-link" href="pages/portfolio-default.html">Portfolio</a>
+            <!-- Dropdown-->
+            <ul class="dropdown-nav">
+              <li class="menu-item"><a class="menu-link" href="pages/portfolio-default.html">Default</a></li>
+              <li class="menu-item"><a class="menu-link" href="pages/portfolio-lightbox.html">Lightbox</a></li>
+              <li class="menu-item"><a class="menu-link" href="pages/portfolio-masonry.html">Masonry</a></li>
+              <li class="menu-item"><a class="menu-link" href="pages/portfolio-no-space.html">No-space</a></li>
+              <li class="menu-item"><a class="menu-link" href="pages/portfolio-random-space.html">Random-space</a></li>
+              <li class="menu-item"><a class="menu-link" href="pages/portfolio-filters.html">Filterable</a></li>
+              <li class="menu-item"><a class="menu-link" href="pages/project-single-harrys.html">Single Project</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a class="menu-link" href="pages/blog.html">Blog</a>
+        
+          </li>
+          <li class="menu-item"><a class="menu-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+        <!-- About section-->
+        <div class="menu about">
+          <p>My goal is to make the digital world more beautiful. I believe that true craftmanship stands out with passion.</p>
         </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        // Initialize AOS with enhanced settings
-        AOS.init({
-            duration: 800,
-            once: false,
-            offset: 100,
-            easing: 'ease-in-out-cubic',
-            mirror: true
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Loading animation
-        window.addEventListener('load', function() {
-            const loading = document.querySelector('.loading');
-            loading.classList.add('hidden');
-        });
-
-        // Scroll progress indicator
-        window.addEventListener('scroll', function() {
-            const scrollProgress = document.querySelector('.scroll-progress');
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            scrollProgress.style.width = scrollPercent + '%';
-        });
-
-        // Custom cursor
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', function(e) {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        document.addEventListener('mousedown', function() {
-            cursor.classList.add('active');
-        });
-
-        document.addEventListener('mouseup', function() {
-            cursor.classList.remove('active');
-        });
-
-        // Add hover effect to interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .service-card, .form-group input, .form-group textarea');
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.classList.add('active');
-            });
-            element.addEventListener('mouseleave', () => {
-                cursor.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Mobile Navigation
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const navOverlay = document.querySelector('.nav-overlay');
-        const body = document.body;
-
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        }
-
-        hamburger.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', toggleMenu);
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Close menu on window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
-
-        // Theme Toggle Functionality
-        const themeToggle = document.querySelector('.theme-toggle');
-        const themeIcon = themeToggle.querySelector('.icon');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Check for saved theme preference or use system preference
-        const currentTheme = localStorage.getItem('theme') || 
-            (prefersDarkScheme.matches ? 'dark' : 'light');
-        
-        // Set initial theme
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-
-        // Theme toggle click handler
-        themeToggle.addEventListener('click', () => {
-            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-            
-            // Add animation class
-            themeIcon.style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                themeIcon.style.transform = '';
-            }, 500);
-        });
-
-        // Listen for system theme changes
-        prefersDarkScheme.addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                const newTheme = e.matches ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', newTheme);
-                themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-            }
-        });
-    </script>
-</body>
+        <!-- Social Navigation-->
+        <ul class="menu social">
+          <li class="menu-item"><a class="menu-link anchor-link" href="#">Instagram</a></li>
+          <li class="menu-item"><a class="menu-link anchor-link" href="#">Behance</a></li>
+          <li class="menu-item"><a class="menu-link anchor-link" href="#">Twitter</a></li>
+        </ul>
+      </header>
+      <!-- Burger menu-->
+      <div class="burger">
+        <hr>
+        <hr>
+        <hr>
+      </div>
+      <div class="content">
+        <section class="nevo-slider halfscreen">
+          <div class="slides">
+            <div class="slide color-bg-2"><img class="background" src="assets/images/backgrounds/5.png">
+              <div class="container">
+                <div class="grid vcenter">
+                  <div class="inner">
+                    <h1><span class="animated-text">We make <br>things </span><span class="typed color-text-1"></span>
+                      <div class="typed-content">
+                        <div class="sentence">vibrant.</div>
+                        <div class="sentence">beautiful.</div>
+                        <div class="sentence">dope!</div>
+                      </div>
+                    </h1><a class="button primary" href="pages/portfolio-random-space.html">See. Believe.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide light-text background-zoom"><img class="background" src="assets/images/backgrounds/4.jpeg">
+              <div class="container">
+                <div class="grid vcenter">
+                  <div class="inner">
+                    <h1 class="animated-text">Projects.</h1>
+                    <h4>We nail them.</h4><a class="button tertiairy" href="pages/portfolio-random-space.html">View work</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide light-text black-bg">
+              <div class="background">
+                <video class="opacity-5" loop poster="assets/videos/video_01.jpg">
+                  <source src="assets/videos/video_01.mp4" type="video/mp4">
+                  <source src="assets/videos/video_01.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="container">
+                <div class="grid center text-center">
+                  <div class="inner">
+                    <h4>No audience?</h4>
+                    <h1 class="animated-text">We hear you.</h1><a class="button tertiairy" href="pages/contact.html">Get in touch</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-size-1">
+          <div class="container">
+            <div class="grid vcenter">
+              <div class="column-6">
+                <h5>Selected work</h5>
+              </div>
+              <div class="column-6">
+                <ul class="grid-filters text-right" data-target="grid">
+                  <li><a class="button link filter" href="#" data-filter="*">All</a></li>
+                  <li><a class="button link filter" href="#" data-filter=".design">Design</a></li>
+                  <li><a class="button link filter" href="#" data-filter=".branding">Branding</a></li>
+                  <li><a class="button link filter" href="#" data-filter=".packaging">Packaging</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid masonry columns-3 columns-tablet-2" id="grid">
+              <div class="grid-sizer"></div>
+              <div class="grid-item column branding"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/va-academy/5.jpeg"/>
+                  <div class="labels">branding</div>
+                  <div class="caption"> 
+                    <div class="title">Internation Academy</div>
+                    <div class="sub">Identity Design</div>
+                  </div></a></div>
+              <div class="grid-item column design"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/logos/3.jpg"/>
+                  <div class="labels">design</div>
+                  <div class="caption"> 
+                    <div class="title">Collect</div>
+                    <div class="sub">Logo selection</div>
+                  </div></a></div>
+              <div class="grid-item column branding"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/full-moon/7.jpg"/>
+                  <div class="labels">branding</div>
+                  <div class="caption"> 
+                    <div class="title">Untold</div>
+                    <div class="sub">Branding</div>
+                  </div></a></div>
+              <div class="grid-item column design"><a class="thumb space-2 animated" href="pages/project-single-hopscotch.html"><img alt="Nevo example image" src="assets/images/work/sequential/1.jpg"/>
+                  <div class="labels">design</div>
+                  <div class="caption"> 
+                    <div class="title">Sequential</div>
+                    <div class="sub">Magazine</div>
+                  </div></a></div>
+              <div class="grid-item column photography"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/blog/1.jpg"/>
+                  <div class="labels">photography</div>
+                  <div class="caption"> 
+                    <div class="title">Tropical Thunder</div>
+                    <div class="sub">Photography</div>
+                  </div></a></div>
+              <div class="grid-item column packaging branding"><a class="thumb space-2 animated" href="pages/project-single-harrys.html"><img alt="Nevo example image" src="assets/images/work/harrys-2/17.jpg"/>
+                  <div class="labels">packaging branding</div>
+                  <div class="caption"> 
+                    <div class="title">Harry's</div>
+                    <div class="sub">Work selection</div>
+                  </div></a></div>
+              <div class="grid-item column branding"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/logos/18.jpg"/>
+                  <div class="labels">branding</div>
+                  <div class="caption"> 
+                    <div class="title">Farber Law</div>
+                    <div class="sub">Work selection</div>
+                  </div></a></div>
+            </div>
+          </div>
+        </section>
+        <section class="section-size-2 lighter-bg">
+          <div class="container">
+            <div class="grid">
+              <div class="column-12 text-center text-left-mobile animated-text">
+                <h2>It's true.</h2>
+                <h5 class="grey-text">Small things make you big.</h5>
+                <div class="space-3"></div>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="column-12 image"><img alt="Nevo example image" src="assets/images/blog/9.jpg"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="space-4"></div>
+            <div class="grid center text-center">
+              <div class="column-6">
+                <p class="font-size-3 grey-text">We're a team of experts, striving long term solutions. We think big and take on every challenge that comes across our path.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-size-2 black-bg light-text" id="team">
+          <div class="container">
+            <div class="grid">
+              <div class="column-12 text-center animated-text">
+                <h5 class="grey-text">Your project</h5>
+                <h2>In the best possible hands</h2>
+                <div class="space-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="container pad-3">
+            <div class="grid masonry columns-3">
+              <div class="grid-item column undefined">
+                <div class="thumb"><img alt="Nevo example image" src="assets/images/team/1.jpg"/>
+                  <ul class="labels">
+                    <li><a class="button anchor-link primary" href="#">Twitter</a></li>
+                    <li><a class="button anchor-link primary" href="#">Instagram</a></li>
+                    <li><a class="button anchor-link primary" href="#">Behance</a></li>
+                  </ul>
+                  <div class="caption">
+                    <h5 class="title">Herald Johnson</h5>
+                    <h6 class="sub">Backend</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item column undefined">
+                <div class="thumb"><img alt="Nevo example image" src="assets/images/team/1b.jpg"/>
+                  <ul class="labels">
+                    <li><a class="button anchor-link primary" href="#">Twitter</a></li>
+                    <li><a class="button anchor-link primary" href="#">Instagram</a></li>
+                    <li><a class="button anchor-link primary" href="#">Behance</a></li>
+                  </ul>
+                  <div class="caption">
+                    <h5 class="title">Jake Thompson</h5>
+                    <h6 class="sub">UX Design</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item column undefined">
+                <div class="thumb"><img alt="Nevo example image" src="assets/images/team/2.jpg"/>
+                  <ul class="labels">
+                    <li><a class="button anchor-link primary" href="#">Twitter</a></li>
+                    <li><a class="button anchor-link primary" href="#">Instagram</a></li>
+                    <li><a class="button anchor-link primary" href="#">Behance</a></li>
+                  </ul>
+                  <div class="caption">
+                    <h5 class="title">Tobias Dupré</h5>
+                    <h6 class="sub">Illustration</h6>
+                  </div>
+                </div>
+              </div>
+           
+            </div>
+          </div>
+          <div class="container">
+            <div class="space-3"></div>
+            <div class="grid">
+              <div class="column-3 centered text-center animated grey-text">
+                <p>We're a team of skilled individuals, always striving for the best solution. We think big, and make clients successful.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-size-2 lighter-bg">
+          <div class="container">
+            <div class="grid animated">
+              <div class="column-3 column-tablet-6 column-mobile-12">
+                <h5>Interviews</h5>
+                <ul class="list">
+                  <li>The New York Times</li>
+                  <li>Boston Herald</li>
+                  <li>Bloomberg</li>
+                  <li>Computer Science</li>
+                </ul>
+              </div>
+              <div class="column-3 column-tablet-6 column-mobile-12">
+                <h5>Awards</h5>
+                <ul class="list">
+                  <li>Red Dot Award 2018</li>
+                  <li>Golden Design 2017</li>
+                  <li>Red Dot Award 2017</li>
+                  <li>Rams Winner 2016</li>
+                </ul>
+              </div>
+              <div class="column-3 column-tablet-6 column-mobile-12">
+                <h5>Publications</h5>
+                <ul class="list">
+                  <li>The New York Times</li>
+                  <li>Digital Mag</li>
+                  <li>Online.com</li>
+                  <li>Digital Heroes</li>
+                </ul>
+              </div>
+              <div class="column-3 column-tablet-6 column-mobile-12">
+                <h5>Nominations</h5>
+                <ul class="list">
+                  <li>Red Dot Award 2018</li>
+                  <li>Golden Design Nominee</li>
+                  <li>Red Dot Award 2017</li>
+                  <li>Rams Winner 2016</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-size-2">
+          <div class="container">
+            <div class="grid">
+              <div class="column text-center centered text-left-mobile">
+                <h5 class="animated-text">The folks we work with</h5>
+                <div class="space-2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="container width-5">
+            <div class="grid columns-5 columns-mobile-2 centered animated">
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/1.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/2.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/3.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/4.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/5.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/6.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/7.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/10.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/9.png"></div>
+              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/8.png"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Footer-->
+      <footer class="footer section-size-1 border-top"> 
+        <div class="font-size-1"> <span>OptiNest Digital </span> 
+          <div>&copy; 2019</div>
+        </div>
+      </footer>
+    </div>
+    <!-- Scripts-->
+    <!-- Core-->
+    <script src="assets/scripts/core.jquery.js"></script>
+    <!-- Vendor Plugins-->
+    <script src="assets/scripts/plugin.imagesloaded.pkgd.js"></script>
+    <script src="assets/scripts/plugin.in-viewport.js"></script>
+    <script src="assets/scripts/plugin.animate.js"></script>
+    <script src="assets/scripts/plugin.isotope.pkgd.min.js"></script>
+    <script src="assets/scripts/plugin.ScrollToPlugin.min.js"></script>
+    <script src="assets/scripts/plugin.SplitText.js"></script>
+    <script src="assets/scripts/plugin.TweenMax.min.js"></script>
+    <script src="assets/scripts/plugin.touchSwipe.min.js"></script>
+    <script src="assets/scripts/plugin.typed.min.js"></script>
+    <!-- Plugins-->
+    <script src="assets/plugins/nevo-slider/nevo-slider.js"></script>
+    <script src="assets/plugins/nevo-lightbox/nevo-lightbox.js"></script>
+    <script src="assets/scripts/main.functions.js"></script>
+  </body>
 </html>
