@@ -63,7 +63,7 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-555-123-4567",
+    "telephone": "0906 847 4375",
     "contactType": "customer service",
     "email": "optinestdigital@gmail.com",
     "availableLanguage": "English"
@@ -734,7 +734,7 @@ img {
                         <p class="dtr-mt-20">At OptiNest Digital, we believe in the power of strategic simplicity. Our approach combines cutting-edge technology with proven marketing strategies to build your brand's digital presence. We don't just create websites—we build optimized nests where your brand can grow and flourish.</p>
                         <ul class="dtr-list-inline dtr-list-left-spaced dtr-mt-20">
                             <li><i class="icon-envelope-fill dtr-mr-10 color-blue"></i><a href="mailto:optinestdigital@gmail.com" class="color-dark">optinestdigital@gmail.com</a></li>
-                            <li><i class="icon-telephone-fill dtr-mr-10 color-blue"></i><a href="tel:+15551234567" class="color-dark">+1 (555) 123-4567</a></li>
+                            <li><i class="icon-telephone-fill dtr-mr-10 color-blue"></i><a href="tel:+639068474375" class="color-dark phone-number" onclick="revealPhoneNumber(event)">Click to view number</a></li>
                         </ul>
                         <!-- link starts --> 
                         <a href="#contact" class="dtr-btn btn-blue dtr-mt-30">Let's Build Your Digital Nest <i class="icon-chevron-compact-right"></i></a> </div>
@@ -1385,6 +1385,15 @@ ${message}`;
     window.location.href = `mailto:optinestdigital@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     return false;
+}
+
+function revealPhoneNumber(event) {
+    event.preventDefault();
+    const phoneLink = event.target;
+    if (phoneLink.textContent === 'Click to view number') {
+        phoneLink.textContent = '+63 906 847 4375';
+        phoneLink.href = 'tel:+639068474375';
+    }
 }
 </script>
  
