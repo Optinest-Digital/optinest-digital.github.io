@@ -565,27 +565,42 @@
             background-color: var(--neutral-gray);
         }
 
+        .contact .container {
+            max-width: 800px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
-            padding: 40px;
+            padding: 50px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            width: 100%;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-weight: 600;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
+            padding: 15px 20px;
             border: 1px solid var(--glass-border);
-            border-radius: 10px;
+            border-radius: 12px;
             transition: all 0.3s ease;
             font-size: 16px;
             background-color: rgba(10, 25, 41, 0.5);
@@ -600,10 +615,29 @@
 
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: var(--primary-orange);
+            border-color: var(--link-color);
             outline: none;
             transform: translateY(-2px);
             background: rgba(10, 25, 41, 0.8);
+            box-shadow: 0 5px 15px rgba(79, 195, 247, 0.1);
+        }
+
+        .contact-form .cta-button {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 30px 20px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 12px 15px;
+            }
         }
 
         /* Footer */
@@ -902,16 +936,16 @@
                 <h2 data-aos="fade-up">Get in Touch</h2>
                 <form class="contact-form" data-aos="fade-up" data-aos-delay="200" action="/submit-form" method="POST">
                     <div class="form-group">
-                        <label for="name" class="visually-hidden">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email" class="visually-hidden">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message" class="visually-hidden">Your Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
                     </div>
                     <button type="submit" class="cta-button">Send Message</button>
                 </form>
