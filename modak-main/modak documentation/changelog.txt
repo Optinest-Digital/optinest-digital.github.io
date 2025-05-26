@@ -1,0 +1,4 @@
+===== Update 1 - 14 Feb 2024 =====
+# New icons - x/mastodon
+- Replace font folder
+- New css to add - in style.css at the bottom

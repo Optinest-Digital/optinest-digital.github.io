@@ -1,353 +1,877 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nevo — The Creative Template</title>
-    <meta content="The main homepage" name="description">
-    <!-- Styles-->
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/custom.css">
-    <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- Header-->
-      <header class="header"><a class="brand" href="index.html"><img class="default" alt="Nevo example image" src="assets/images/logo.svg"><img class="white" alt="Nevo example image" src="assets/images/logo-white.svg"></a>
-        <!-- Navigation-->
-        <ul class="menu main">
-          <li class="menu-item"><a class="menu-link" href="index.html">Home</a>
-            <!-- Dropdown-->
-           
-          </li>
-          <li class="menu-item"><a class="menu-link" href="pages/about-studio.html">About</a>
-           
-          </li>
-          
-          <li class="menu-item has-dropdown"><a class="menu-link" href="pages/portfolio-default.html">Portfolio</a>
-            <!-- Dropdown-->
-            <ul class="dropdown-nav">
-              <li class="menu-item"><a class="menu-link" href="pages/portfolio-default.html">Default</a></li>
-              <li class="menu-item"><a class="menu-link" href="pages/portfolio-lightbox.html">Lightbox</a></li>
-              <li class="menu-item"><a class="menu-link" href="pages/portfolio-masonry.html">Masonry</a></li>
-              <li class="menu-item"><a class="menu-link" href="pages/portfolio-no-space.html">No-space</a></li>
-              <li class="menu-item"><a class="menu-link" href="pages/portfolio-random-space.html">Random-space</a></li>
-              <li class="menu-item"><a class="menu-link" href="pages/portfolio-filters.html">Filterable</a></li>
-              <li class="menu-item"><a class="menu-link" href="pages/project-single-harrys.html">Single Project</a></li>
-            </ul>
-          </li>
-          <li class="menu-item"><a class="menu-link" href="pages/blog.html">Blog</a>
-        
-          </li>
-          <li class="menu-item"><a class="menu-link" href="pages/contact.html">Contact</a></li>
-        </ul>
-        <!-- About section-->
-        <div class="menu about">
-          <p>My goal is to make the digital world more beautiful. I believe that true craftmanship stands out with passion.</p>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>OptiNest Digital - Where Strategy Meets Simplicity | Web Design & SEO Agency</title>
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="OptiNest Digital - Where Strategy Meets Simplicity | Web Design & SEO Agency">
+<meta name="description" content="OptiNest Digital is a boutique digital agency specializing in high-performance websites and smart SEO strategies. We build optimized digital nests for businesses to thrive online.">
+<meta name="keywords" content="digital agency, web design, SEO, content strategy, local SEO, brand identity, performance optimization, website development, digital marketing, UI/UX design">
+<meta name="author" content="OptiNest Digital">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="generator" content="OptiNest Digital">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://optinestdigtal.com/">
+<meta property="og:title" content="OptiNest Digital - Where Strategy Meets Simplicity">
+<meta property="og:description" content="Boutique digital agency specializing in high-performance websites and smart SEO strategies. We build optimized digital nests for businesses to thrive online.">
+<meta property="og:image" content="https://optinestdigtal.com/assets/images/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://optinestdigtal.com/">
+<meta property="twitter:title" content="OptiNest Digital - Where Strategy Meets Simplicity">
+<meta property="twitter:description" content="Boutique digital agency specializing in high-performance websites and smart SEO strategies. We build optimized digital nests for businesses to thrive online.">
+<meta property="twitter:image" content="https://optinestdigtal.com/assets/images/og-image.jpg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://optinestdigtal.com/">
+
+<!-- FAVICON FILES -->
+<link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="assets/images/icons/favicon.png" rel="shortcut icon">
+
+<!-- CSS FILES -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/fonts/iconfonts.css">
+<link rel="stylesheet" href="assets/css/plugins.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/color.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DigitalAgency",
+  "name": "OptiNest Digital",
+  "url": "https://optinestdigtal.com",
+  "logo": "https://optinestdigtal.com/assets/images/logo-dark.png",
+  "description": "A boutique digital agency specializing in high-performance websites and smart SEO strategies.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-123-4567",
+    "contactType": "customer service",
+    "email": "hello@optinest.digital"
+  },
+  "sameAs": [
+    "https://twitter.com/OptiNestDigital",
+    "https://www.facebook.com/OptiNestDigital",
+    "https://www.linkedin.com/company/optinestdigital",
+    "https://www.instagram.com/optinest.digital"
+  ]
+}
+</script>
+</head>
+<body>
+<div id="dtr-wrapper" class="clearfix"> 
+    
+    <!-- preloader starts -->
+    <div class="dtr-preloader">
+        <div class="dtr-preloader-inner">
+            <div class="dtr-preloader-img"></div>
         </div>
-        <!-- Social Navigation-->
-        <ul class="menu social">
-          <li class="menu-item"><a class="menu-link anchor-link" href="#">Instagram</a></li>
-          <li class="menu-item"><a class="menu-link anchor-link" href="#">Behance</a></li>
-          <li class="menu-item"><a class="menu-link anchor-link" href="#">Twitter</a></li>
-        </ul>
-      </header>
-      <!-- Burger menu-->
-      <div class="burger">
-        <hr>
-        <hr>
-        <hr>
-      </div>
-      <div class="content">
-        <section class="nevo-slider halfscreen">
-          <div class="slides">
-            <div class="slide color-bg-2"><img class="background" src="assets/images/backgrounds/5.png">
-              <div class="container">
-                <div class="grid vcenter">
-                  <div class="inner">
-                    <h1><span class="animated-text">We make <br>things </span><span class="typed color-text-1"></span>
-                      <div class="typed-content">
-                        <div class="sentence">vibrant.</div>
-                        <div class="sentence">beautiful.</div>
-                        <div class="sentence">dope!</div>
-                      </div>
-                    </h1><a class="button primary" href="pages/portfolio-random-space.html">See. Believe.</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slide light-text background-zoom"><img class="background" src="assets/images/backgrounds/4.jpeg">
-              <div class="container">
-                <div class="grid vcenter">
-                  <div class="inner">
-                    <h1 class="animated-text">Projects.</h1>
-                    <h4>We nail them.</h4><a class="button tertiairy" href="pages/portfolio-random-space.html">View work</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slide light-text black-bg">
-              <div class="background">
-                <video class="opacity-5" loop poster="assets/videos/video_01.jpg">
-                  <source src="assets/videos/video_01.mp4" type="video/mp4">
-                  <source src="assets/videos/video_01.webm" type="video/webm">
-                </video>
-              </div>
-              <div class="container">
-                <div class="grid center text-center">
-                  <div class="inner">
-                    <h4>No audience?</h4>
-                    <h1 class="animated-text">We hear you.</h1><a class="button tertiairy" href="pages/contact.html">Get in touch</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-size-1">
-          <div class="container">
-            <div class="grid vcenter">
-              <div class="column-6">
-                <h5>Selected work</h5>
-              </div>
-              <div class="column-6">
-                <ul class="grid-filters text-right" data-target="grid">
-                  <li><a class="button link filter" href="#" data-filter="*">All</a></li>
-                  <li><a class="button link filter" href="#" data-filter=".design">Design</a></li>
-                  <li><a class="button link filter" href="#" data-filter=".branding">Branding</a></li>
-                  <li><a class="button link filter" href="#" data-filter=".packaging">Packaging</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="grid masonry columns-3 columns-tablet-2" id="grid">
-              <div class="grid-sizer"></div>
-              <div class="grid-item column branding"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/va-academy/5.jpeg"/>
-                  <div class="labels">branding</div>
-                  <div class="caption"> 
-                    <div class="title">Internation Academy</div>
-                    <div class="sub">Identity Design</div>
-                  </div></a></div>
-              <div class="grid-item column design"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/logos/3.jpg"/>
-                  <div class="labels">design</div>
-                  <div class="caption"> 
-                    <div class="title">Collect</div>
-                    <div class="sub">Logo selection</div>
-                  </div></a></div>
-              <div class="grid-item column branding"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/full-moon/7.jpg"/>
-                  <div class="labels">branding</div>
-                  <div class="caption"> 
-                    <div class="title">Untold</div>
-                    <div class="sub">Branding</div>
-                  </div></a></div>
-              <div class="grid-item column design"><a class="thumb space-2 animated" href="pages/project-single-hopscotch.html"><img alt="Nevo example image" src="assets/images/work/sequential/1.jpg"/>
-                  <div class="labels">design</div>
-                  <div class="caption"> 
-                    <div class="title">Sequential</div>
-                    <div class="sub">Magazine</div>
-                  </div></a></div>
-              <div class="grid-item column photography"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/blog/1.jpg"/>
-                  <div class="labels">photography</div>
-                  <div class="caption"> 
-                    <div class="title">Tropical Thunder</div>
-                    <div class="sub">Photography</div>
-                  </div></a></div>
-              <div class="grid-item column packaging branding"><a class="thumb space-2 animated" href="pages/project-single-harrys.html"><img alt="Nevo example image" src="assets/images/work/harrys-2/17.jpg"/>
-                  <div class="labels">packaging branding</div>
-                  <div class="caption"> 
-                    <div class="title">Harry's</div>
-                    <div class="sub">Work selection</div>
-                  </div></a></div>
-              <div class="grid-item column branding"><a class="thumb space-2 animated" href="pages/project-single-logos.html"><img alt="Nevo example image" src="assets/images/work/logos/18.jpg"/>
-                  <div class="labels">branding</div>
-                  <div class="caption"> 
-                    <div class="title">Farber Law</div>
-                    <div class="sub">Work selection</div>
-                  </div></a></div>
-            </div>
-          </div>
-        </section>
-        <section class="section-size-2 lighter-bg">
-          <div class="container">
-            <div class="grid">
-              <div class="column-12 text-center text-left-mobile animated-text">
-                <h2>It's true.</h2>
-                <h5 class="grey-text">Small things make you big.</h5>
-                <div class="space-3"></div>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="column-12 image"><img alt="Nevo example image" src="assets/images/blog/9.jpg"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="space-4"></div>
-            <div class="grid center text-center">
-              <div class="column-6">
-                <p class="font-size-3 grey-text">We're a team of experts, striving long term solutions. We think big and take on every challenge that comes across our path.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-size-2 black-bg light-text" id="team">
-          <div class="container">
-            <div class="grid">
-              <div class="column-12 text-center animated-text">
-                <h5 class="grey-text">Your project</h5>
-                <h2>In the best possible hands</h2>
-                <div class="space-3"></div>
-              </div>
-            </div>
-          </div>
-          <div class="container pad-3">
-            <div class="grid masonry columns-3">
-              <div class="grid-item column undefined">
-                <div class="thumb"><img alt="Nevo example image" src="assets/images/team/1.jpg"/>
-                  <ul class="labels">
-                    <li><a class="button anchor-link primary" href="#">Twitter</a></li>
-                    <li><a class="button anchor-link primary" href="#">Instagram</a></li>
-                    <li><a class="button anchor-link primary" href="#">Behance</a></li>
-                  </ul>
-                  <div class="caption">
-                    <h5 class="title">Herald Johnson</h5>
-                    <h6 class="sub">Backend</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-item column undefined">
-                <div class="thumb"><img alt="Nevo example image" src="assets/images/team/1b.jpg"/>
-                  <ul class="labels">
-                    <li><a class="button anchor-link primary" href="#">Twitter</a></li>
-                    <li><a class="button anchor-link primary" href="#">Instagram</a></li>
-                    <li><a class="button anchor-link primary" href="#">Behance</a></li>
-                  </ul>
-                  <div class="caption">
-                    <h5 class="title">Jake Thompson</h5>
-                    <h6 class="sub">UX Design</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-item column undefined">
-                <div class="thumb"><img alt="Nevo example image" src="assets/images/team/2.jpg"/>
-                  <ul class="labels">
-                    <li><a class="button anchor-link primary" href="#">Twitter</a></li>
-                    <li><a class="button anchor-link primary" href="#">Instagram</a></li>
-                    <li><a class="button anchor-link primary" href="#">Behance</a></li>
-                  </ul>
-                  <div class="caption">
-                    <h5 class="title">Tobias Dupré</h5>
-                    <h6 class="sub">Illustration</h6>
-                  </div>
-                </div>
-              </div>
-           
-            </div>
-          </div>
-          <div class="container">
-            <div class="space-3"></div>
-            <div class="grid">
-              <div class="column-3 centered text-center animated grey-text">
-                <p>We're a team of skilled individuals, always striving for the best solution. We think big, and make clients successful.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-size-2 lighter-bg">
-          <div class="container">
-            <div class="grid animated">
-              <div class="column-3 column-tablet-6 column-mobile-12">
-                <h5>Interviews</h5>
-                <ul class="list">
-                  <li>The New York Times</li>
-                  <li>Boston Herald</li>
-                  <li>Bloomberg</li>
-                  <li>Computer Science</li>
-                </ul>
-              </div>
-              <div class="column-3 column-tablet-6 column-mobile-12">
-                <h5>Awards</h5>
-                <ul class="list">
-                  <li>Red Dot Award 2018</li>
-                  <li>Golden Design 2017</li>
-                  <li>Red Dot Award 2017</li>
-                  <li>Rams Winner 2016</li>
-                </ul>
-              </div>
-              <div class="column-3 column-tablet-6 column-mobile-12">
-                <h5>Publications</h5>
-                <ul class="list">
-                  <li>The New York Times</li>
-                  <li>Digital Mag</li>
-                  <li>Online.com</li>
-                  <li>Digital Heroes</li>
-                </ul>
-              </div>
-              <div class="column-3 column-tablet-6 column-mobile-12">
-                <h5>Nominations</h5>
-                <ul class="list">
-                  <li>Red Dot Award 2018</li>
-                  <li>Golden Design Nominee</li>
-                  <li>Red Dot Award 2017</li>
-                  <li>Rams Winner 2016</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-size-2">
-          <div class="container">
-            <div class="grid">
-              <div class="column text-center centered text-left-mobile">
-                <h5 class="animated-text">The folks we work with</h5>
-                <div class="space-2"></div>
-              </div>
-            </div>
-          </div>
-          <div class="container width-5">
-            <div class="grid columns-5 columns-mobile-2 centered animated">
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/1.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/2.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/3.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/4.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/5.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/6.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/7.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/10.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/9.png"></div>
-              <div class="column image pad-1"><img alt="Nevo example image" src="assets/images/brands/8.png"></div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- Footer-->
-      <footer class="footer section-size-1 border-top"> 
-        <div class="font-size-1"> <span>OptiNest Digital </span> 
-          <div>&copy; 2019</div>
-        </div>
-      </footer>
     </div>
-    <!-- Scripts-->
-    <!-- Core-->
-    <script src="assets/scripts/core.jquery.js"></script>
-    <!-- Vendor Plugins-->
-    <script src="assets/scripts/plugin.imagesloaded.pkgd.js"></script>
-    <script src="assets/scripts/plugin.in-viewport.js"></script>
-    <script src="assets/scripts/plugin.animate.js"></script>
-    <script src="assets/scripts/plugin.isotope.pkgd.min.js"></script>
-    <script src="assets/scripts/plugin.ScrollToPlugin.min.js"></script>
-    <script src="assets/scripts/plugin.SplitText.js"></script>
-    <script src="assets/scripts/plugin.TweenMax.min.js"></script>
-    <script src="assets/scripts/plugin.touchSwipe.min.js"></script>
-    <script src="assets/scripts/plugin.typed.min.js"></script>
-    <!-- Plugins-->
-    <script src="assets/plugins/nevo-slider/nevo-slider.js"></script>
-    <script src="assets/plugins/nevo-lightbox/nevo-lightbox.js"></script>
-    <script src="assets/scripts/main.functions.js"></script>
-  </body>
+    <!-- preloader ends --> 
+    
+    <!-- Small Devices Header 
+============================================= -->
+    <div class="dtr-responsive-header fixed-top">
+        <div class="container"> 
+            
+            <!-- small devices logo --> 
+            <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"></a> 
+            <!-- small devices logo ends --> 
+            
+            <!-- menu button -->
+            <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+        </div>
+        <div class="dtr-responsive-header-menu"></div>
+    </div>
+    <!-- Small Devices Header ends 
+============================================= --> 
+    
+    <!-- Header 
+============================================= -->
+    <header id="dtr-header-global" class="fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between"> 
+                
+                <!-- header left starts -->
+                <div class="dtr-header-left"> 
+                    
+                    <!-- logo --> 
+                    <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo" width="108"></a> 
+                    
+                    <!-- logo on scroll --> 
+                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo" width="108"></a> 
+                    <!-- logo on scroll ends --> 
+                    
+                </div>
+                <!-- header left ends --> 
+                
+                <!-- menu starts-->
+                <div class="dtr-header-right">
+                    <div class="main-navigation dtr-menu-dark">
+                        <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
+                            <li> <a class="nav-link" href="#home">Home</a> </li>
+                            <li> <a class="nav-link" href="#about">About</a> </li>
+                            <li> <a class="nav-link" href="#services">Services</a> </li>
+                            <li> <a class="nav-link" href="#portfolio">Works</a> </li>
+                            <li> <a class="nav-link" href="#blog">Blog</a> </li>
+                            <li> <a class="nav-link" href="#contact">Contact</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- menu ends --> 
+                
+            </div>
+        </div>
+    </header>
+    <!-- header ends
+================================================== --> 
+    
+    <!-- == main content area starts == -->
+    <div id="dtr-main-content"> 
+        
+        <!-- hero section starts
+================================================== -->
+        <section id="home" class="dtr-section dtr-hero-section-top-padding dtr-pb-100">
+            <div class="container"> 
+                
+                <!--===== row 1 starts =====-->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- intro text --> 
+                        <p class="text-size-xxl font-weight-300 color-dark">We are <span class="font-weight-500">OptiNest Digital</span></p>
+                        <div class="spacer-20"></div>
+						<!-- animated text starts -->
+                        <h3><span class="dtr-animated-headline push"> <span class="dtr-words-wrapper"> 
+                            
+                            <!-- first visible word --> 
+                            <b class="is-visible"><span class="color-blue">Where Strategy Meets Simplicity</span></b> 
+                            <!-- first visible word ends --> 
+                            
+                            <!-- second word --> 
+                            <b class="is-hidden"><span class="color-blue">Building Your Digital Nest</span></b> 
+                            <!-- second word ends --> 
+                            
+                            </span> </span></h3>
+						<!-- animated text ends --> 
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-2"> 
+                        
+                        <!--=== img slider - 3col starts ===-->
+                        <div class="dtr-slick-slider dtr-img-slider-1col dtr-rounded-img"> 
+                            <!-- img 1 -->
+                            <div> <img src="assets/images/photography_img7.jpg" alt="image"> </div>
+                            <!-- img 2 -->
+                            <div> <img src="assets/images/photography_img9.jpg" alt="image"> </div>
+                            <!-- img 3 -->
+                            <div> <img src="assets/images/photography_img8.jpg" alt="image"> </div>
+                        </div>
+                        <!--=== img slider - 3col ends ===--> 
+                        
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4 small-device-space"> 
+                        
+                        <!-- video box starts -->
+                        <div class="dtr-video-wrapper dtr-rounded-img video-button-light"> 
+                            <!-- image --> 
+                            <img src="assets/images/blogpost-img2.jpg" alt="image"> 
+                            <!-- button -->
+                            <div class="dtr-video-wrapper-inner"> <a class="dtr-video-popup dtr-video-button" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=kuceVNBTJio"><span class="dtr-video-button-wrap-inner"></span> <span class="dtr-border-animation dtr-border-1"></span> <span class="dtr-border-animation dtr-border-2"></span> </a> </div>
+                        </div>
+                        <!-- video box ends --> 
+                        
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                </div>
+                <!--===== row 1 ends =====--> 
+                <!--===== row 2 starts =====-->
+                <div class="row dtr-mt-30"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-10"> 
+                        
+                        <!-- text -->
+                        <p class="text-size-md">We help businesses grow online by building <span class="font-weight-500 color-dark">high-performance websites</span> and implementing <span class="font-weight-500 color-dark">smart SEO strategies</span>. We don't just create websites—we build optimized nests for your brand to thrive.</p>
+                        
+                        <!-- social starts -->
+                        <ul class="dtr-social dtr-social-list dtr-styled-social text-left dtr-mt-30">
+                            <li class="dtr-social-title font-weight-500 color-dark">Follow Us</li>
+                            <li><a href="https://twitter.com/OptiNestDigital" class="dtr-social-button dtr-twitter" target="_blank" rel="noopener noreferrer" title="Follow OptiNest Digital on Twitter"><span>@OptiNestDigital</span></a></li>
+                            <li><a href="https://www.facebook.com/OptiNestDigital" class="dtr-social-button dtr-facebook" target="_blank" rel="noopener noreferrer" title="Follow OptiNest Digital on Facebook"><span>@OptiNestDigital</span></a></li>
+                            <li><a href="https://www.linkedin.com/company/optinestdigital" class="dtr-social-button dtr-linkedin" target="_blank" rel="noopener noreferrer" title="Follow OptiNest Digital on LinkedIn"><span>@OptiNestDigital</span></a></li>
+                        </ul>
+                        <!-- social ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-2 dtr-rounded-img small-device-space"> <img src="assets/images/experience-img.jpg" alt="image"> </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--===== row 2 ends =====--> 
+                
+            </div>
+        </section>
+        <!-- hero section ends
+================================================== --> 
+        
+        <!-- about section starts -->
+        <section id="about" class="dtr-section dtr-py-100 bg-light-blue" aria-label="About Us">
+            <div class="container"> 
+                
+                <!--===== row 1 starts =====-->
+                <div class="row d-flex align-items-center"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6 small-device-space">
+                        <div class="dtr-pr-30"> <img src="assets/images/agency_img.png" alt="OptiNest Digital Team Working on Web Design and SEO Projects"> </div>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- heading starts -->
+                        <div class="dtr-styled-heading">
+                            <h2>About OptiNest Digital</h2>
+                            <p>Your Partner in Digital Growth</p>
+                        </div>
+                        <!-- heading ends --> 
+                        
+                        <!-- text -->
+                        <p class="font-weight-500 color-dark">We're a boutique digital agency that specializes in creating high-performance websites and implementing smart SEO strategies to help businesses thrive in the digital landscape.</p>
+                        <p class="dtr-mt-20">At OptiNest Digital, we believe in the power of strategic simplicity. Our approach combines cutting-edge technology with proven marketing strategies to build your brand's digital presence. We don't just create websites—we build optimized nests where your brand can grow and flourish.</p>
+                        <ul class="dtr-list-inline dtr-list-left-spaced dtr-mt-20">
+                            <li><i class="icon-envelope-fill dtr-mr-10 color-blue"></i><a href="mailto:hello@optinest.digital" class="color-dark">hello@optinest.digital</a></li>
+                            <li><i class="icon-telephone-fill dtr-mr-10 color-blue"></i><a href="tel:+15551234567" class="color-dark">+1 (555) 123-4567</a></li>
+                        </ul>
+                        <!-- link starts --> 
+                        <a href="#contact" class="dtr-btn btn-blue dtr-mt-30">Let's Build Your Digital Nest <i class="icon-chevron-compact-right"></i></a> </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--===== row 1 ends =====--> 
+                
+            </div>
+        </section>
+        <!-- about section ends -->
+        
+        <!-- services section starts
+================================================== -->
+        <section id="services" class="dtr-section dtr-py-100" aria-label="Our Services">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading heading-center">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive Digital Solutions for Your Business Growth</p>
+                </div>
+                <!-- heading ends -->
+                
+                <div class="row"> 
+                    
+                    <!-- box 1 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="dtr-service-box bg-white">
+                            <p class="dtr-service-number color-blue">01</p>
+                            <img src="assets/images/icon-3.png" alt="Web Design & Development">
+                            <h4 class="dtr-service-heading">Web Design & Development</h4>
+                            <p>Custom, high-performance websites that convert visitors into customers and reflect your brand's unique identity.</p>
+                        </div>
+                    </div>
+                    <!-- box 1 ends --> 
+                    
+                    <!-- box 2 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="dtr-service-box bg-white">
+                            <p class="dtr-service-number color-blue">02</p>
+                            <img src="assets/images/icon-2.png" alt="SEO & Content Strategy">
+                            <h4 class="dtr-service-heading">SEO & Content Strategy</h4>
+                            <p>Data-driven SEO strategies and compelling content that helps your business rank higher and attract qualified leads.</p>
+                        </div>
+                    </div>
+                    <!-- box 2 ends --> 
+                    
+                    <!-- box 3 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="dtr-service-box bg-white">
+                            <p class="dtr-service-number color-blue">03</p>
+                            <img src="assets/images/icon-1.png" alt="Local SEO & Google Maps">
+                            <h4 class="dtr-service-heading">Local SEO & Google Maps</h4>
+                            <p>Optimize your local presence and dominate Google Maps rankings to attract more customers in your area.</p>
+                        </div>
+                    </div>
+                    <!-- box 3 ends --> 
+                    
+                    <!-- box 4 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="dtr-service-box bg-white">
+                            <p class="dtr-service-number color-blue">04</p>
+                            <img src="assets/images/icon-5.png" alt="Brand Identity & Logo Design">
+                            <h4 class="dtr-service-heading">Brand Identity & Logo Design</h4>
+                            <p>Create a memorable brand identity that resonates with your target audience and sets you apart from competitors.</p>
+                        </div>
+                    </div>
+                    <!-- box 4 ends --> 
+                    
+                    <!-- box 5 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="dtr-service-box bg-white">
+                            <p class="dtr-service-number color-blue">05</p>
+                            <img src="assets/images/icon-4.png" alt="Performance Optimization">
+                            <h4 class="dtr-service-heading">Performance Optimization</h4>
+                            <p>Speed up your website and improve user experience with our comprehensive performance optimization services.</p>
+                        </div>
+                    </div>
+                    <!-- box 5 ends --> 
+                    
+                    <!-- box 6 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="dtr-service-box bg-white">
+                            <p class="dtr-service-number color-blue">06</p>
+                            <img src="assets/images/icon-6.png" alt="UI/UX Consulting">
+                            <h4 class="dtr-service-heading">UI/UX Consulting</h4>
+                            <p>Expert guidance on creating intuitive user interfaces and seamless user experiences that drive engagement and conversions.</p>
+                        </div>
+                    </div>
+                    <!-- box 6 ends --> 
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- services section ends
+================================================== --> 
+        
+        <!-- testimonial section starts
+================================================== -->
+        <section class="dtr-section overflow-hidden dtr-py-100 bg-light-blue">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading heading-center">
+                    <h2>What people say</h2>
+                    <p>Subheading or information goes here</p>
+                </div>
+                <!-- heading ends --> 
+                
+                <!--===== row 1 starts =====-->
+                <div class="row">
+                    <div class="col-12"> 
+                        
+                        <!--===== testimonial slider starts =====-->
+                        <div class="dtr-slick-slider dtr-slider-side-arrows dtr-testimonial-style-left"> 
+                            
+                            <!--== slide 1 starts ==-->
+                            <div class="dtr-testimonial clearfix">
+                                <div class="dtr-testimonial-image color-blue"> <img src="assets/images/testimonial-user1.jpg" alt="image"> </div>
+                                <div class="dtr-testimonial-content-wrapper">
+                                    <div class="dtr-testimonial-content">“Extremely professional, unique and enjoyable. The effort taken to ensure sed quia non numquam eius modi tempora incidunt ut labore voluptat relevance to our requirements ensured the optimum outcome.” </div>
+                                    <div class="dtr-client-info">
+                                        <h5 class="dtr-client-name">Hans Witherspoon</h5>
+                                        <span class="dtr-client-job">ACME Inc.</span></div>
+                                    <div class="dtr-testimonial-stars dtr-stars-5 color-blue"></div>
+                                </div>
+                            </div>
+                            <!--== slide 1 ends ==--> 
+                            
+                            <!--== slide 2 starts ==-->
+                            <div class="dtr-testimonial clearfix">
+                                <div class="dtr-testimonial-image color-blue"> <img src="assets/images/testimonial-user2.jpg" alt="image"> </div>
+                                <div class="dtr-testimonial-content-wrapper">
+                                    <div class="dtr-testimonial-content">“An absolutely phenomenal work and highly recommended services sed quia non numquam eius modi tempora incidunt ut labore voluptat if you want to make some lasting impression!” </div>
+                                    <div class="dtr-client-info">
+                                        <h5 class="dtr-client-name">Martha Weiner</h5>
+                                        <span class="dtr-client-job">Moonblush Studio</span></div>
+                                    <div class="dtr-testimonial-stars dtr-stars-5 color-blue"></div>
+                                </div>
+                            </div>
+                            <!--== slide 2 ends ==--> 
+                            
+                            <!--== slide 3 starts ==-->
+                            <div class="dtr-testimonial clearfix">
+                                <div class="dtr-testimonial-image color-blue"> <img src="assets/images/testimonial-user3.jpg" alt="image"> </div>
+                                <div class="dtr-testimonial-content-wrapper">
+                                    <div class="dtr-testimonial-content">“Helped us enormously in enabling to analyze and take a step forward and sed quia non numquam eius modi tempora incidunt ut labore voluptat explore different avenues.” </div>
+                                    <div class="dtr-client-info">
+                                        <h5 class="dtr-client-name">Jouri Wende</h5>
+                                        <span class="dtr-client-job">Miami, Florida</span></div>
+                                    <div class="dtr-testimonial-stars dtr-stars-5 color-blue"></div>
+                                </div>
+                            </div>
+                            <!--== slide 3 ends ==--> 
+                            
+                        </div>
+                        <!--===== testimonial slider ends =====--> 
+                        
+                    </div>
+                </div>
+                <!--===== row 1 ends =====--> 
+                
+            </div>
+        </section>
+        <!-- testimonial section ends
+================================================== --> 
+        
+        <!-- portfolio section starts
+================================================== -->
+        <section id="portfolio" class="dtr-section dtr-py-100">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading heading-center">
+                    <h2>Some Inspiration</h2>
+                    <p>Subheading or information goes here</p>
+                </div>
+                <!-- heading ends --> 
+                
+                <!-- portfolio filter starts -->
+                <ul class="dtr-filter-nav clearfix">
+                    <li><a class="dtr-filter-all active" data-filter="*" href="#">All Work</a></li>
+                    <li><a data-filter=".filter-product" href="#">Product</a></li>
+                    <li><a data-filter=".filter-creative" href="#">Creative</a></li>
+                    <li><a data-filter=".filter-design" href="#">Design</a></li>
+                    <li><a data-filter=".filter-photography" href="#">Photography</a></li>
+                </ul>
+                <!-- portfolio filter ends --> 
+                
+                <!-- portfolio grid starts -->
+                <div class="dtr-portfolio-grid dtr-portfolio-grid-3col dtr-portfolio-style-2 dtr-rounded-img clearfix"> 
+                    
+                    <!-- portfolio item 1 starts -->
+                    <div class="dtr-portfolio-item isotope-item filter-creative all">
+                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img7.jpg" alt="image">
+                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg"></a> </div>
+                        </div>
+                    </div>
+                    <!-- portfolio item 1 ends --> 
+                    
+                    <!-- portfolio item 2 starts -->
+                    <div class="dtr-portfolio-item isotope-item filter-product all">
+                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img13.jpg" alt="image">
+                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img13.jpg"></a> </div>
+                        </div>
+                    </div>
+                    <!-- portfolio item 2 ends--> 
+                    
+                    <!-- portfolio item 3 starts -->
+                    <div class="dtr-portfolio-item isotope-item filter-design filter-photography all">
+                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img9.jpg" alt="image">
+                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img9.jpg"></a> </div>
+                        </div>
+                    </div>
+                    <!-- portfolio item 3 ends --> 
+                    
+                    <!-- portfolio item 4 starts -->
+                    <div class="dtr-portfolio-item isotope-item filter-product filter-photography all">
+                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img6.jpg" alt="image">
+                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img6.jpg"></a> </div>
+                        </div>
+                    </div>
+                    <!-- portfolio item 4 ends --> 
+                    
+                    <!-- portfolio item 5 starts -->
+                    <div class="dtr-portfolio-item isotope-item filter-design all">
+                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img10.jpg" alt="image">
+                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img10.jpg"></a> </div>
+                        </div>
+                    </div>
+                    <!-- portfolio item 5 ends --> 
+                    
+                    <!-- portfolio item 6 starts -->
+                    <div class="dtr-portfolio-item isotope-item filter-creative all">
+                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img8.jpg" alt="image">
+                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img8.jpg"></a> </div>
+                        </div>
+                    </div>
+                    <!-- portfolio item 6 ends --> 
+                    
+                </div>
+                <!-- portfolio grid ends --> 
+                
+            </div>
+        </section>
+        <!-- portfolio section ends
+================================================== --> 
+        
+        <!-- team section starts
+================================================== -->
+        <section class="dtr-section dtr-py-100 bg-light-blue">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading heading-left">
+                    <h2>Our Team</h2>
+                    <p>Subheading or information goes here</p>
+                </div>
+                <!-- heading ends --> 
+                
+                <!-- row starts -->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-sm-6 col-lg-3"> 
+                        
+                        <!-- member 1 starts -->
+                        <div class="dtr-team dtr-rounded-img">
+                            <div class="dtr-team-img"> <img src="assets/images/team-member1.jpg" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
+                                        <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-0">David Cottrell</h4>
+                                <p>CEO</p>
+                            </div>
+                        </div>
+                        <!-- member 1 ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-sm-6 col-lg-3"> 
+                        
+                        <!-- member 1 starts -->
+                        <div class="dtr-team dtr-rounded-img">
+                            <div class="dtr-team-img"> <img src="assets/images/team-member2.jpg" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
+                                        <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-0">Larz Moreno</h4>
+                                <p>Business Manager</p>
+                            </div>
+                        </div>
+                        <!-- member 1 ends --> 
+                        
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-sm-6 col-lg-3"> 
+                        
+                        <!-- member 1 starts -->
+                        <div class="dtr-team dtr-rounded-img">
+                            <div class="dtr-team-img"> <img src="assets/images/team-member3.jpg" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
+                                        <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-0">Tyrese Harper</h4>
+                                <p>Project Lead</p>
+                            </div>
+                        </div>
+                        <!-- member 1 ends --> 
+                        
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                    <!-- column 4 starts -->
+                    <div class="col-12 col-sm-6 col-lg-3"> 
+                        
+                        <!-- member 1 starts -->
+                        <div class="dtr-team dtr-rounded-img">
+                            <div class="dtr-team-img"> <img src="assets/images/team-member4.jpg" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
+                                        <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-0">Klara Reeves</h4>
+                                <p>Creative Head</p>
+                            </div>
+                        </div>
+                        <!-- member 1 ends --> 
+                        
+                    </div>
+                    <!-- column 4 ends --> 
+                    
+                </div>
+                <!-- row ends --> 
+                
+            </div>
+        </section>
+        <!-- team section ends
+================================================== --> 
+        
+        <!-- cta section starts -->
+        <section class="dtr-section parallax dtr-py-100" style="background-image: url(assets/images/background-cta.jpg);">
+            <div class="container"> 
+                
+                <!--== row starts ==-->
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h3 class="font-family-alt font-weight-700 color-dark">Ready to Build Your Digital Nest?</h3>
+                        <p class="color-dark text-size-md">Let's create a high-performance online presence that helps your business thrive.</p>
+                        <!-- link starts --> 
+                        <a href="#contact" class="dtr-btn btn-white dtr-mt-30">Start Your Project <i class="icon-chevron-compact-right"></i></a> 
+                        <!-- link ends --> 
+                    </div>
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </section>
+        <!-- cta section ends -->
+        
+        <!-- blog section starts
+================================================== -->
+        <section id="blog" class="dtr-section dtr-py-100">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading heading-center">
+                    <h2>From The Blog</h2>
+                    <p> Subheading or information goes here</p>
+                </div>
+                <!-- heading ends --> 
+                
+                <!--== row starts ==-->
+                <div class="row dtr-mt-50"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4"> 
+                        
+                        <!-- blog item 1 starts -->
+                        <div class="dtr-blog-item"> 
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="assets/images/blogpost-img1.jpg" alt="image"><span class="dtr-category bg-blue color-white">Marketing</span> </div>
+                            <div class="dtr-post-content">
+                                <ul class="dtr-blog-meta color-grey">
+                                    <li>March 24, 2020</li>
+                                    <li>by Alycia</li>
+                                </ul>
+                                <h5>Essential social media tips for small business</h5>
+                                <a href="#" class="dtr-read-more">Continue Reading</a> </div>
+                        </div>
+                        <!-- blog item 1 ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4"> 
+                        
+                        <!-- blog item 2 starts -->
+                        <div class="dtr-blog-item"> 
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="assets/images/blogpost-img2.jpg" alt="image"> <span class="dtr-category bg-blue color-white">Branding</span></div>
+                            <div class="dtr-post-content">
+                                <ul class="dtr-blog-meta color-grey">
+                                    <li>August 16, 2020</li>
+                                    <li>by Alycia</li>
+                                </ul>
+                                <h5>Tips to boost product based sale online</h5>
+                                <a href="#" class="dtr-read-more">Continue Reading</a> </div>
+                        </div>
+                        <!-- blog item 2 ends --> 
+                        
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4"> 
+                        
+                        <!-- blog item 3 starts -->
+                        <div class="dtr-blog-item"> 
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="assets/images/blogpost-img3.jpg" alt="image"> <span class="dtr-category bg-blue color-white">Creative</span></div>
+                            <div class="dtr-post-content">
+                                <ul class="dtr-blog-meta color-grey">
+                                    <li>September 30, 2020</li>
+                                    <li>by Alycia</li>
+                                </ul>
+                                <h5>The art of effective storytelling</h5>
+                                <a href="#" class="dtr-read-more">Continue Reading</a> </div>
+                        </div>
+                        <!-- blog item 3 ends --> 
+                        
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                </div>
+                <!--== row starts ==--> 
+                
+            </div>
+        </section>
+        <!-- blog section ends
+================================================== --> 
+        
+        <!-- contact section starts
+================================================== -->
+        <section id="contact" class="dtr-section dtr-py-100 bg-light-blue">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading">
+                    <h2>Say Hello</h2>
+                    <p>Subheading or information goes here</p>
+                </div>
+                <!-- heading ends --> 
+                
+                <!--== row starts ==-->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- form starts -->
+                        <div class="dtr-form">
+                            <form id="contactform" method="post" action="php/contact-form.php">
+                                <fieldset>
+                                    <div class="dtr-form-row dtr-form-row-2col">
+                                        <p class="dtr-form-column">
+                                            <input name="name"  type="text" placeholder="Name">
+                                        </p>
+                                        <p class="dtr-form-column">
+                                            <input name="email"  class="required email" type="text" placeholder="Email">
+                                        </p>
+                                    </div>
+                                    <p>
+                                        <input name="subject"  type="text" placeholder="Subject">
+                                    </p>
+                                    <p class="antispam">Leave this empty: <br />
+                                        <input name="url" />
+                                    </p>
+                                    <p>
+                                        <textarea rows="6" name="message" id="message" class="required"  placeholder="Message"></textarea>
+                                    </p>
+                                    <p class="text-center">
+                                        <button class="dtr-btn btn-blue dtr-mt-minus30" type="submit">Send Now<i class="icon-cursor dtr-ml-15"></i></button>
+                                    </p>
+                                    <div id="result"></div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- form ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6">
+                        <div class="dtr-pl-30">
+                            <p class="d-flex align-items-center"><i class="icon-geo-alt dtr-mr-10 text-size-md color-blue"></i><span class="font-weight-500 color-dark">Our Location</span></p>
+                            <p>PO Box 16122, Collins, Victoria 3000, Australia</p>
+                            <div class="spacer-20"></div>
+                            <p class="d-flex align-items-center"><i class="icon-clock-fill dtr-mr-10 text-size-md color-blue"></i><span class="font-weight-500 color-dark">Work Timings</span></p>
+                            <p>Mon : Sat - 10:00 am to 05:00 pm<br>Sunday : Holiday</p>
+                            
+                            
+                            <!-- social starts -->
+                            <ul class="dtr-social dtr-social-list dtr-styled-social text-left dtr-mt-30">
+                                <li><a href="#" class="dtr-social-button dtr-dribbble" target="_blank" title="dribbble"><span>Follow us</span></a></li>
+                                <li><a href="#" class="dtr-social-button dtr-skype" target="_blank" title="skype"><span>Talk to us</span></a></li>
+                                <li><a href="#" class="dtr-social-button dtr-google" target="_blank" title="google"><span>Share on Google</span></a></li>
+                            </ul>
+                            <!-- social ends --> 
+                            
+                        </div>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </section>
+        <!-- contact section ends
+================================================== --> 
+        
+        <!-- footer section starts -->
+        <footer id="dtr-footer"> 
+            
+            <!--== copyright starts ==-->
+            <div class="dtr-copyright">
+                <div class="container"> 
+                    
+                    <!--== row starts ==-->
+                    <div class="row"> 
+                        
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6">
+                            <p>Copyright © OptiNest Digital 2024. All rights reserved.</p>
+                        </div>
+                        <!-- column 1 ends --> 
+                        
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6 text-right">
+                            <ul class="dtr-pipe-list">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                        <!-- column 2 ends --> 
+                        
+                    </div>
+                    <!--== row ends ==--> 
+                    
+                </div>
+            </div>
+            <!--== copyright ends ==--> 
+            
+        </footer>
+        <!-- footer section ends -->
+        
+    </div>
+    <!-- == main content area ends == --> 
+    
+</div>
+<!-- #dtr-wrapper ends --> 
+
+<!-- JS FILES --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/plugins.js"></script> 
+<script src="assets/js/custom.js"></script>
+ 
+</body>
 </html>
