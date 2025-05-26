@@ -1279,6 +1279,10 @@ img {
                                     </p>
                                 </fieldset>
                             </form>
+                            <div id="emailConfirmation" style="display: none;" class="alert alert-success mt-3 text-center">
+                                <p>Your email client should open now. After sending the email, please click the button below to confirm.</p>
+                                <button onclick="confirmEmailSent()" class="dtr-btn btn-blue mt-2">I've Sent the Email</button>
+                            </div>
                         </div>
                         <!-- form ends --> 
                         
@@ -1382,9 +1386,34 @@ Service: ${service}
 Message:
 ${message}`;
     
+    // Show confirmation message
+    document.getElementById('emailConfirmation').style.display = 'block';
+    
+    // Open email client
     window.location.href = `mailto:optinestdigital@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     return false;
+}
+
+function confirmEmailSent() {
+    // Hide the confirmation message
+    document.getElementById('emailConfirmation').style.display = 'none';
+    
+    // Show success message
+    const successMessage = document.createElement('div');
+    successMessage.className = 'alert alert-success mt-3 text-center';
+    successMessage.innerHTML = '<p>Thank you for your message! We will get back to you soon.</p>';
+    
+    // Insert success message after the form
+    document.getElementById('emailConfirmation').insertAdjacentElement('afterend', successMessage);
+    
+    // Reset the form
+    document.getElementById('contactform').reset();
+    
+    // Remove success message after 5 seconds
+    setTimeout(() => {
+        successMessage.remove();
+    }, 5000);
 }
 </script>
  
