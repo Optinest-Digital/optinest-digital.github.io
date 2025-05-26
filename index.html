@@ -191,6 +191,93 @@
         font-size: 14px !important;
         padding: 8px 15px !important;
     }
+    
+    /* Span and Text Adjustments */
+    .dtr-animated-headline .is-visible span,
+    .dtr-animated-headline .is-hidden span {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .color-blue {
+        font-size: 24px !important;
+    }
+    
+    /* Image Adjustments */
+    .dtr-img-slider-1col img,
+    .dtr-video-wrapper img,
+    .dtr-portfolio-content img,
+    .dtr-team-img img,
+    .dtr-blog-item img,
+    .dtr-testimonial-image img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
+    
+    /* Portfolio Images */
+    .dtr-portfolio-item {
+        margin-bottom: 20px !important;
+    }
+    
+    .dtr-portfolio-content {
+        height: 250px !important;
+    }
+    
+    .dtr-portfolio-content img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* Team Images */
+    .dtr-team-img {
+        height: 280px !important;
+    }
+    
+    .dtr-team-img img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* Blog Images */
+    .dtr-post-img {
+        height: 200px !important;
+    }
+    
+    .dtr-post-img img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* Testimonial Images */
+    .dtr-testimonial-image {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .dtr-testimonial-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* Video Box */
+    .dtr-video-wrapper {
+        height: 250px !important;
+    }
+    
+    .dtr-video-wrapper img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* Service Icons */
+    .dtr-service-box img {
+        max-width: 60px !important;
+        height: auto !important;
+    }
 }
 
 /* Tablet Responsive Styles */
@@ -207,6 +294,45 @@
     .text-size-xxl {
         font-size: 36px !important;
     }
+    
+    .dtr-animated-headline .is-visible span,
+    .dtr-animated-headline .is-hidden span {
+        font-size: 28px !important;
+    }
+    
+    .dtr-portfolio-content {
+        height: 300px !important;
+    }
+    
+    .dtr-team-img {
+        height: 320px !important;
+    }
+    
+    .dtr-post-img {
+        height: 250px !important;
+    }
+    
+    .dtr-video-wrapper {
+        height: 300px !important;
+    }
+}
+
+/* Image Container Adjustments */
+.dtr-img-slider-1col,
+.dtr-video-wrapper,
+.dtr-portfolio-content,
+.dtr-team-img,
+.dtr-post-img,
+.dtr-testimonial-image {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ensure all images maintain aspect ratio */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 </style>
 </head>
@@ -296,17 +422,13 @@
                         <h1 class="text-size-xxl font-weight-300 color-dark mb-3">We are <span class="font-weight-500">OptiNest Digital</span></h1>
                         <div class="spacer-20"></div>
 						<!-- animated text starts -->
-                        <h2 class="h3 mb-4"><span class="dtr-animated-headline push"> <span class="dtr-words-wrapper"> 
-                            
+                        <h2 class="h3 mb-4"> 
                             <!-- first visible word --> 
                             <b class="is-visible"><span class="color-blue">Where Strategy Meets Simplicity</span></b> 
                             <!-- first visible word ends --> 
                             
-                            <!-- second word --> 
-                            <b class="is-hidden"><span class="color-blue">Building Your Digital Nest</span></b> 
-                            <!-- second word ends --> 
-                            
-                            </span> </span></h2>
+                         
+                       </h2>
 						<!-- animated text ends --> 
                     </div>
                     <!-- column 1 ends --> 
@@ -603,8 +725,12 @@
                     
                     <!-- portfolio item 1 starts -->
                     <div class="dtr-portfolio-item isotope-item filter-creative all">
-                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img7.jpg" alt="Creative Web Design Project">
-                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#" title="View Creative Web Design Project"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg" title="Enlarge Creative Web Design Project"></a> </div>
+                        <div class="dtr-portfolio-content dual-icons"> 
+                            <img src="assets/images/photography_img7.jpg" alt="Creative Web Design Project" loading="lazy">
+                            <div class="dtr-portfolio-overlay"> 
+                                <a class="media-link" href="#" title="View Creative Web Design Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg" title="Enlarge Creative Web Design Project"></a> 
+                            </div>
                         </div>
                     </div>
                     <!-- portfolio item 1 ends --> 
