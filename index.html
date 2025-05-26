@@ -553,10 +553,185 @@ img {
     display: inline-block;
 }
 .status-indicator.open {
-    background-color: #28a745;
+    background-color: #4dabff;
 }
 .status-indicator.closed {
     background-color: #dc3545;
+}
+
+.text-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    transition: all 0.3s ease;
+}
+
+.text-logo span {
+    color: #4dabff;
+    font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .text-logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-logo {
+        font-size: 18px;
+    }
+}
+
+/* Dark mode for scroll */
+.logo-alt.text-logo {
+    color: #fff;
+}
+
+.logo-alt.text-logo span {
+    color: #4dabff;
+}
+
+/* Update color scheme with both primary colors */
+.text-logo span {
+    color: #4dabff;
+    font-weight: 500;
+}
+
+/* Primary blue color instances */
+.color-blue {
+    color: #4dabff !important;
+}
+
+.bg-blue {
+    background-color: #4dabff !important;
+}
+
+.btn-blue {
+    background-color: #4dabff !important;
+    border-color: #4dabff !important;
+}
+
+.btn-blue:hover {
+    background-color: #3d9bef !important;
+    border-color: #3d9bef !important;
+}
+
+/* Purple color instances */
+.color-purple {
+    color: #61388b !important;
+}
+
+.bg-purple {
+    background-color: #61388b !important;
+}
+
+.btn-purple {
+    background-color: #61388b !important;
+    border-color: #61388b !important;
+}
+
+.btn-purple:hover {
+    background-color: #4f2d6f !important;
+    border-color: #4f2d6f !important;
+}
+
+/* Social buttons - alternating colors */
+.dtr-social-button.dtr-facebook,
+.dtr-social-button.dtr-instagram {
+    background-color: #4dabff !important;
+    color: #ffffff !important;
+}
+
+.dtr-social-button.dtr-twitter,
+.dtr-social-button.dtr-google {
+    background-color: #61388b !important;
+    color: #ffffff !important;
+}
+
+.dtr-social-button {
+    color: #ffffff !important;
+}
+
+.dtr-social-button:hover {
+    opacity: 0.9 !important;
+    color: #ffffff !important;
+}
+
+.dtr-social-button:before {
+    color: #ffffff !important;
+}
+
+.dtr-social-button span {
+    color: #ffffff !important;
+}
+
+/* Service numbers - alternating colors */
+.dtr-service-number:nth-child(odd) {
+    color: #4dabff !important;
+}
+
+.dtr-service-number:nth-child(even) {
+    color: #61388b !important;
+}
+
+/* Testimonial stars */
+.dtr-testimonial-stars {
+    color: #4dabff !important;
+}
+
+/* Category tags - alternating colors */
+.dtr-category:nth-child(odd) {
+    background-color: #4dabff !important;
+}
+
+.dtr-category:nth-child(even) {
+    background-color: #61388b !important;
+}
+
+/* Business status indicator */
+.status-indicator.open {
+    background-color: #4dabff;
+}
+
+/* Icons - alternating colors */
+.icon-geo-alt,
+.icon-envelope-fill {
+    color: #4dabff !important;
+}
+
+.icon-clock-fill,
+.icon-telephone-fill {
+    color: #61388b !important;
+}
+
+/* Hover states */
+a:hover {
+    color: #61388b !important;
+}
+
+/* Gradient backgrounds */
+.bg-light-blue {
+    background-color: rgba(77, 171, 255, 0.1) !important;
+}
+
+.bg-light-purple {
+    background-color: rgba(97, 56, 139, 0.1) !important;
+}
+
+/* White button hover state */
+.btn-white:hover {
+    color: #ffffff !important;
+    background-color: #4dabff !important;
+    border-color: #4dabff !important;
+}
+
+.btn-white:hover i {
+    color: #ffffff !important;
 }
 </style>
 </head>
@@ -577,7 +752,7 @@ img {
         <div class="container"> 
             
             <!-- small devices logo --> 
-            <a href="index.html"><img src="assets/images/logo-dark.png" alt="OptiNest Digital Logo"></a> 
+            <a href="index.html" class="text-logo">OptiNest<span>Digital</span></a>
             <!-- small devices logo ends --> 
             
             <!-- menu button -->
@@ -598,10 +773,10 @@ img {
                 <div class="dtr-header-left"> 
                     
                     <!-- logo --> 
-                    <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="OptiNest Digital Logo" width="108"></a> 
+                    <a class="logo-default dtr-scroll-link text-logo" href="#home">OptiNest<span>Digital</span></a>
                     
                     <!-- logo on scroll --> 
-                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="OptiNest Digital Logo" width="108"></a> 
+                    <a class="logo-alt dtr-scroll-link text-logo" href="#home">OptiNest<span>Digital</span></a>
                     <!-- logo on scroll ends --> 
                     
                 </div>
