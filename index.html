@@ -225,9 +225,44 @@
     }
     
     /* Blog Section */
+    .dtr-blog-item {
+        margin-bottom: 30px !important;
+        max-width: 280px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .dtr-post-img {
+        height: 180px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .dtr-post-content {
+        padding: 15px !important;
+    }
+    
     .dtr-blog-title {
-        font-size: 18px !important;
+        font-size: 16px !important;
         line-height: 1.4 !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .dtr-blog-meta {
+        font-size: 12px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .dtr-blog-meta li {
+        margin-right: 10px !important;
+    }
+    
+    .dtr-category {
+        font-size: 12px !important;
+        padding: 4px 10px !important;
+    }
+    
+    .dtr-read-more {
+        font-size: 13px !important;
     }
     
     /* Contact Form */
@@ -259,48 +294,51 @@
     }
     
     /* Portfolio */
-    .dtr-filter-nav li a {
-        font-size: 14px !important;
-        padding: 8px 15px !important;
+    .dtr-portfolio-grid {
+        margin: 0 -10px !important;
     }
     
-    /* Span and Text Adjustments */
-    .dtr-animated-headline .is-visible span,
-    .dtr-animated-headline .is-hidden span {
-        font-size: 24px !important;
-        line-height: 1.3 !important;
-        display: inline-block;
-        width: 100%;
-    }
-    
-    .color-blue {
-        font-size: 24px !important;
-    }
-    
-    /* Image Adjustments */
-    .dtr-img-slider-1col img,
-    .dtr-video-wrapper img,
-    .dtr-portfolio-content img,
-    .dtr-team-img img,
-    .dtr-blog-item img,
-    .dtr-testimonial-image img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-    }
-    
-    /* Portfolio Images */
     .dtr-portfolio-item {
+        padding: 0 10px !important;
         margin-bottom: 20px !important;
     }
     
     .dtr-portfolio-content {
-        height: 250px !important;
+        height: 200px !important;
+        margin-bottom: 15px !important;
     }
     
     .dtr-portfolio-content img {
         height: 100% !important;
         object-fit: cover !important;
+    }
+    
+    .dtr-filter-nav {
+        margin-bottom: 20px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    .dtr-filter-nav li {
+        margin: 0 5px 10px !important;
+    }
+    
+    .dtr-filter-nav li a {
+        font-size: 13px !important;
+        padding: 6px 12px !important;
+        border-radius: 4px !important;
+    }
+    
+    .dtr-portfolio-overlay {
+        opacity: 0.9 !important;
+    }
+    
+    .dtr-portfolio-overlay a {
+        width: 40px !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        font-size: 16px !important;
     }
     
     /* Team Images */
@@ -309,16 +347,6 @@
     }
     
     .dtr-team-img img {
-        height: 100% !important;
-        object-fit: cover !important;
-    }
-    
-    /* Blog Images */
-    .dtr-post-img {
-        height: 200px !important;
-    }
-    
-    .dtr-post-img img {
         height: 100% !important;
         object-fit: cover !important;
     }
@@ -373,7 +401,7 @@
     }
     
     .dtr-portfolio-content {
-        height: 300px !important;
+        height: 250px !important;
     }
     
     .dtr-team {
@@ -402,11 +430,26 @@
     }
     
     .dtr-post-img {
-        height: 250px !important;
+        height: 220px !important;
     }
     
     .dtr-video-wrapper {
         height: 300px !important;
+    }
+    
+    .dtr-blog-item {
+        max-width: 320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .dtr-blog-title {
+        font-size: 18px !important;
+    }
+    
+    .dtr-filter-nav li a {
+        font-size: 14px !important;
+        padding: 8px 15px !important;
     }
 }
 
@@ -797,9 +840,9 @@ img {
             <div class="container"> 
                 
                 <!-- heading starts -->
-                <div class="dtr-styled-heading heading-center">
+                <div class="dtr-styled-heading heading-center mb-5">
                     <h2 class="dtr-section-heading">Some Inspiration</h2>
-                    <p>Subheading or information goes here</p>
+                    <p class="text-size-md">Explore our latest creative projects</p>
                 </div>
                 <!-- heading ends --> 
                 
@@ -821,8 +864,8 @@ img {
                         <div class="dtr-portfolio-content dual-icons"> 
                             <img src="assets/images/photography_img7.jpg" alt="Creative Web Design Project" loading="lazy">
                             <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Creative Web Design Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg" title="Enlarge Creative Web Design Project"></a> 
+                                <a class="media-link" href="#" title="View Creative Web Design Project" aria-label="View Creative Web Design Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img7.jpg" title="Enlarge Creative Web Design Project" aria-label="Enlarge Creative Web Design Project"></a> 
                             </div>
                         </div>
                     </div>
@@ -830,40 +873,60 @@ img {
                     
                     <!-- portfolio item 2 starts -->
                     <div class="dtr-portfolio-item isotope-item filter-product all">
-                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img13.jpg" alt="E-commerce Product Design">
-                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#" title="View E-commerce Product Design"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img13.jpg" title="Enlarge E-commerce Product Design"></a> </div>
+                        <div class="dtr-portfolio-content dual-icons"> 
+                            <img src="assets/images/photography_img13.jpg" alt="E-commerce Product Design" loading="lazy">
+                            <div class="dtr-portfolio-overlay"> 
+                                <a class="media-link" href="#" title="View E-commerce Product Design" aria-label="View E-commerce Product Design"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img13.jpg" title="Enlarge E-commerce Product Design" aria-label="Enlarge E-commerce Product Design"></a> 
+                            </div>
                         </div>
                     </div>
                     <!-- portfolio item 2 ends--> 
                     
                     <!-- portfolio item 3 starts -->
                     <div class="dtr-portfolio-item isotope-item filter-design filter-photography all">
-                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img9.jpg" alt="UI/UX Design Project">
-                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#" title="View UI/UX Design Project"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img9.jpg" title="Enlarge UI/UX Design Project"></a> </div>
+                        <div class="dtr-portfolio-content dual-icons"> 
+                            <img src="assets/images/photography_img9.jpg" alt="UI/UX Design Project" loading="lazy">
+                            <div class="dtr-portfolio-overlay"> 
+                                <a class="media-link" href="#" title="View UI/UX Design Project" aria-label="View UI/UX Design Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img9.jpg" title="Enlarge UI/UX Design Project" aria-label="Enlarge UI/UX Design Project"></a> 
+                            </div>
                         </div>
                     </div>
                     <!-- portfolio item 3 ends --> 
                     
                     <!-- portfolio item 4 starts -->
                     <div class="dtr-portfolio-item isotope-item filter-product filter-photography all">
-                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img6.jpg" alt="Brand Identity Design">
-                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#" title="View Brand Identity Design"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img6.jpg" title="Enlarge Brand Identity Design"></a> </div>
+                        <div class="dtr-portfolio-content dual-icons"> 
+                            <img src="assets/images/photography_img6.jpg" alt="Brand Identity Design" loading="lazy">
+                            <div class="dtr-portfolio-overlay"> 
+                                <a class="media-link" href="#" title="View Brand Identity Design" aria-label="View Brand Identity Design"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img6.jpg" title="Enlarge Brand Identity Design" aria-label="Enlarge Brand Identity Design"></a> 
+                            </div>
                         </div>
                     </div>
                     <!-- portfolio item 4 ends --> 
                     
                     <!-- portfolio item 5 starts -->
                     <div class="dtr-portfolio-item isotope-item filter-design all">
-                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img10.jpg" alt="Website Design Project">
-                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#" title="View Website Design Project"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img10.jpg" title="Enlarge Website Design Project"></a> </div>
+                        <div class="dtr-portfolio-content dual-icons"> 
+                            <img src="assets/images/photography_img10.jpg" alt="Website Design Project" loading="lazy">
+                            <div class="dtr-portfolio-overlay"> 
+                                <a class="media-link" href="#" title="View Website Design Project" aria-label="View Website Design Project"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img10.jpg" title="Enlarge Website Design Project" aria-label="Enlarge Website Design Project"></a> 
+                            </div>
                         </div>
                     </div>
                     <!-- portfolio item 5 ends --> 
                     
                     <!-- portfolio item 6 starts -->
                     <div class="dtr-portfolio-item isotope-item filter-creative all">
-                        <div class="dtr-portfolio-content dual-icons"> <img src="assets/images/photography_img8.jpg" alt="Digital Marketing Campaign">
-                            <div class="dtr-portfolio-overlay"> <a class="media-link" href="#" title="View Digital Marketing Campaign"></a> <a class="media-zoom popup-gallery" href="assets/images/photography_img8.jpg" title="Enlarge Digital Marketing Campaign"></a> </div>
+                        <div class="dtr-portfolio-content dual-icons"> 
+                            <img src="assets/images/photography_img8.jpg" alt="Digital Marketing Campaign" loading="lazy">
+                            <div class="dtr-portfolio-overlay"> 
+                                <a class="media-link" href="#" title="View Digital Marketing Campaign" aria-label="View Digital Marketing Campaign"></a> 
+                                <a class="media-zoom popup-gallery" href="assets/images/photography_img8.jpg" title="Enlarge Digital Marketing Campaign" aria-label="Enlarge Digital Marketing Campaign"></a> 
+                            </div>
                         </div>
                     </div>
                     <!-- portfolio item 6 ends --> 
@@ -1016,80 +1079,82 @@ img {
 ================================================== -->
         <section id="blog" class="dtr-section dtr-py-100">
             <div class="container"> 
-                
                 <!-- heading starts -->
-                <div class="dtr-styled-heading heading-center">
+                <div class="dtr-styled-heading heading-center mb-5">
                     <h2 class="dtr-section-heading">From The Blog</h2>
-                    <p> Subheading or information goes here</p>
+                    <p class="text-size-md">Latest insights and updates from our team</p>
                 </div>
                 <!-- heading ends --> 
                 
                 <!--== row starts ==-->
-                <div class="row dtr-mt-50"> 
-                    
+                <div class="row justify-content-center"> 
                     <!-- column 1 starts -->
-                    <div class="col-12 col-md-4"> 
-                        
+                    <div class="col-6 col-md-4 mb-4"> 
                         <!-- blog item 1 starts -->
                         <div class="dtr-blog-item"> 
                             <!-- image -->
-                            <div class="dtr-post-img"> <img src="assets/images/blogpost-img1.jpg" alt="Social Media Marketing Tips for Small Businesses"><span class="dtr-category bg-blue color-white">Marketing</span> </div>
+                            <div class="dtr-post-img"> 
+                                <img src="assets/images/blogpost-img1.jpg" alt="Social Media Marketing Tips for Small Businesses" loading="lazy">
+                                <span class="dtr-category bg-blue color-white">Marketing</span> 
+                            </div>
                             <div class="dtr-post-content">
                                 <ul class="dtr-blog-meta color-grey">
                                     <li>March 24, 2020</li>
                                     <li>by Alycia</li>
                                 </ul>
                                 <h3 class="dtr-blog-title">Essential social media tips for small business</h3>
-                                <a href="#" class="dtr-read-more">Continue Reading</a> </div>
+                                <a href="#" class="dtr-read-more">Continue Reading</a> 
+                            </div>
                         </div>
                         <!-- blog item 1 ends --> 
-                        
                     </div>
                     <!-- column 1 ends --> 
                     
                     <!-- column 2 starts -->
-                    <div class="col-12 col-md-4"> 
-                        
+                    <div class="col-6 col-md-4 mb-4"> 
                         <!-- blog item 2 starts -->
                         <div class="dtr-blog-item"> 
                             <!-- image -->
-                            <div class="dtr-post-img"> <img src="assets/images/blogpost-img2.jpg" alt="E-commerce Product Sales Optimization Tips"> <span class="dtr-category bg-blue color-white">Branding</span></div>
+                            <div class="dtr-post-img"> 
+                                <img src="assets/images/blogpost-img2.jpg" alt="E-commerce Product Sales Optimization Tips" loading="lazy">
+                                <span class="dtr-category bg-blue color-white">Branding</span>
+                            </div>
                             <div class="dtr-post-content">
                                 <ul class="dtr-blog-meta color-grey">
                                     <li>August 16, 2020</li>
                                     <li>by Alycia</li>
                                 </ul>
                                 <h3 class="dtr-blog-title">Tips to boost product based sale online</h3>
-                                <a href="#" class="dtr-read-more">Continue Reading</a> </div>
+                                <a href="#" class="dtr-read-more">Continue Reading</a> 
+                            </div>
                         </div>
                         <!-- blog item 2 ends --> 
-                        
                     </div>
                     <!-- column 2 ends --> 
                     
                     <!-- column 3 starts -->
-                    <div class="col-12 col-md-4"> 
-                        
+                    <div class="col-6 col-md-4 mb-4"> 
                         <!-- blog item 3 starts -->
                         <div class="dtr-blog-item"> 
                             <!-- image -->
-                            <div class="dtr-post-img"> <img src="assets/images/blogpost-img3.jpg" alt="Digital Storytelling in Marketing"> <span class="dtr-category bg-blue color-white">Creative</span></div>
+                            <div class="dtr-post-img"> 
+                                <img src="assets/images/blogpost-img3.jpg" alt="Digital Storytelling in Marketing" loading="lazy">
+                                <span class="dtr-category bg-blue color-white">Creative</span>
+                            </div>
                             <div class="dtr-post-content">
                                 <ul class="dtr-blog-meta color-grey">
                                     <li>September 30, 2020</li>
                                     <li>by Alycia</li>
                                 </ul>
                                 <h3 class="dtr-blog-title">The art of effective storytelling</h3>
-                                <a href="#" class="dtr-read-more">Continue Reading</a> </div>
+                                <a href="#" class="dtr-read-more">Continue Reading</a> 
+                            </div>
                         </div>
                         <!-- blog item 3 ends --> 
-                        
                     </div>
                     <!-- column 3 ends --> 
-                    
                 </div>
-                <!--== row starts ==--> 
-                
+                <!--== row ends ==--> 
             </div>
         </section>
         <!-- blog section ends
