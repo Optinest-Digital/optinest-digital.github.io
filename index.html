@@ -780,13 +780,21 @@ a:hover {
 
 @media (min-width: 992px) {
     .dtr-team {
-        max-width: 400px;
+        max-width: 320px;
         margin-left: auto;
         margin-right: auto;
     }
     
     .dtr-team-img {
-        height: 320px;
+        height: 240px;
+        overflow: hidden;
+    }
+    
+    .dtr-team-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 </style>
