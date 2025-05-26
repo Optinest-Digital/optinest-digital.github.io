@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /php/
+Disallow: /.git/
+Disallow: /.DS_Store
+
+# Sitemap location
+Sitemap: https://optinestdigital.com/sitemap.xml 
