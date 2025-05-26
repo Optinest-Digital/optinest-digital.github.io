@@ -1694,22 +1694,39 @@ function handleSubmit(event) {
     const domainUrl = form.domain_url.value || '';
     
     const subject = `New Inquiry: ${service}`;
-    const body = `Name: ${name}
+    
+    // Base email body
+    let body = `Name: ${name}
 
 Email: ${email}
 
-Service: ${service}
+Service: ${service}`;
 
-Selected Plan: ${selectedPlan}
-Price: ${planPrice}
+    // Add pricing details only if a plan was selected
+    if (selectedPlan && planPrice) {
+        // Convert price if in USD
+        let displayPrice = planPrice;
+        if (isUSD) {
+            const phpPrice = parseFloat(planPrice.replace(/[^0-9.-]+/g, ''));
+            const usdPrice = (phpPrice * exchangeRate).toFixed(2);
+            displayPrice = `$${usdPrice}`;
+        }
+        
+        body += `\n\nSelected Plan: ${selectedPlan}
+Price: ${displayPrice}
 
 Plan Features:
-${planFeatures.map(feature => `• ${feature}`).join('\n')}
+${planFeatures.map(feature => `• ${feature}`).join('\n')}`;
+    }
 
-Domain Status: ${hasDomain === 'yes' ? 'Has Domain' : hasDomain === 'no' ? 'Needs Domain' : 'Not specified'}
-${domainUrl ? `Domain URL: ${domainUrl}` : ''}
+    // Add domain status
+    body += `\n\nDomain Status: ${hasDomain === 'yes' ? 'Has Domain' : hasDomain === 'no' ? 'Needs Domain' : 'Not specified'}`;
+    if (domainUrl) {
+        body += `\nDomain URL: ${domainUrl}`;
+    }
 
-Message:
+    // Add message
+    body += `\n\nMessage:
 ${message}`;
     
     window.location.href = `mailto:optinestdigital@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -1717,17 +1734,60 @@ ${message}`;
     return false;
 }
 
-function revealPhoneNumber(event) {
-    event.preventDefault();
-    const phoneLink = event.target;
-    if (phoneLink.textContent === 'Click to view number') {
-        phoneLink.textContent = '+63 906 847 4375';
-        phoneLink.href = 'tel:+639068474375';
+let isUSD = false;
+const exchangeRate = 0.018; // 1 PHP = 0.018 USD (approximate)
+
+function updatePrices() {
+    const prices = document.querySelectorAll('.price-amount');
+    const symbols = document.querySelectorAll('.currency-symbol');
+    
+    prices.forEach(price => {
+        const originalPrice = parseFloat(price.getAttribute('data-original-price') || price.textContent.replace(/,/g, ''));
+        if (isUSD) {
+            const usdPrice = (originalPrice * exchangeRate).toFixed(2);
+            price.textContent = usdPrice;
+            price.previousElementSibling.textContent = '$';
+        } else {
+            price.textContent = originalPrice.toLocaleString();
+            price.previousElementSibling.textContent = '₱';
+        }
+    });
+
+    // Update any stored prices in the form
+    const planPrice = document.getElementById('plan_price');
+    if (planPrice && planPrice.value) {
+        const originalPrice = parseFloat(planPrice.value.replace(/[^0-9.-]+/g, ''));
+        if (isUSD) {
+            const usdPrice = (originalPrice * exchangeRate).toFixed(2);
+            planPrice.value = `$${usdPrice}`;
+        } else {
+            planPrice.value = `₱${originalPrice.toLocaleString()}`;
+        }
     }
 }
 
-let isUSD = false;
-const exchangeRate = 0.018; // 1 PHP = 0.018 USD (approximate)
+function toggleCurrency() {
+    isUSD = !isUSD;
+    const button = document.getElementById('currencyToggle');
+    button.textContent = isUSD ? 'Switch to PHP' : 'Switch to USD';
+    updatePrices();
+}
+
+// Add this to your existing DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    const prices = document.querySelectorAll('.price-amount');
+    prices.forEach(price => {
+        price.setAttribute('data-original-price', price.textContent.replace(/,/g, ''));
+    });
+    detectLocationAndSetCurrency();
+    
+    // Clear any existing plan details if coming directly to the contact form
+    if (!window.location.hash.includes('contact')) {
+        document.getElementById('selected_plan').value = '';
+        document.getElementById('plan_price').value = '';
+        document.getElementById('plan_features').value = '';
+    }
+});
 
 // Function to detect user's location and set default currency
 async function detectLocationAndSetCurrency() {
@@ -1747,44 +1807,14 @@ async function detectLocationAndSetCurrency() {
     }
 }
 
-function updatePrices() {
-    const prices = document.querySelectorAll('.price-amount');
-    const symbols = document.querySelectorAll('.currency-symbol');
-    
-    prices.forEach(price => {
-        const originalPrice = parseFloat(price.getAttribute('data-original-price') || price.textContent.replace(/,/g, ''));
-        if (isUSD) {
-            const usdPrice = (originalPrice * exchangeRate).toFixed(2);
-            price.textContent = usdPrice;
-            price.previousElementSibling.textContent = '$';
-        } else {
-            price.textContent = originalPrice.toLocaleString();
-            price.previousElementSibling.textContent = '₱';
-        }
-    });
-}
-
-function toggleCurrency() {
-    isUSD = !isUSD;
-    const button = document.getElementById('currencyToggle');
-    button.textContent = isUSD ? 'Switch to PHP' : 'Switch to USD';
-    updatePrices();
-}
-
-// Initialize prices with data attributes and detect location
-document.addEventListener('DOMContentLoaded', function() {
-    const prices = document.querySelectorAll('.price-amount');
-    prices.forEach(price => {
-        price.setAttribute('data-original-price', price.textContent.replace(/,/g, ''));
-    });
-    detectLocationAndSetCurrency();
-    
-    // Set the selected plan from URL parameter
-    const selectedPlan = getUrlParameter('plan');
-    if (selectedPlan) {
-        document.getElementById('selected_plan').value = selectedPlan;
+function revealPhoneNumber(event) {
+    event.preventDefault();
+    const phoneLink = event.target;
+    if (phoneLink.textContent === 'Click to view number') {
+        phoneLink.textContent = '+63 906 847 4375';
+        phoneLink.href = 'tel:+639068474375';
     }
-});
+}
 
 // Add this new function to handle URL parameters
 function getUrlParameter(name) {
