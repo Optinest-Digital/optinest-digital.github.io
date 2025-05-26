@@ -672,6 +672,39 @@ a:hover {
         object-position: center;
     }
 }
+
+/* Add hover and focus states for form elements */
+.form-control:hover,
+.form-control:focus {
+    border-color: #4dabff !important;
+    box-shadow: 0 0 0 2px rgba(77, 171, 255, 0.1) !important;
+    outline: none !important;
+}
+
+/* Style for selected radio button */
+.radio-group label input[type="radio"]:checked + span {
+    color: #4dabff;
+    font-weight: 500;
+}
+
+.radio-group label:hover {
+    border-color: #4dabff;
+    background-color: rgba(77, 171, 255, 0.05);
+}
+
+.radio-group label input[type="radio"]:checked ~ span {
+    color: #4dabff;
+}
+
+/* Style for the domain status container */
+.domain-status {
+    border: 1px solid #eee;
+}
+
+.domain-status:hover {
+    border-color: #4dabff;
+    box-shadow: 0 2px 15px rgba(77, 171, 255, 0.1);
+}
 </style>
 </head>
 <body>
@@ -1311,7 +1344,7 @@ a:hover {
                                         </p>
                                     </div>
                                     <p>
-                                        <select name="service" class="form-control" required>
+                                        <select name="service" class="form-control" required style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; color: #555; background-color: #fff; transition: all 0.3s ease; margin-bottom: 20px;">
                                             <option value="">Select a Service</option>
                                             <option value="Web Design & Development">Web Design & Development</option>
                                             <option value="SEO & Content Strategy">SEO & Content Strategy</option>
@@ -1322,20 +1355,20 @@ a:hover {
                                         </select>
                                     </p>
                                     <p>
-                                        <div class="domain-status" style="margin-bottom: 15px;">
-                                            <label style="display: block; margin-bottom: 10px; color: #555; font-weight: 500;">Do you already have a domain?</label>
-                                            <div class="radio-group" style="display: flex; gap: 20px;">
-                                                <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; border: 1px solid #ddd; border-radius: 4px; transition: all 0.3s ease;">
-                                                    <input type="radio" name="has_domain" value="yes" style="margin-right: 8px;" onchange="toggleDomainUrl()">
-                                                    <span>Yes</span>
+                                        <div class="domain-status" style="margin-bottom: 25px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                                            <label style="display: block; margin-bottom: 15px; color: #333; font-weight: 500; font-size: 16px;">Do you already have a domain?</label>
+                                            <div class="radio-group" style="display: flex; gap: 15px;">
+                                                <label style="display: flex; align-items: center; cursor: pointer; padding: 12px 20px; border: 1px solid #ddd; border-radius: 6px; transition: all 0.3s ease; flex: 1; background-color: #fff;">
+                                                    <input type="radio" name="has_domain" value="yes" style="margin-right: 10px; accent-color: #4dabff;" onchange="toggleDomainUrl()">
+                                                    <span style="color: #555; font-size: 15px;">Yes</span>
                                                 </label>
-                                                <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; border: 1px solid #ddd; border-radius: 4px; transition: all 0.3s ease;">
-                                                    <input type="radio" name="has_domain" value="no" style="margin-right: 8px;" onchange="toggleDomainUrl()">
-                                                    <span>No</span>
+                                                <label style="display: flex; align-items: center; cursor: pointer; padding: 12px 20px; border: 1px solid #ddd; border-radius: 6px; transition: all 0.3s ease; flex: 1; background-color: #fff;">
+                                                    <input type="radio" name="has_domain" value="no" style="margin-right: 10px; accent-color: #4dabff;" onchange="toggleDomainUrl()">
+                                                    <span style="color: #555; font-size: 15px;">No</span>
                                                 </label>
                                             </div>
-                                            <div id="domainUrlContainer" style="display: none; margin-top: 15px;">
-                                                <input type="url" name="domain_url" class="form-control" placeholder="Enter your domain URL (e.g., www.example.com)" style="width: 100%;">
+                                            <div id="domainUrlContainer" style="display: none; margin-top: 20px;">
+                                                <input type="url" name="domain_url" class="form-control" placeholder="Enter your domain URL (e.g., www.example.com)" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 15px; color: #555; background-color: #fff; transition: all 0.3s ease;">
                                             </div>
                                         </div>
                                     </p>
@@ -1856,6 +1889,31 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.checked) {
                 label.style.borderColor = '#4dabff';
                 label.style.backgroundColor = 'rgba(77, 171, 255, 0.1)';
+            }
+        });
+    });
+});
+
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Style radio buttons when selected
+    const radioLabels = document.querySelectorAll('.radio-group label');
+    
+    radioLabels.forEach(label => {
+        const radio = label.querySelector('input[type="radio"]');
+        const span = label.querySelector('span');
+        
+        radio.addEventListener('change', function() {
+            radioLabels.forEach(l => {
+                l.style.borderColor = '#ddd';
+                l.style.backgroundColor = '#fff';
+                l.querySelector('span').style.color = '#555';
+            });
+            
+            if (this.checked) {
+                label.style.borderColor = '#4dabff';
+                label.style.backgroundColor = 'rgba(77, 171, 255, 0.05)';
+                span.style.color = '#4dabff';
             }
         });
     });
