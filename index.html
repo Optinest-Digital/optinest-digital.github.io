@@ -138,13 +138,16 @@
             --neutral-gray: #1A1A1A;
             --deep-navy: #0A1929;
             --text-primary: #FFFFFF;
-            --text-secondary: #B3B3B3;
+            --text-secondary: #E0E0E0;
+            --text-muted: #B3B3B3;
             --card-bg: #242424;
             --header-bg: rgba(26, 26, 26, 0.95);
             --gradient-start: #1A1A1A;
             --gradient-end: #2C1810;
             --glass-bg: rgba(36, 36, 36, 0.8);
             --glass-border: rgba(255, 255, 255, 0.1);
+            --link-color: #4FC3F7;
+            --link-hover: #81D4FA;
         }
 
         * {
@@ -160,8 +163,8 @@
             background-color: var(--neutral-gray);
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255, 159, 28, 0.05) 0%, transparent 20%);
+                radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 159, 28, 0.03) 0%, transparent 20%);
             background-attachment: fixed;
         }
 
@@ -323,29 +326,27 @@
             color: var(--text-primary);
             line-height: 1.2;
             animation: fadeInUp 1s ease-out;
-            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            background: none;
         }
 
         .hero p {
             font-size: 24px;
-            color: var(--primary-orange);
+            color: var(--text-secondary);
             margin-bottom: 40px;
             animation: fadeInUp 1s ease-out 0.2s backwards;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .cta-button {
             display: inline-block;
             padding: 15px 30px;
-            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            background: linear-gradient(135deg, var(--link-color), var(--link-hover));
             color: var(--text-primary);
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -367,9 +368,9 @@
         }
 
         .cta-button:hover {
-            background-color: var(--secondary-orange);
+            background: linear-gradient(135deg, var(--link-hover), var(--link-color));
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 159, 28, 0.3);
+            box-shadow: 0 6px 20px rgba(79, 195, 247, 0.4);
         }
 
         /* Services Section */
@@ -425,7 +426,7 @@
         }
 
         .service-card h3 {
-            color: var(--primary-orange);
+            color: var(--text-primary);
             margin-bottom: 15px;
             font-size: 24px;
         }
@@ -445,7 +446,7 @@
             justify-content: center;
             margin-bottom: 20px;
             font-size: 24px;
-            color: var(--primary-orange);
+            color: var(--link-color);
             transition: all 0.3s ease;
         }
 
@@ -520,7 +521,7 @@
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
-            color: var(--text-secondary);
+            color: var(--text-muted);
         }
 
         .form-group input:focus,
@@ -547,13 +548,21 @@
         }
 
         .footer-section h4 {
-            color: var(--primary-orange);
+            color: var(--text-primary);
             margin-bottom: 20px;
             font-size: 20px;
         }
 
         .footer-section p {
             color: var(--text-secondary);
+        }
+
+        .footer-section a {
+            color: var(--link-color);
+        }
+
+        .footer-section a:hover {
+            color: var(--link-hover);
         }
 
         .social-links {
@@ -577,7 +586,7 @@
 
         .social-links a:hover {
             transform: translateY(-5px) rotate(360deg);
-            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            background: var(--link-color);
             border-color: transparent;
         }
 
@@ -586,8 +595,8 @@
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--primary-orange);
-            color: white;
+            background: var(--link-color);
+            color: var(--text-primary);
             padding: 8px;
             z-index: 100;
             transition: top 0.3s;
@@ -595,7 +604,7 @@
 
         .skip-link:focus {
             top: 0;
-            box-shadow: 0 0 0 3px var(--primary-orange);
+            box-shadow: 0 0 0 3px var(--link-color);
         }
 
         .visually-hidden {
@@ -633,10 +642,10 @@
             width: 50px;
             height: 50px;
             border: 4px solid var(--text-secondary);
-            border-top-color: var(--primary-orange);
+            border-top-color: var(--link-color);
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 0 20px rgba(79, 195, 247, 0.3);
         }
 
         @keyframes spin {
@@ -650,19 +659,19 @@
             left: 0;
             width: 0;
             height: 4px;
-            background: linear-gradient(to right, var(--primary-orange), var(--secondary-orange));
+            background: linear-gradient(to right, var(--link-color), var(--link-hover));
             z-index: 1001;
             transition: width 0.1s ease;
-            box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 2px 10px rgba(79, 195, 247, 0.3);
         }
 
         /* Custom Cursor */
         .custom-cursor {
             width: 20px;
             height: 20px;
-            background: radial-gradient(circle at center, var(--primary-orange), transparent);
+            background: radial-gradient(circle at center, var(--link-color), transparent);
             mix-blend-mode: difference;
-            opacity: 0.8;
+            opacity: 0.6;
             position: fixed;
             pointer-events: none;
             z-index: 9999;
@@ -700,6 +709,10 @@
             body {
                 background: white;
                 color: black;
+            }
+
+            a {
+                color: #0066cc;
             }
 
             .service-card,
