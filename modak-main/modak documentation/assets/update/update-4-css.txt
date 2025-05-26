@@ -1,1 +1,0 @@
-.dtr-social a.dtr-gitlab::before { content: "\e99c"; }
