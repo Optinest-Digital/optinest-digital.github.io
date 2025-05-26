@@ -1572,9 +1572,9 @@ a:hover {
                         <!-- column 2 starts -->
                         <div class="col-12 col-md-6 text-right">
                             <ul class="dtr-pipe-list">
-                                <li><a href="#">Read our Privacy Policy</a></li>
-                                <li><a href="#">View Terms of Service</a></li>
-                                <li><a href="#">Learn about our Cookie Policy</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#privacyModal">Read our Privacy Policy</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#termsModal">View Terms of Service</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#cookieModal">Learn about our Cookie Policy</a></li>
                             </ul>
                         </div>
                         <!-- column 2 ends --> 
@@ -1594,6 +1594,209 @@ a:hover {
     
 </div>
 <!-- #dtr-wrapper ends --> 
+
+<!-- Policy Modals -->
+<!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>1. Information We Collect</h4>
+                <p>We collect information that you provide directly to us, including:</p>
+                <ul>
+                    <li>Name and contact information</li>
+                    <li>Email address</li>
+                    <li>Service preferences</li>
+                    <li>Communication history</li>
+                </ul>
+
+                <h4>2. How We Use Your Information</h4>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide and improve our services</li>
+                    <li>Communicate with you about our services</li>
+                    <li>Send you marketing communications (with your consent)</li>
+                    <li>Analyze and improve our website performance</li>
+                </ul>
+
+                <h4>3. Information Sharing</h4>
+                <p>We do not sell or rent your personal information to third parties. We may share your information with:</p>
+                <ul>
+                    <li>Service providers who assist in our operations</li>
+                    <li>Professional advisors and consultants</li>
+                    <li>Law enforcement when required by law</li>
+                </ul>
+
+                <h4>4. Your Rights</h4>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your information</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms of Service</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>1. Acceptance of Terms</h4>
+                <p>By accessing and using OptiNest Digital's services, you agree to be bound by these Terms of Service.</p>
+
+                <h4>2. Services</h4>
+                <p>We provide digital marketing and web development services including:</p>
+                <ul>
+                    <li>Web Design & Development</li>
+                    <li>SEO & Content Strategy</li>
+                    <li>Local SEO & Google Maps Optimization</li>
+                    <li>Brand Identity & Logo Design</li>
+                    <li>Performance Optimization</li>
+                    <li>UI/UX Consulting</li>
+                </ul>
+
+                <h4>3. Client Responsibilities</h4>
+                <p>As a client, you agree to:</p>
+                <ul>
+                    <li>Provide accurate and complete information</li>
+                    <li>Maintain confidentiality of account credentials</li>
+                    <li>Comply with all applicable laws and regulations</li>
+                    <li>Pay for services as agreed</li>
+                </ul>
+
+                <h4>4. Intellectual Property</h4>
+                <p>Upon full payment, you will own the rights to the final deliverables. We retain rights to:</p>
+                <ul>
+                    <li>Our proprietary tools and processes</li>
+                    <li>Portfolio usage rights</li>
+                    <li>Underlying code and frameworks</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Policy Modal -->
+<div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="cookieModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cookieModalLabel">Cookie Policy</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>1. What Are Cookies</h4>
+                <p>Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience.</p>
+
+                <h4>2. Types of Cookies We Use</h4>
+                <p>We use the following types of cookies:</p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our website</li>
+                    <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+                    <li><strong>Marketing Cookies:</strong> Track your browsing habits for targeted advertising</li>
+                </ul>
+
+                <h4>3. How We Use Cookies</h4>
+                <p>We use cookies to:</p>
+                <ul>
+                    <li>Improve website performance</li>
+                    <li>Remember your preferences</li>
+                    <li>Analyze website traffic</li>
+                    <li>Provide personalized content</li>
+                </ul>
+
+                <h4>4. Managing Cookies</h4>
+                <p>You can control and manage cookies through your browser settings. However, disabling certain cookies may affect website functionality.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add custom styles for modals -->
+<style>
+.modal-content {
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #4dabff;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1.5rem;
+}
+
+.modal-header .close {
+    color: white;
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-body h4 {
+    color: #4dabff;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body h4:first-child {
+    margin-top: 0;
+}
+
+.modal-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #4dabff;
+    border-color: #4dabff;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #3d9bef;
+    border-color: #3d9bef;
+}
+</style>
 
 <!-- JS FILES --> 
 <script src="assets/js/jquery.min.js"></script> 
