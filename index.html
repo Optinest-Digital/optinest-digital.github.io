@@ -707,12 +707,24 @@ a:hover {
 }
 
 /* Logo styles */
+.dtr-logo,
+.logo-default,
+.logo-alt {
+    display: block;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .dtr-logo img,
 .logo-default img,
 .logo-alt img {
     width: 200px;
-    height: 40px;
+    height: 48px;
     object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 /* Responsive logo adjustments */
@@ -720,8 +732,8 @@ a:hover {
     .dtr-logo img,
     .logo-default img,
     .logo-alt img {
-        width: 160px; /* Slightly smaller on mobile */
-        height: 32px;
+        width: 200px;
+        height: 48px;
     }
 }
 </style>
@@ -743,7 +755,7 @@ a:hover {
         <div class="container"> 
             
             <!-- small devices logo --> 
-            <a href="index.html" class="dtr-logo"><img src="assets/images/logo.png" alt="OptiNest Digital Logo" style="width: 200px; height: 40px; object-fit: contain;"></a>
+            <a href="index.html" class="dtr-logo"><img src="assets/images/logo.png" alt="OptiNest Digital Logo"></a>
             <!-- small devices logo ends --> 
             
             <!-- menu button -->
@@ -764,10 +776,10 @@ a:hover {
                 <div class="dtr-header-left"> 
                     
                     <!-- logo --> 
-                    <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo.png" alt="OptiNest Digital Logo" style="width: 200px; height: 40px; object-fit: contain;"></a>
+                    <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo.png" alt="OptiNest Digital Logo"></a>
                     
                     <!-- logo on scroll --> 
-                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo.png" alt="OptiNest Digital Logo" style="width: 200px; height: 40px; object-fit: contain;"></a>
+                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo.png" alt="OptiNest Digital Logo"></a>
                     <!-- logo on scroll ends --> 
                     
                 </div>
@@ -809,13 +821,11 @@ a:hover {
                     <div class="col-12 col-md-6 mb-4 mb-md-0"> 
                         
                         <!-- intro text --> 
-                        <h1 class="text-size-xxl font-weight-300 color-dark mb-3">We are <span class="font-weight-400">OptiNest Digital</span></h1>
+                        <h1 class="text-size-xl font-weight-300 color-dark mb-3">We are <span class="font-weight-400">OptiNest Digital</span></h1>
                         <div class="spacer-20"></div>
 						<!-- animated text starts -->
-                        <h2 class="h3 mb-4"> 
-                            <!-- first visible word --> 
-                            <b class="is-visible"><span class="color-blue">Where Strategy Meets Simplicity</span></b> 
-                            <!-- first visible word ends --> 
+                        <p class="text-size-md">We help businesses grow online by building <span class="font-weight-500 color-dark">high-performance websites</span> and implementing <span class="font-weight-500 color-dark">smart SEO strategies</span>. We don't just create websites—we build optimized nests for your brand to thrive.</p>
+                        
                             
                          
                        </h2>
@@ -863,9 +873,6 @@ a:hover {
                     <!-- column 1 starts -->
                     <div class="col-12 col-md-10"> 
                         
-                        <!-- text -->
-                        <p class="text-size-md">We help businesses grow online by building <span class="font-weight-500 color-dark">high-performance websites</span> and implementing <span class="font-weight-500 color-dark">smart SEO strategies</span>. We don't just create websites—we build optimized nests for your brand to thrive.</p>
-                        
                         <!-- social starts -->
                         <ul class="dtr-social dtr-social-list dtr-styled-social text-left dtr-mt-30">
                             <li class="dtr-social-title font-weight-500 color-dark">Follow Us</li>
@@ -879,7 +886,9 @@ a:hover {
                     <!-- column 1 ends --> 
                     
                     <!-- column 2 starts -->
-                    <div class="col-12 col-md-2 dtr-rounded-img small-device-space"> <img src="assets/images/experience-img.jpg" alt="OptiNest Digital Team Experience" loading="lazy" decoding="async"> </div>
+                    <div class="col-12 col-md-2 dtr-rounded-img small-device-space" style="max-width: 50%; margin-left: auto;">
+                        <img src="assets/images/experience-img.jpg" alt="OptiNest Digital Team Experience" loading="lazy" decoding="async" style="width: 100%; height: auto;">
+                    </div>
                     <!-- column 2 ends --> 
                     
                 </div>
