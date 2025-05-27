@@ -206,7 +206,7 @@ $(document).ready(function() {
 		dots: false,
 		infinite:true,
 		autoplay: true,
-		autoplaySpeed: 4500,
+		autoplaySpeed: 400,
 		responsive: [
 		{
 		  breakpoint: 768,
