@@ -21,21 +21,21 @@
 <meta property="og:url" content="https://optinestdigital.com/">
 <meta property="og:title" content="OptiNest Digital - Where Strategy Meets Simplicity">
 <meta property="og:description" content="Boutique digital agency specializing in high-performance websites and smart SEO strategies. We build optimized digital nests for businesses to thrive online.">
-<meta property="og:image" content="https://optinestdigital.com/assets/images/logo-dark.png">
+<meta property="og:image" content="https://optinestdigital.com/assets/images/cover.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://optinestdigital.com/">
 <meta property="twitter:title" content="OptiNest Digital - Where Strategy Meets Simplicity">
 <meta property="twitter:description" content="Boutique digital agency specializing in high-performance websites and smart SEO strategies. We build optimized digital nests for businesses to thrive online.">
-<meta property="twitter:image" content="https://optinestdigital.com/assets/images/logo-dark.png">
+<meta property="twitter:image" content="https://optinestdigital.com/assets/images/cover.jpg">
 <!-- Canonical URL -->
 <link rel="canonical" href="https://optinestdigital.com">
 <!-- FAVICON FILES -->
-<link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-<link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
-<link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
-<link href="assets/images/icons/favicon.png" rel="shortcut icon">
+<link href="assets/images/ico.png" rel="shortcut icon">
+<link href="assets/images/ico.png" rel="apple-touch-icon" sizes="144x144">
+<link href="assets/images/ico.png" rel="apple-touch-icon" sizes="120x120">
+<link href="assets/images/ico.png" rel="apple-touch-icon" sizes="76x76">
 
 <!-- CSS FILES -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -705,6 +705,25 @@ a:hover {
     border-color: #4dabff;
     box-shadow: 0 2px 15px rgba(77, 171, 255, 0.1);
 }
+
+/* Logo styles */
+.dtr-logo img,
+.logo-default img,
+.logo-alt img {
+    width: 200px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Responsive logo adjustments */
+@media (max-width: 767px) {
+    .dtr-logo img,
+    .logo-default img,
+    .logo-alt img {
+        width: 160px; /* Slightly smaller on mobile */
+        height: 32px;
+    }
+}
 </style>
 </head>
 <body>
@@ -724,7 +743,7 @@ a:hover {
         <div class="container"> 
             
             <!-- small devices logo --> 
-            <a href="index.html" class="text-logo">OptiNest<span>Digital</span></a>
+            <a href="index.html" class="dtr-logo"><img src="assets/images/logo.png" alt="OptiNest Digital Logo" style="width: 200px; height: 40px; object-fit: contain;"></a>
             <!-- small devices logo ends --> 
             
             <!-- menu button -->
@@ -745,10 +764,10 @@ a:hover {
                 <div class="dtr-header-left"> 
                     
                     <!-- logo --> 
-                    <a class="logo-default dtr-scroll-link text-logo" href="#home">OptiNest<span>Digital</span></a>
+                    <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo.png" alt="OptiNest Digital Logo" style="width: 200px; height: 40px; object-fit: contain;"></a>
                     
                     <!-- logo on scroll --> 
-                    <a class="logo-alt dtr-scroll-link text-logo" href="#home">OptiNest<span>Digital</span></a>
+                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo.png" alt="OptiNest Digital Logo" style="width: 200px; height: 40px; object-fit: contain;"></a>
                     <!-- logo on scroll ends --> 
                     
                 </div>
