@@ -1807,7 +1807,41 @@ ${message}`;
 }
 
 let isUSD = false;
-const exchangeRate = 0.018; // 1 PHP = 0.018 USD (approximate)
+let exchangeRate = 0.018; // Default fallback rate
+
+// Function to fetch real-time exchange rate
+async function fetchExchangeRate() {
+    try {
+        const response = await fetch('https://open.er-api.com/v6/latest/PHP');
+        const data = await response.json();
+        if (data.rates && data.rates.USD) {
+            exchangeRate = data.rates.USD;
+            console.log('Updated exchange rate:', exchangeRate);
+        }
+    } catch (error) {
+        console.log('Failed to fetch exchange rate, using default:', error);
+    }
+}
+
+// Call fetchExchangeRate when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    fetchExchangeRate();
+    // Update rates every hour
+    setInterval(fetchExchangeRate, 3600000);
+    
+    const prices = document.querySelectorAll('.price-amount');
+    prices.forEach(price => {
+        price.setAttribute('data-original-price', price.textContent.replace(/,/g, ''));
+    });
+    detectLocationAndSetCurrency();
+    
+    // Clear any existing plan details if coming directly to the contact form
+    if (!window.location.hash.includes('contact')) {
+        document.getElementById('selected_plan').value = '';
+        document.getElementById('plan_price').value = '';
+        document.getElementById('plan_features').value = '';
+    }
+});
 
 function updatePrices() {
     const prices = document.querySelectorAll('.price-amount');
@@ -1844,22 +1878,6 @@ function toggleCurrency() {
     button.textContent = isUSD ? 'Switch to PHP' : 'Switch to USD';
     updatePrices();
 }
-
-// Add this to your existing DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', function() {
-    const prices = document.querySelectorAll('.price-amount');
-    prices.forEach(price => {
-        price.setAttribute('data-original-price', price.textContent.replace(/,/g, ''));
-    });
-    detectLocationAndSetCurrency();
-    
-    // Clear any existing plan details if coming directly to the contact form
-    if (!window.location.hash.includes('contact')) {
-        document.getElementById('selected_plan').value = '';
-        document.getElementById('plan_price').value = '';
-        document.getElementById('plan_features').value = '';
-    }
-});
 
 // Function to detect user's location and set default currency
 async function detectLocationAndSetCurrency() {
