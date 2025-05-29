@@ -3,7 +3,8 @@ name: 'Optinest Digital'
 description: 'Boutique digital agency specializing in high-performance websites and smart SEO strategies..'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/ico.png'
-baseurl: https://optinestdigital.com
+baseurl: ''
+url: 'https://optinestdigital.com'
 email: 'optinestdigital@gmail.com'
  
 include: ["_pages"]
@@ -21,7 +22,7 @@ authors:
       name:           Admin
       site:           https://optinestdigital.com
       avatar:         assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      bio:            "Hi, I am Boks, the author of Mundana, the theme you're currently previewing. I hope you like it!"
       email:          optinestdigital@gmail.com
       twitter:        https://optinestdigital.com/optinestdigital
 
