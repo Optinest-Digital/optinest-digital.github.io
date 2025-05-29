@@ -3,7 +3,7 @@ name: 'Optinest Digital'
 description: 'Boutique digital agency specializing in high-performance websites and smart SEO strategies..'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/ico.png'
-baseurl: 'https://optinestdigital.com'
+baseurl: '/'
 email: 'optinestdigital@gmail.com'
  
 include: ["_pages"]
