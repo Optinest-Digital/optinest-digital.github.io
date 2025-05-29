@@ -19,12 +19,12 @@ plugins:
   
 authors:
     admin:
-      name:           Admin
+      name:           Optinest
       site:           https://optinestdigital.com
-      avatar:         assets/images/avatar1.jpg
-      bio:            "Hi, I am Boks, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      avatar:         assets/images/logo.png
+      bio:            "We're a boutique digital agency that specializes in creating high-performance websites and implementing smart SEO strategies to help businesses thrive in the digital landscape."
       email:          optinestdigital@gmail.com
-      twitter:        https://optinestdigital.com/optinestdigital
+      twitter:        https://facebook.com/optinestdigital
 
     
  
