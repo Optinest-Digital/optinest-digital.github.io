@@ -66,16 +66,18 @@ function lunr_search(term) {
 }
 </script>
 <style>
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
+.lunrsearchresult .title {color: #060606;}
+.lunrsearchresult .url {color: silver;}
+.lunrsearchresult li {margin: 1em;}
+.lunrsearchresult p {margin: 0.25em 0;}
+#lunrsearch::placeholder {
+    font-weight: bold;
+}
 </style>
 
 
 
 
 <form class="bd-search hidden-sm-down" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-<input type="text" class="form-control text-small"  id="lunrsearch" name="q" value="" placeholder="Type keyword and enter..."> 
+<input type="text" class="form-control text-small" id="lunrsearch" name="q" value="" placeholder="Type keyword and enter..." style="border-color: #7832e2 !important; font-weight: bold;"> 
 </form>

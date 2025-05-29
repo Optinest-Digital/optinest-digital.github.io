@@ -27,6 +27,39 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+    <style>
+        /* Logo styles */
+.dtr-logo,
+.logo-default,
+.logo-alt {
+    display: block;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.dtr-logo img,
+.logo-default img,
+.logo-alt img {
+    width: 100%;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive logo adjustments */
+@media (max-width: 767px) {
+    .dtr-logo img,
+    .logo-default img,
+    .logo-alt img {
+        width: 200px;
+        height: 48px;
+    }
+}
+
+    </style>
 
     {% include tracking-header.html %}
 
@@ -38,7 +71,9 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><strong>{{site.name}}</strong></a>
+        <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="OptiNest Digital Logo"></a>
+      
+          
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,15 +112,15 @@
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>Mundana</strong></span>
-                <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
-
-                <!--  Github Repo Star Btn-->
-                <a class="text-dark ml-1" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="OptiNest Digital Logo"></a>
+                
+               
+      
+ 
 
             </div>
             <div>
-                Made with <a target="_blank" class="text-dark font-weight-bold" href="https://www.wowthemes.net/mundana-jekyll-theme/"> Mundana Jekyll Theme </a> by <a class="text-dark" target="_blank" href="https://www.wowthemes.net">WowThemes</a>.
+                Copyright © OptiNest Digital  <script>document.write(new Date().getFullYear())</script>. All rights reserved.
             </div>
         </div>
         </div>

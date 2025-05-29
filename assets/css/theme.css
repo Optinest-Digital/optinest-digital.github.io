@@ -31,10 +31,10 @@ a,a:hover {
 	text-decoration:none;
 }
 a {
-	color:#03a87c;
+	color:#4dabff;
 }
 a.text-dark:hover {
-	color:#03a87c !important;
+	color:#4dabff !important;
 }
 .c-pointer:hover {
 	cursor:pointer;
@@ -112,7 +112,7 @@ a.text-dark:hover {
 	box-shadow:none;
 }
 .btn-link.btn-primary {
-	color:#03a87c;
+	color:#4dabff;
 	border-color:transparent;
 }
 .btn-link.btn-secondary {
@@ -120,7 +120,7 @@ a.text-dark:hover {
 	border-color:transparent;
 }
 .btn-link.btn-success {
-	color:#03a87c;
+	color:#4dabff;
 	border-color:transparent;
 }
 .btn-link.btn-info {
@@ -192,14 +192,14 @@ a.text-dark:hover {
 	font-weight:400;
 }
 .navbar .highlight .nav-link {
-	color:#03a87c !important;
-	border:1px solid #03a87c;
+	color:#4dabff !important;
+	border:1px solid #4dabff;
 	padding:0.3rem 1rem;
 	border-radius:3px;
 	font-size:.93rem;
 }
 .navbar .highlight .nav-link:hover {
-	background:#03a87c;
+	background:#4dabff;
 	color:#fff !important;
 }
 .navbar-brand {
@@ -334,13 +334,13 @@ a.text-dark:hover {
 	background-color:rgba(23,29,90,0.5);
 }
 .bg-primary {
-	fill:#03a87c !important;
+	fill:#4dabff !important;
 }
 .bg-secondary {
 	fill:#7832e2 !important;
 }
 .bg-success {
-	fill:#03a87c !important;
+	fill:#4dabff !important;
 }
 .bg-info {
 	fill:#09ebaf !important;
@@ -407,7 +407,7 @@ a.text-dark:hover {
 }
 .card a:hover {
 	text-decoration:none;
-	color:#03a87c;
+	color:#4dabff;
 }
 .card-pricing .card ul li {
 	margin-bottom:1.5rem;
@@ -437,8 +437,8 @@ a.text-dark:hover {
 }
 .alert-primary {
 	color:#fff;
-	background-color:#03a87c;
-	border-color:#03a87c;
+	background-color:#4dabff;
+	border-color:#4dabff;
 }
 .alert-primary hr {
 	border-top-color:#038f6a;
@@ -459,8 +459,8 @@ a.text-dark:hover {
 }
 .alert-success {
 	color:#fff;
-	background-color:#03a87c;
-	border-color:#03a87c;
+	background-color:#4dabff;
+	border-color:#4dabff;
 }
 .alert-success hr {
 	border-top-color:#038f6a;
@@ -628,10 +628,11 @@ ol.list-featured li:before {
     content: "0" counter(my-awesome-counter);
     font-weight: bold;
     font-size: 2rem;
+	color:#4dabff;
     margin-right: 0.5rem;
     font-family: Arial;
     line-height: 1;
-    opacity: .1;
+    opacity: .2;
 }
 .catlist .sep:last-child {
 	display:none;
