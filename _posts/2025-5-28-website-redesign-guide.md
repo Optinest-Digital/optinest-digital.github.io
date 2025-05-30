@@ -97,7 +97,7 @@ Most people browse on their phones. Ask your team: **Will this site look great o
 
 ## 8. Make It Easy to Find
 
-Your website should show up in search results. This is where SEO (Search Engine Optimization) comes in. You don’t need to do the techy stuff, but make sure:
+Your website should show up in search results. This is where SEO ([Search Engine Optimization](/web-design-seo)) comes in. You don’t need to do the techy stuff, but make sure:
 - Every page has a clear topic
 - Titles and headings make sense
 - You’re using real, helpful words your audience would search for
