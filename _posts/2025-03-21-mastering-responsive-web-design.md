@@ -108,6 +108,6 @@ Remember to:
 - Use flexible grids and images
 - Implement proper media queries
 - Test thoroughly on various devices
-- Optimize for performance
+- [Optimize for performance](/web-design-seo)
 
 Stay tuned for more web design tips and tutorials! 

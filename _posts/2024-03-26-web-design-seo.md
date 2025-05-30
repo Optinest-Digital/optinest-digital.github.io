@@ -173,7 +173,7 @@ The relationship between web design and SEO is crucial for creating successful w
 Creating an SEO-friendly website requires balancing technical optimization with user experience. By following these guidelines, you can create websites that rank well in search engines while providing excellent user experience.
 
 Key takeaways:
-- Focus on mobile optimization
+- Focus on [mobile optimization](/mastering-responsive-web-design)
 - Optimize page speed
 - Implement proper structure
 - Create quality content
