@@ -15,14 +15,21 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: "permalink", widget: "string", required: false }
+     
       - {
-          label: "Sticky",
-          name: "featured",
+          label: "Tag",
+          name: "tags",
           widget: "select",
-          options: ["false", "true"],
+          options: ["featured", "sticky"],
         }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      
+      - {
+          label: "TOC",
+          name: "toc",
+          widget: "select",
+          options: ["true", "false"],
+        }
+     
       - { label: "Featured", name: "image", widget: "image" }
       - { label: "Category", name: "categories", widget: "list" }
       - {
