@@ -6,6 +6,8 @@ image: assets/images/blog/core-web-vitals.svg
 author: admin
 ---
 
+
+
 Core Web Vitals are essential metrics that measure the user experience of your website. This guide explores how to optimize these key performance indicators for better search rankings and user satisfaction.
 
 ## Understanding Core Web Vitals
