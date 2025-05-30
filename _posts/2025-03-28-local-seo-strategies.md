@@ -147,5 +147,4 @@ For more insights into SEO optimization, check out our articles on [Web Design a
 ## Additional Resources
 
 - [Mobile SEO Strategies](/mobile-seo-strategies/)
-- [Content Marketing for Local SEO](/content-marketing-local-seo/)
-- [Local SEO Case Studies](/local-seo-case-studies/) 
+ 
