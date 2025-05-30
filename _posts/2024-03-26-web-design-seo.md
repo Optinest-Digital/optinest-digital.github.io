@@ -18,7 +18,7 @@ The relationship between web design and SEO is crucial for creating successful w
 
 ### 2. Page Speed
 - Loading time impact
-- Core Web Vitals
+- [Core Web Vitals](/core-web-vitals-guide)
 - Image optimization
 - Code minification
 
