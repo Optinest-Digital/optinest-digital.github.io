@@ -29,6 +29,6 @@ collections:
           label: "Author",
           name: "author",
           widget: "select",
-          options: ["Killcradmineek", "Godsmurf"],
+          options: ["admin", "Godsmurf"],
         }
       - { label: "Body", name: "body", widget: "markdown" }
