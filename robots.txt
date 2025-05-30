@@ -1,0 +1,9 @@
+
+User-agent: *
+Disallow: 
+Crawl-delay: 5
+Disallow: /cgi-bin/
+Disallow: /admin
+Disallow: /c11cb29c-54d7-47ce-9537-04c085af3351.html
+Disallow: /googlef513c3ee9609ccc8.html
+Sitemap: https://optinestdigital.com/sitemap.xml
