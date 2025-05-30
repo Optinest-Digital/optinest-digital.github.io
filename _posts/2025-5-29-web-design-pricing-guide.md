@@ -4,7 +4,7 @@ title: "Understanding Web Design Pricing: What You Need to Know"
 author: admin
 toc: true
 categories: ["web design", "pricing", "website cost", "monthly web design", "one-time payment", "small business", "freelance"]
-image: "assets/images/blog/web-design-pricing.png"
+image: /assets/images/blog/web-design-pricing.png
 tags: featured
 ---
  

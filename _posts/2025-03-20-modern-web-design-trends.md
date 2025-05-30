@@ -2,7 +2,7 @@
 layout: post
 title: "Web Design Trends That Will Shape 2025"
 categories: [Web Design, Trends]
-image: assets/images/blog/web-design-trends.svg
+image: /assets/images/blog/web-design-trends.svg
 tags: featured
 author: admin
 toc: true

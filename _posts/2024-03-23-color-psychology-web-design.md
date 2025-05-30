@@ -2,7 +2,7 @@
 layout: post
 title: "The Psychology of Color in Web Design"
 categories: [Web Design, Psychology]
-image: assets/images/blog/color-psychology.png
+image: /assets/images/blog/color-psychology.png
 tags: [sticky]
 author: admin
 toc: true

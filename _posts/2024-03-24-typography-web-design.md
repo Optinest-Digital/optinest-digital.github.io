@@ -2,7 +2,7 @@
 layout: post
 title: "Typography in Web Design: A Comprehensive Guide"
 categories: [Web Design, Typography]
-image: assets/images/blog/typography.png
+image: /assets/images/blog/typography.png
 author: admin
 toc: true
 ---

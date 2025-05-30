@@ -2,7 +2,7 @@
 layout: post
 title: "Technical SEO: A Comprehensive Guide"
 categories: [SEO, Technical]
-image: assets/images/blog/technical-seo.svg
+image: /assets/images/blog/technical-seo.svg
 tags: featured
 author: admin
 toc: true

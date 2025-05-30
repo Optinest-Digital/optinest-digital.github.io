@@ -2,7 +2,7 @@
 layout: post
 title: "Mastering Responsive Web Design: A Comprehensive Guide"
 categories: [Web Design, Development]
-image: assets/images/blog/responsive-design.svg
+image: /assets/images/blog/responsive-design.svg
 author: admin
 toc: true
 ---

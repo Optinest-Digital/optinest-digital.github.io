@@ -2,7 +2,7 @@
 layout: post
 title: "Essential Web Design Tools"
 categories: [Web Design, Tools]
-image: assets/images/blog/web-design-tools.png
+image: /assets/images/blog/web-design-tools.png
 tags: featured
 author: admin
 toc: true

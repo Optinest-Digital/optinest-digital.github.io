@@ -2,7 +2,7 @@
 layout: post
 title: "Essential Web Design Principles for Creating Engaging Websites"
 categories: [Web Design, UX]
-image: assets/images/blog/design-principles.png
+image: /assets/images/blog/design-principles.png
 author: admin
 toc: true
 ---

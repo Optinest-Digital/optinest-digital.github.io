@@ -2,7 +2,7 @@
 layout: post
 title: "Mobile SEO Strategies: A Complete Guide"
 categories: [SEO, Mobile]
-image: assets/images/blog/mobile-seo.svg
+image: /assets/images/blog/mobile-seo.svg
 author: admin
 toc: true
 ---

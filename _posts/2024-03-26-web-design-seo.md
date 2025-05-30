@@ -2,7 +2,7 @@
 layout: post
 title: "Web Design and SEO: A Complete Guide to Optimization"
 categories: [Web Design, SEO]
-image: assets/images/blog/web-design-seo.png
+image: /assets/images/blog/web-design-seo.png
 author: admin
 toc: true
 ---

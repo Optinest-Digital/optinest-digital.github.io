@@ -2,7 +2,7 @@
 layout: post
 title: "The Psychology Behind Effective Web Design"
 categories: [Web Design, Psychology]
-image: assets/images/blog/web-psychology.png
+image: /assets/images/blog/web-psychology.png
 tags: featured
 author: admin
 toc: true

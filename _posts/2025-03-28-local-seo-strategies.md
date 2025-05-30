@@ -2,7 +2,7 @@
 layout: post
 title: "Local SEO Strategies: A Complete Guide"
 categories: [SEO, Local Marketing]
-image: assets/images/blog/local-seo.svg
+image: /assets/images/blog/local-seo.svg
 author: admin
 toc: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Content SEO Strategies: A Complete Guide"
 categories: [SEO, Content Marketing]
-image: assets/images/blog/content-seo.svg
+image: /assets/images/blog/content-seo.svg
 author: admin
 toc: true
 ---
