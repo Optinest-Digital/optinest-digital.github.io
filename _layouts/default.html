@@ -123,11 +123,28 @@
     color: #4dabff;
 }
 
+/* Active/Clicked TOC Link */
+#table-of-contents a.active {
+    background: #f0e6ff;
+    color: #6f42c1;
+    border-left: 3px solid #6f42c1;
+    font-weight: 500;
+}
+
+#table-of-contents a.active:hover {
+    background: #e6d9ff;
+    color: #5a32a3;
+}
+
 #table-of-contents a::before {
     content: "→";
     margin-right: 10px;
     color: #4dabff;
     font-weight: bold;
+}
+
+#table-of-contents a.active::before {
+    color: #6f42c1;
 }
 
 /* Main content wrapper for proper sidebar layout */
@@ -227,6 +244,44 @@
 
     <script src="{{site.baseurl}}/assets/js/theme.js"></script>
 
+    <!-- Table of Contents Active State -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tocLinks = document.querySelectorAll('#table-of-contents a');
+            
+            // Function to set active link
+            function setActiveLink() {
+                const fromTop = window.scrollY;
+                
+                tocLinks.forEach(link => {
+                    const section = document.querySelector(link.hash);
+                    
+                    if (
+                        section.offsetTop <= fromTop + 100 &&
+                        section.offsetTop + section.offsetHeight > fromTop + 100
+                    ) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Set active link on scroll
+            window.addEventListener('scroll', setActiveLink);
+            
+            // Set active link on click
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    tocLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Initial check
+            setActiveLink();
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="bg-white border-top p-3 text-muted small">
