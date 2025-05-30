@@ -12,7 +12,7 @@ The relationship between web design and SEO is crucial for creating successful w
 
 ### 1. Mobile Responsiveness
 - Google's mobile-first indexing
-- Responsive design principles
+- [Responsive design principles](/mastering-responsive-web-design)
 - Mobile-friendly testing
 - Performance optimization
 
