@@ -59,6 +59,123 @@
     }
 }
 
+/* Table of Contents Styles */
+#table-of-contents {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    width: 300px;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#table-of-contents h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4dabff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+}
+
+/* Table of Contents Title */
+#table-of-contents h2::before {
+    content: "📑";
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+#table-of-contents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#table-of-contents li {
+    margin-bottom: 12px;
+}
+
+#table-of-contents a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+#table-of-contents a:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+    color: #4dabff;
+}
+
+#table-of-contents a::before {
+    content: "→";
+    margin-right: 10px;
+    color: #4dabff;
+    font-weight: bold;
+}
+
+/* Main content wrapper for proper sidebar layout */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+/* Responsive Table of Contents */
+@media (max-width: 991px) {
+    #table-of-contents {
+        display: none; /* Hide on mobile */
+    }
+    
+    .content-wrapper {
+        display: block;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+}
+
+/* Scrollbar styling for table of contents */
+#table-of-contents::-webkit-scrollbar {
+    width: 6px;
+}
+
+#table-of-contents::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#table-of-contents::-webkit-scrollbar-thumb {
+    background: #4dabff;
+    border-radius: 3px;
+}
+
+#table-of-contents::-webkit-scrollbar-thumb:hover {
+    background: #3d9bef;
+}
+
     </style>
 
     {% include tracking-header.html %}
@@ -95,7 +212,11 @@
 
     <!-- Content -->
     <main role="main" class="site-content">
-        {{ content }}
+        <div class="content-wrapper">
+            <div class="main-content">
+                {{ content }}
+            </div>
+        </div>
     </main>
 
 

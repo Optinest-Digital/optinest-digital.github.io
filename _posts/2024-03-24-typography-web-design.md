@@ -4,6 +4,7 @@ title: "Typography in Web Design: A Comprehensive Guide"
 categories: [Web Design, Typography]
 image: assets/images/blog/typography.png
 author: admin
+toc: true
 ---
 
 Typography is a fundamental element of web design that significantly impacts readability, user experience, and brand perception. This guide explores the essential aspects of typography in modern web design.

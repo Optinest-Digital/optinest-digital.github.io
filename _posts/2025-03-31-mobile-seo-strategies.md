@@ -4,6 +4,7 @@ title: "Mobile SEO Strategies: A Complete Guide"
 categories: [SEO, Mobile]
 image: assets/images/blog/mobile-seo.svg
 author: admin
+toc: true
 ---
 
 Mobile SEO is essential in today's digital landscape, where mobile devices account for over half of all web traffic. This guide explores comprehensive strategies for optimizing your website for mobile search and user experience.

@@ -4,6 +4,7 @@ title: "Content SEO Strategies: A Complete Guide"
 categories: [SEO, Content Marketing]
 image: assets/images/blog/content-seo.svg
 author: admin
+toc: true
 ---
 
 Content SEO is the art of creating and optimizing content that ranks well in search engines while providing value to your audience. This guide explores effective strategies for content optimization and creation.

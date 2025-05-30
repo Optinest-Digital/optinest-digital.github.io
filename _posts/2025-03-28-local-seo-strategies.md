@@ -4,6 +4,7 @@ title: "Local SEO Strategies: A Complete Guide"
 categories: [SEO, Local Marketing]
 image: assets/images/blog/local-seo.svg
 author: admin
+toc: true
 ---
 
 Local SEO is crucial for businesses targeting customers in specific geographic areas. This guide explores effective strategies to improve your local search visibility and attract nearby customers.

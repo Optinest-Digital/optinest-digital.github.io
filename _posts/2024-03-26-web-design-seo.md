@@ -4,6 +4,7 @@ title: "Web Design and SEO: A Complete Guide to Optimization"
 categories: [Web Design, SEO]
 image: assets/images/blog/web-design-seo.png
 author: admin
+toc: true
 ---
 
 The relationship between web design and SEO is crucial for creating successful websites. This guide explores how to optimize your web design for search engines while maintaining excellent user experience.

@@ -4,6 +4,7 @@ title: "Mastering Responsive Web Design: A Comprehensive Guide"
 categories: [Web Design, Development]
 image: assets/images/blog/responsive-design.svg
 author: admin
+toc: true
 ---
 
 Responsive web design has become a fundamental requirement in modern web development. This comprehensive guide will help you understand and implement responsive design principles effectively.

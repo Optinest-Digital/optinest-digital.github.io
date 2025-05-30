@@ -12,6 +12,8 @@ ruby "3.2.2"
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'webrick'
 gem 'kramdown-parser-gfm'
+gem 'jekyll-toc'
+
 
 group :jekyll_plugins do
     gem "jekyll", "~> 3.9.0"

@@ -2,6 +2,7 @@
 layout: post
 title:  "A Strategic Guide to Redesigning Your Website"
 author: admin
+toc: true
 categories: [ Web Design, Tips ]
 image: assets/images/blog/website-redesign-guide.png
 tags: featured

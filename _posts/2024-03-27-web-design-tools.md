@@ -5,6 +5,7 @@ categories: [Web Design, Tools]
 image: assets/images/blog/web-design-tools.png
 tags: featured
 author: admin
+toc: true
 ---
 
 Having the right tools is essential for creating effective web designs. This guide covers the most important tools and resources that every web designer should have in their toolkit.

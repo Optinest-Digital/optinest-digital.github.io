@@ -7,7 +7,7 @@ layout: default
 		<div class="h-100 tofront">
 			<div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
 				<div class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
-					<p class="text-uppercase font-weight-bold">
+					<p class="text-lowercase font-weight-bold">
                         <span class="catlist">
 						{% for category in page.categories %}
                           <a class="sscroll text-muted" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase }}</a><span class="sep">, </span>
@@ -42,13 +42,16 @@ layout: default
 	<div class="row justify-content-center">
         
         
-      
+        <div id="table-of-contents">
+			<h2 class="toc-title">Table Of Contents</h2>
+			{% toc %}
+		  </div>
         
 		<div class="col-md-12 col-lg-8">
-            
+           
             <!-- Article -->
 			<article class="article-post">                
-			{{ content }}                
+				{{ content }}             
 			</article>
 			
 			<!-- Tags -->
@@ -101,3 +104,5 @@ layout: default
         </div>
     </div>
 </div>
+
+ 

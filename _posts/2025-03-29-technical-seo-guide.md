@@ -5,6 +5,7 @@ categories: [SEO, Technical]
 image: assets/images/blog/technical-seo.svg
 tags: featured
 author: admin
+toc: true
 ---
 
 Technical SEO is the foundation of a successful search engine optimization strategy. This guide covers essential technical aspects that every website should implement for better search engine visibility.

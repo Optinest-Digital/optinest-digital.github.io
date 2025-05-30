@@ -5,6 +5,7 @@ categories: [Web Design, Psychology]
 image: assets/images/blog/web-psychology.png
 tags: featured
 author: admin
+toc: true
 ---
 
 Understanding the psychological principles behind web design can significantly improve user engagement and conversion rates. This guide explores how psychological principles influence user behavior and decision-making on websites.

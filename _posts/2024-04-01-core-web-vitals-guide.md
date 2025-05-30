@@ -4,6 +4,7 @@ title: "Core Web Vitals: A Complete Guide"
 categories: [SEO, Performance]
 image: assets/images/blog/core-web-vitals.svg
 author: admin
+toc: true
 ---
 
 

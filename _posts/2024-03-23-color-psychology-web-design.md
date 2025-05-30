@@ -5,6 +5,7 @@ categories: [Web Design, Psychology]
 image: assets/images/blog/color-psychology.png
 tags: [sticky]
 author: admin
+toc: true
 ---
 
 Color is one of the most powerful tools in a web designer's arsenal. It can evoke emotions, influence decisions, and create memorable user experiences. Understanding color psychology is essential for creating effective web designs that resonate with your target audience.

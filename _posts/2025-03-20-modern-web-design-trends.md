@@ -5,6 +5,7 @@ categories: [Web Design, Trends]
 image: assets/images/blog/web-design-trends.svg
 tags: featured
 author: admin
+toc: true
 ---
 
 As we look ahead to 2025, web design is poised for transformative changes driven by emerging technologies and evolving user expectations. Let's explore the trends that will define the future of web design.
