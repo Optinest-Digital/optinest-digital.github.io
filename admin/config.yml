@@ -39,3 +39,53 @@ collections:
           options: ["admin", "Godsmurf"],
         }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
+      - { label: "SEO Description", name: "seo_description", widget: "text", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "_data/settings.yml"
+        label: "General Settings"
+        name: "general"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Site Description", name: "description", widget: "text" }
+          - { label: "Site Logo", name: "logo", widget: "image", required: false }
+          - { label: "Favicon", name: "favicon", widget: "image", required: false }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Address", name: "address", widget: "text", required: false }
+          - { label: "Social Media", name: "social", widget: "list", required: false, fields:
+              - { label: "Platform", name: "platform", widget: "select", options: ["Facebook", "Twitter", "Instagram", "LinkedIn"] }
+              - { label: "URL", name: "url", widget: "string" }
+            }
+      
+      - file: "_data/navigation.yml"
+        label: "Navigation"
+        name: "navigation"
+        fields:
+          - { label: "Main Menu", name: "main", widget: "list", fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "New Tab", name: "new_tab", widget: "boolean", required: false }
+            }
+          - { label: "Footer Menu", name: "footer", widget: "list", fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "New Tab", name: "new_tab", widget: "boolean", required: false }
+            }
