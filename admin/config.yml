@@ -1,9 +1,8 @@
 # config.yml
-
+logo_url: "assets/images/logo.png"
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-  logo_url: "assets/images/logo.png"
 media_folder: "assets/images/blog"
 collections:
   - name: "blog"
@@ -52,7 +51,6 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
-       
       - { label: "Body", name: "body", widget: "markdown" }
 
   
