@@ -205,7 +205,7 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="OptiNest Digital Logo"></a>
+        <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{site.name}}"></a>
       
           
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -252,14 +252,19 @@
             // Function to set active link
             function setActiveLink() {
                 const fromTop = window.scrollY;
+                let currentSection = null;
                 
+                // Find the current section
                 tocLinks.forEach(link => {
                     const section = document.querySelector(link.hash);
-                    
-                    if (
-                        section.offsetTop <= fromTop + 100 &&
-                        section.offsetTop + section.offsetHeight > fromTop + 100
-                    ) {
+                    if (section && section.offsetTop <= fromTop + 100) {
+                        currentSection = link;
+                    }
+                });
+                
+                // Update active states
+                tocLinks.forEach(link => {
+                    if (link === currentSection) {
                         link.classList.add('active');
                     } else {
                         link.classList.remove('active');
@@ -288,7 +293,7 @@
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="OptiNest Digital Logo"></a>
+                <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{site.name}}"></a>
                 
                
       
@@ -296,7 +301,7 @@
 
             </div>
             <div>
-                Copyright © OptiNest Digital  <script>document.write(new Date().getFullYear())</script>. All rights reserved.
+                Copyright © {{site.name}}  <script>document.write(new Date().getFullYear())</script>. All rights reserved.
             </div>
         </div>
         </div>
