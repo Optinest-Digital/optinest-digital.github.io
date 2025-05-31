@@ -79,7 +79,10 @@ collections:
         label: "Authors"
         name: "authors"
         fields:
-          - { label: "Admin", name: "admin", widget: "object", fields:
+          - label: "Admin"
+            name: "admin"
+            widget: "object"
+            fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Website", name: "site", widget: "string" }
               - { label: "Avatar", name: "avatar", widget: "image" }
@@ -87,7 +90,6 @@ collections:
               - { label: "Email", name: "email", widget: "string" }
               - { label: "Facebook", name: "facebook", widget: "string" }
               - { label: "Twitter", name: "twitter", widget: "string" }
-            }
 
       - file: "_data/navigation.yml"
         label: "Navigation"
