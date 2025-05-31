@@ -59,22 +59,36 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
-      - file: "_data/settings.yml"
-        label: "General Settings"
-        name: "general"
+      - file: "_config.yml"
+        label: "Site Settings"
+        name: "site"
         fields:
-          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Site Name", name: "name", widget: "string" }
           - { label: "Site Description", name: "description", widget: "text" }
-          - { label: "Site Logo", name: "logo", widget: "image", required: false }
-          - { label: "Favicon", name: "favicon", widget: "image", required: false }
-          - { label: "Email", name: "email", widget: "string", required: false }
-          - { label: "Phone", name: "phone", widget: "string", required: false }
-          - { label: "Address", name: "address", widget: "text", required: false }
-          - { label: "Social Media", name: "social", widget: "list", required: false, fields:
-              - { label: "Platform", name: "platform", widget: "select", options: ["Facebook", "Twitter", "Instagram", "LinkedIn"] }
-              - { label: "URL", name: "url", widget: "string" }
+          - { label: "Site Logo", name: "logo", widget: "image" }
+          - { label: "Favicon", name: "favicon", widget: "image" }
+          - { label: "Base URL", name: "baseurl", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Posts Per Page", name: "paginate", widget: "number" }
+          - { label: "Permalink Structure", name: "permalink", widget: "string" }
+          - { label: "Markdown Processor", name: "markdown", widget: "select", options: ["kramdown", "redcarpet"] }
+          - { label: "Syntax Highlighter", name: "highlighter", widget: "select", options: ["rouge", "pygments"] }
+
+      - file: "_data/authors.yml"
+        label: "Authors"
+        name: "authors"
+        fields:
+          - { label: "Admin", name: "admin", widget: "object", fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Website", name: "site", widget: "string" }
+              - { label: "Avatar", name: "avatar", widget: "image" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "Twitter", name: "twitter", widget: "string" }
             }
-      
+
       - file: "_data/navigation.yml"
         label: "Navigation"
         name: "navigation"
