@@ -143,7 +143,7 @@ Key takeaways:
 - Manage online reviews
 - Track local performance
 
-For more insights into SEO optimization, check out our articles on [Web Design and SEO](/web-design-seo/) and [Technical SEO Best Practices](/technical-seo-best-practices/). And if you're looking to improve your website's performance, our [Website Redesign Guide](/website-redesign-guide/) provides valuable tips.
+For more insights into SEO optimization, check out our articles on [Web Design and SEO](/web-design-seo/) and [Technical SEO Best Practices](/technical-seo-guie/). And if you're looking to improve your website's performance, our [Website Redesign Guide](/website-redesign-guide/) provides valuable tips.
 
 ## Additional Resources
 
