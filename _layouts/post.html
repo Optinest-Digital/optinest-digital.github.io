@@ -185,10 +185,15 @@ function initializeTOC() {
             }
         });
 
-        // Add smooth scrolling with passive event listener
+        // Add click handling for TOC links
         Array.from(tocLinks).forEach(link => {
-            link.addEventListener('click', function(e) {
+            // Remove any existing click handlers
+            const newLink = link.cloneNode(true);
+            link.parentNode.replaceChild(newLink, link);
+            
+            newLink.addEventListener('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
                 const targetId = this.getAttribute('href');
                 if (targetId) {
                     const targetElement = document.getElementById(targetId.substring(1));
@@ -203,7 +208,7 @@ function initializeTOC() {
                         });
                     }
                 }
-            }, { passive: true });
+            });
         });
 
         // Optimize scroll handling with passive event listener
