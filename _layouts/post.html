@@ -180,35 +180,12 @@ function initializeTOC() {
                 const targetText = decodeURIComponent(href.substring(1));
                 const safeId = headingMap.get(targetText.toLowerCase());
                 if (safeId) {
+                    // Update the href to use the new ID
                     link.setAttribute('href', '#' + safeId);
+                    // Add the sscroll class to work with theme's smooth scroll
+                    link.classList.add('sscroll');
                 }
             }
-        });
-
-        // Add click handling for TOC links
-        Array.from(tocLinks).forEach(link => {
-            // Remove any existing click handlers
-            const newLink = link.cloneNode(true);
-            link.parentNode.replaceChild(newLink, link);
-            
-            newLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const targetId = this.getAttribute('href');
-                if (targetId) {
-                    const targetElement = document.getElementById(targetId.substring(1));
-                    if (targetElement) {
-                        const headerOffset = 100;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
         });
 
         // Optimize scroll handling with passive event listener
