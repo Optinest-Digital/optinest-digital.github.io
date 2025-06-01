@@ -108,51 +108,10 @@ layout: default
 <script>
 // Function to create a safe ID from text
 function createSafeId(text) {
-    // Ensure ID starts with a letter and is URL-safe
-    const safeText = text
+    return 'section-' + text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
-    return 'section-' + safeText;
-}
-
-// Function to escape CSS selector
-function escapeSelector(selector) {
-    return selector.replace(/[!"#$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, '\\$&');
-}
-
-// Function to set active link in TOC
-function setActiveLink() {
-    const toc = document.getElementById('toc');
-    if (!toc) return;
-
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const tocLinks = toc.getElementsByTagName('a');
-    const scrollPosition = window.scrollY;
-
-    // Find the current active heading
-    let currentHeading = null;
-    for (const heading of headings) {
-        const headingTop = heading.getBoundingClientRect().top + scrollPosition;
-        if (headingTop <= scrollPosition + 100) {
-            currentHeading = heading;
-        } else {
-            break;
-        }
-    }
-
-    // Update active state of TOC links
-    Array.from(tocLinks).forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && currentHeading) {
-            const targetId = href.substring(1);
-            if (targetId === currentHeading.id) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        }
-    });
 }
 
 // Function to initialize TOC
@@ -160,21 +119,15 @@ function initializeTOC() {
     const toc = document.getElementById('toc');
     const article = document.getElementById('article-content');
     
-    if (!toc || !article) {
-        console.warn('TOC or article element not found');
-        return;
-    }
+    if (!toc || !article) return;
 
     try {
-        // Process headings first
+        // Add IDs to headings
         const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        const headingMap = new Map();
-
         headings.forEach(heading => {
-            const headingText = heading.textContent.trim();
-            const safeId = createSafeId(headingText);
-            heading.id = safeId;
-            headingMap.set(headingText.toLowerCase(), safeId);
+            if (!heading.id) {
+                heading.id = createSafeId(heading.textContent);
+            }
         });
 
         // Update TOC links
@@ -183,56 +136,75 @@ function initializeTOC() {
             const href = link.getAttribute('href');
             if (href && href.startsWith('#')) {
                 const targetText = decodeURIComponent(href.substring(1));
-                const safeId = headingMap.get(targetText.toLowerCase());
-                if (safeId) {
-                    // Update the href to use the new ID
-                    link.setAttribute('href', '#' + safeId);
-                    // Add the sscroll class to work with theme's smooth scroll
-                    link.classList.add('sscroll');
+                const targetHeading = Array.from(headings).find(h => 
+                    h.textContent.trim().toLowerCase() === targetText.toLowerCase()
+                );
+                if (targetHeading) {
+                    link.setAttribute('href', '#' + targetHeading.id);
                 }
             }
         });
 
-        // Optimize scroll handling with passive event listener
-        let scrollTimeout;
+        // Add click handlers for smooth scroll
+        Array.from(tocLinks).forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId.substring(1));
+                    if (targetElement) {
+                        // Remove active class from all links
+                        Array.from(tocLinks).forEach(l => l.classList.remove('active'));
+                        // Add active class to clicked link
+                        this.classList.add('active');
+                        
+                        // Smooth scroll to target
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Update active link on scroll
         window.addEventListener('scroll', function() {
-            if (scrollTimeout) {
-                window.cancelAnimationFrame(scrollTimeout);
+            const scrollPosition = window.scrollY;
+            
+            // Find the current section
+            let currentSection = null;
+            for (const heading of headings) {
+                const headingTop = heading.getBoundingClientRect().top + scrollPosition;
+                if (headingTop <= scrollPosition + 100) {
+                    currentSection = heading;
+                } else {
+                    break;
+                }
             }
-            scrollTimeout = window.requestAnimationFrame(setActiveLink);
-        }, { passive: true });
 
-        // Add wheel event listener with passive option
-        window.addEventListener('wheel', function() {
-            if (scrollTimeout) {
-                window.cancelAnimationFrame(scrollTimeout);
+            // Update active link
+            if (currentSection) {
+                Array.from(tocLinks).forEach(link => {
+                    if (link.getAttribute('href') === '#' + currentSection.id) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
             }
-            scrollTimeout = window.requestAnimationFrame(setActiveLink);
-        }, { passive: true });
-
-        // Initial call to set active link
-        setActiveLink();
+        });
 
     } catch (error) {
         console.warn('TOC initialization failed:', error);
     }
 }
 
-// Wait for both DOM and TOC to be ready
-function waitForTOC() {
-    const toc = document.getElementById('toc');
-    if (toc && toc.children.length > 0) {
-        initializeTOC();
-    } else {
-        requestAnimationFrame(waitForTOC);
-    }
-}
-
-// Start initialization when DOM is ready
+// Initialize when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', waitForTOC);
+    document.addEventListener('DOMContentLoaded', initializeTOC);
 } else {
-    waitForTOC();
+    initializeTOC();
 }
 </script>
 
@@ -245,7 +217,6 @@ if (document.readyState === 'loading') {
     padding: 1rem;
     background: #f8f9fa;
     border-radius: 0.25rem;
-    will-change: transform;
 }
 
 .toc-nav {
@@ -265,20 +236,18 @@ if (document.readyState === 'loading') {
 .toc-nav a {
     color: #495057;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
     display: block;
     padding: 0.25rem 0;
 }
 
-.toc-nav a:hover,
-.toc-nav a.active {
+.toc-nav a:hover {
     color: #6f42c1;
-    text-decoration: none;
 }
 
-.toc-nav .active {
-    font-weight: bold;
+.toc-nav a.active {
     color: #6f42c1;
+    font-weight: bold;
     border-left: 3px solid #6f42c1;
     padding-left: 0.5rem;
 }
