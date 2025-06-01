@@ -123,7 +123,7 @@ function initializeTOC() {
 
     try {
         // Add IDs to headings
-        const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        const headings = article.querySelectorAll('h2, h3');
         headings.forEach(heading => {
             if (!heading.id) {
                 heading.id = createSafeId(heading.textContent);
@@ -141,6 +141,10 @@ function initializeTOC() {
                 );
                 if (targetHeading) {
                     link.setAttribute('href', '#' + targetHeading.id);
+                    // Add class based on heading level
+                    if (targetHeading.tagName.toLowerCase() === 'h3') {
+                        link.classList.add('h3-link');
+                    }
                 }
             }
         });
@@ -168,13 +172,14 @@ function initializeTOC() {
             });
         });
 
-        // Update active link on scroll
+        // Update active link on scroll (only for h2)
         window.addEventListener('scroll', function() {
             const scrollPosition = window.scrollY;
             
-            // Find the current section
+            // Find the current h2 section
             let currentSection = null;
-            for (const heading of headings) {
+            const h2s = article.querySelectorAll('h2');
+            for (const heading of h2s) {
                 const headingTop = heading.getBoundingClientRect().top + scrollPosition;
                 if (headingTop <= scrollPosition + 100) {
                     currentSection = heading;
@@ -250,6 +255,22 @@ if (document.readyState === 'loading') {
     font-weight: bold;
     border-left: 3px solid #6f42c1;
     padding-left: 0.5rem;
+}
+
+/* Style for h3 links */
+.toc-nav a.h3-link {
+    color: #0d6efd;
+    font-size: 0.9em;
+    padding-left: 1rem;
+}
+
+.toc-nav a.h3-link:hover {
+    color: #0a58ca;
+}
+
+.toc-nav a.h3-link.active {
+    color: #0a58ca;
+    border-left: 3px solid #0d6efd;
 }
 
 .toc-nav ul ul {
