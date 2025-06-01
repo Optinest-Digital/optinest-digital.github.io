@@ -114,6 +114,27 @@ function createSafeId(text) {
         .replace(/^-+|-+$/g, '');
 }
 
+// Function to scroll TOC to make link visible
+function scrollTOCToLink(link) {
+    const tocWrapper = document.querySelector('.toc-wrapper');
+    if (!tocWrapper || !link) return;
+
+    const wrapperRect = tocWrapper.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    
+    // Check if link is outside the visible area
+    if (linkRect.top < wrapperRect.top || linkRect.bottom > wrapperRect.bottom) {
+        // Calculate the scroll position to center the link
+        const scrollTop = link.offsetTop - tocWrapper.offsetHeight / 2 + link.offsetHeight / 2;
+        
+        // Smooth scroll the TOC wrapper
+        tocWrapper.scrollTo({
+            top: scrollTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
 // Function to initialize TOC
 function initializeTOC() {
     const toc = document.getElementById('toc');
@@ -167,6 +188,9 @@ function initializeTOC() {
                             behavior: 'smooth',
                             block: 'start'
                         });
+
+                        // Scroll TOC to make the clicked link visible
+                        scrollTOCToLink(this);
                     }
                 }
             });
@@ -193,6 +217,8 @@ function initializeTOC() {
                 Array.from(tocLinks).forEach(link => {
                     if (link.getAttribute('href') === '#' + currentSection.id) {
                         link.classList.add('active');
+                        // Scroll TOC to make the active link visible
+                        scrollTOCToLink(link);
                     } else {
                         link.classList.remove('active');
                     }
@@ -222,6 +248,7 @@ if (document.readyState === 'loading') {
     padding: 1rem;
     background: #f8f9fa;
     border-radius: 0.25rem;
+    scroll-behavior: smooth;
 }
 
 .toc-nav {
