@@ -1,5 +1,7 @@
 
 User-agent: *
+Allow: /
+Allow: /blog/
 Disallow: 
 Crawl-delay: 5
 Disallow: /cgi-bin/
