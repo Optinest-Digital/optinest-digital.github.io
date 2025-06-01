@@ -1,6 +1,6 @@
 ---
 title: "Optinest - Author"
-layout: default
+layout: page-sidebar
 permalink: "/author-admin.html"
 ---
 <div class="container">
