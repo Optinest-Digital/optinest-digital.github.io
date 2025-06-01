@@ -106,81 +106,108 @@ layout: default
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait for the TOC to be generated
-    setTimeout(function() {
-        const toc = document.getElementById('toc');
-        const article = document.getElementById('article-content');
-        
-        if (toc && article) {
-            try {
-                // Add IDs to all headings if they don't have them
-                const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
-                headings.forEach((heading, index) => {
-                    if (!heading.id) {
-                        // Create a URL-safe ID from the heading text
-                        const headingText = heading.textContent.trim();
-                        const safeId = headingText
-                            .toLowerCase()
-                            .replace(/[^a-z0-9]+/g, '-')
-                            .replace(/^-+|-+$/g, '');
-                        heading.id = safeId;
-                    }
-                });
+// Function to create a safe ID from text
+function createSafeId(text) {
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
 
-                // Update TOC links to use the new IDs
-                const tocLinks = toc.getElementsByTagName('a');
-                Array.from(tocLinks).forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (href && href.startsWith('#')) {
-                        const targetText = href.substring(1);
-                        const targetHeading = Array.from(headings).find(h => 
-                            h.textContent.trim().toLowerCase() === targetText.toLowerCase()
-                        );
-                        if (targetHeading) {
-                            link.setAttribute('href', '#' + targetHeading.id);
-                        }
-                    }
-                });
+// Function to initialize TOC
+function initializeTOC() {
+    const toc = document.getElementById('toc');
+    const article = document.getElementById('article-content');
+    
+    if (!toc || !article) {
+        console.warn('TOC or article element not found');
+        return;
+    }
 
-                // Initialize scrollspy
-                const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-                    target: '#toc',
-                    offset: 100,
-                    method: 'auto'
-                });
+    try {
+        // Process headings first
+        const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        const headingMap = new Map();
 
-                // Add smooth scrolling to TOC links
-                Array.from(tocLinks).forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        if (targetId) {
-                            const targetElement = document.querySelector(targetId);
-                            if (targetElement) {
-                                const headerOffset = 100;
-                                const elementPosition = targetElement.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        headings.forEach(heading => {
+            const headingText = heading.textContent.trim();
+            const safeId = createSafeId(headingText);
+            heading.id = safeId;
+            headingMap.set(headingText.toLowerCase(), safeId);
+        });
 
-                                window.scrollTo({
-                                    top: offsetPosition,
-                                    behavior: 'smooth'
-                                });
-                            }
-                        }
-                    });
-                });
-
-                // Force scrollspy to update on scroll
-                window.addEventListener('scroll', function() {
-                    scrollSpy.refresh();
-                });
-            } catch (error) {
-                console.warn('ScrollSpy initialization failed:', error);
+        // Update TOC links
+        const tocLinks = toc.getElementsByTagName('a');
+        Array.from(tocLinks).forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const targetText = decodeURIComponent(href.substring(1));
+                const safeId = headingMap.get(targetText.toLowerCase());
+                if (safeId) {
+                    link.setAttribute('href', '#' + safeId);
+                }
             }
-        }
-    }, 100);
-});
+        });
+
+        // Initialize scrollspy
+        const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#toc',
+            offset: 100
+        });
+
+        // Add smooth scrolling
+        Array.from(tocLinks).forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId.substring(1));
+                    if (targetElement) {
+                        const headerOffset = 100;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Optimize scroll handling
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = window.requestAnimationFrame(function() {
+                scrollSpy.refresh();
+            });
+        });
+
+    } catch (error) {
+        console.warn('TOC initialization failed:', error);
+    }
+}
+
+// Wait for both DOM and TOC to be ready
+function waitForTOC() {
+    const toc = document.getElementById('toc');
+    if (toc && toc.children.length > 0) {
+        initializeTOC();
+    } else {
+        requestAnimationFrame(waitForTOC);
+    }
+}
+
+// Start initialization when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', waitForTOC);
+} else {
+    waitForTOC();
+}
 </script>
 
 <style>
@@ -192,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     padding: 1rem;
     background: #f8f9fa;
     border-radius: 0.25rem;
+    will-change: transform;
 }
 
 .toc-nav {
@@ -201,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .toc-nav ul {
     list-style: none;
     padding-left: 1rem;
+    margin: 0;
 }
 
 .toc-nav li {
@@ -228,7 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
     padding-left: 0.5rem;
 }
 
-/* Add styles for different heading levels */
 .toc-nav ul ul {
     margin-left: 1rem;
 }
