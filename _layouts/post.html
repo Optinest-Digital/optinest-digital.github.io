@@ -113,17 +113,37 @@ document.addEventListener('DOMContentLoaded', function() {
         const article = document.getElementById('article-content');
         
         if (toc && article) {
-            // Initialize scrollspy
             try {
                 // Add IDs to all headings if they don't have them
                 const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
                 headings.forEach((heading, index) => {
                     if (!heading.id) {
-                        heading.id = `heading-${index}`;
+                        // Create a URL-safe ID from the heading text
+                        const headingText = heading.textContent.trim();
+                        const safeId = headingText
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, '-')
+                            .replace(/^-+|-+$/g, '');
+                        heading.id = safeId;
                     }
                 });
 
-                // Initialize scrollspy with updated configuration
+                // Update TOC links to use the new IDs
+                const tocLinks = toc.getElementsByTagName('a');
+                Array.from(tocLinks).forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        const targetText = href.substring(1);
+                        const targetHeading = Array.from(headings).find(h => 
+                            h.textContent.trim().toLowerCase() === targetText.toLowerCase()
+                        );
+                        if (targetHeading) {
+                            link.setAttribute('href', '#' + targetHeading.id);
+                        }
+                    }
+                });
+
+                // Initialize scrollspy
                 const scrollSpy = new bootstrap.ScrollSpy(document.body, {
                     target: '#toc',
                     offset: 100,
@@ -131,21 +151,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Add smooth scrolling to TOC links
-                const tocLinks = toc.getElementsByTagName('a');
                 Array.from(tocLinks).forEach(link => {
                     link.addEventListener('click', function(e) {
                         e.preventDefault();
                         const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            const headerOffset = 100;
-                            const elementPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        if (targetId) {
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                const headerOffset = 100;
+                                const elementPosition = targetElement.getBoundingClientRect().top;
+                                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
                         }
                     });
                 });
