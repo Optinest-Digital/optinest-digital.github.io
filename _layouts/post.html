@@ -108,10 +108,12 @@ layout: default
 <script>
 // Function to create a safe ID from text
 function createSafeId(text) {
-    return text
+    // Ensure ID starts with a letter
+    const safeText = text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
+    return 'heading-' + safeText;
 }
 
 // Function to set active link in TOC
@@ -138,7 +140,8 @@ function setActiveLink() {
     Array.from(tocLinks).forEach(link => {
         const href = link.getAttribute('href');
         if (href && currentHeading) {
-            if (href === '#' + currentHeading.id) {
+            const targetId = href.substring(1);
+            if (targetId === currentHeading.id) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -182,7 +185,7 @@ function initializeTOC() {
             }
         });
 
-        // Add smooth scrolling
+        // Add smooth scrolling with passive event listener
         Array.from(tocLinks).forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -200,17 +203,25 @@ function initializeTOC() {
                         });
                     }
                 }
-            });
+            }, { passive: true });
         });
 
-        // Optimize scroll handling
+        // Optimize scroll handling with passive event listener
         let scrollTimeout;
         window.addEventListener('scroll', function() {
             if (scrollTimeout) {
                 window.cancelAnimationFrame(scrollTimeout);
             }
             scrollTimeout = window.requestAnimationFrame(setActiveLink);
-        });
+        }, { passive: true });
+
+        // Add wheel event listener with passive option
+        window.addEventListener('wheel', function() {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = window.requestAnimationFrame(setActiveLink);
+        }, { passive: true });
 
         // Initial call to set active link
         setActiveLink();
