@@ -108,12 +108,17 @@ layout: default
 <script>
 // Function to create a safe ID from text
 function createSafeId(text) {
-    // Ensure ID starts with a letter
+    // Ensure ID starts with a letter and is URL-safe
     const safeText = text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
-    return 'heading-' + safeText;
+    return 'section-' + safeText;
+}
+
+// Function to escape CSS selector
+function escapeSelector(selector) {
+    return selector.replace(/[!"#$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, '\\$&');
 }
 
 // Function to set active link in TOC
