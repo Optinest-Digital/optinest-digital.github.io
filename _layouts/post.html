@@ -114,6 +114,39 @@ function createSafeId(text) {
         .replace(/^-+|-+$/g, '');
 }
 
+// Function to set active link in TOC
+function setActiveLink() {
+    const toc = document.getElementById('toc');
+    if (!toc) return;
+
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const tocLinks = toc.getElementsByTagName('a');
+    const scrollPosition = window.scrollY;
+
+    // Find the current active heading
+    let currentHeading = null;
+    for (const heading of headings) {
+        const headingTop = heading.getBoundingClientRect().top + scrollPosition;
+        if (headingTop <= scrollPosition + 100) {
+            currentHeading = heading;
+        } else {
+            break;
+        }
+    }
+
+    // Update active state of TOC links
+    Array.from(tocLinks).forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && currentHeading) {
+            if (href === '#' + currentHeading.id) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        }
+    });
+}
+
 // Function to initialize TOC
 function initializeTOC() {
     const toc = document.getElementById('toc');
@@ -149,12 +182,6 @@ function initializeTOC() {
             }
         });
 
-        // Initialize scrollspy
-        const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#toc',
-            offset: 100
-        });
-
         // Add smooth scrolling
         Array.from(tocLinks).forEach(link => {
             link.addEventListener('click', function(e) {
@@ -182,10 +209,11 @@ function initializeTOC() {
             if (scrollTimeout) {
                 window.cancelAnimationFrame(scrollTimeout);
             }
-            scrollTimeout = window.requestAnimationFrame(function() {
-                scrollSpy.refresh();
-            });
+            scrollTimeout = window.requestAnimationFrame(setActiveLink);
         });
+
+        // Initial call to set active link
+        setActiveLink();
 
     } catch (error) {
         console.warn('TOC initialization failed:', error);
