@@ -1,6 +1,8 @@
 ---
 title: "Privacy Policy"
+ 
 permalink: "/privacy-policy.html"
+# image: assets/images/cover.jpg
 layout: page-sidebar
 ---
 

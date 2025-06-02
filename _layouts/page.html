@@ -4,9 +4,13 @@ layout: default
 
 <div class="container">
 <h3 class="font-weight-bold spanborder"><span>{{page.title}}</span></h3>
+{% if page.image %}
+<div class="col-md-6 pr-0 align-self-center">
+    <img class="rounded" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image }}{% endif %}" alt="{{ page.title }}" loading="lazy">
+</div>
+{% endif %}
 <div class="page-content">
 {{ content }}
-<!-- Comments -->
- 
+
 </div>
 </div>

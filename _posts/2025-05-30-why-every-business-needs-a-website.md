@@ -24,7 +24,7 @@ Your physical store or office has business hours, but your website works around 
 
 ## Reach a Wider Audience
 
-A local-only approach limits your business growth. A website opens the door to a global market. Even small businesses can attract customers beyond their neighborhood or city. With the [right SEO strategy](/web-design-seo/), your website can show up on search engines and bring in traffic from anywhere in the world.
+A local-only approach limits your business growth. A website opens the door to a global market. Even small businesses can attract customers beyond their neighborhood or city. With the [right SEO strategy](/seo/), your website can show up on search engines and bring in traffic from anywhere in the world.
 
 ## Control Your Brand Message
 
