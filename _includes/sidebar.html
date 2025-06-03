@@ -1,36 +1,115 @@
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
- 
 <div class="pricing-wrapper">
     <!-- Basic Plan -->
-    <div class="dtr-pricing-box" style="background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 2px 15px rgba(0,0,0,0.1);">
+    <div class="dtr-pricing-box">
         <div class="dtr-pricing-header text-center">
-            <h3 style="color: #4dabff; font-size: 24px; margin-bottom: 15px;">Need a website?</h3>
-            <div class="dtr-price" style="font-size: 36px; font-weight: 700; color: #333; margin-bottom: 20px;">
-                <span style="font-size: 20px; font-weight: 400;">Starting from</span><br>
-                <span class="currency-symbol">$</span><span class="price-amount">290</span><span style="font-size: 16px; font-weight: 400;">/month</span>
+            <h3 class="pricing-title">Need a website?</h3>
+            <div class="dtr-price">
+                <span class="price-label">Starting from</span>
+                <span class="currency-symbol">$</span><span class="price-amount">290</span><span class="price-period">/month</span>
             </div>
-            <p style="color: #666; margin-bottom: 25px;">Perfect for small businesses starting their digital journey</p>
+            <p class="pricing-description">Perfect for small businesses starting their digital journey</p>
         </div>
-        <div class="dtr-pricing-features" style="margin: 30px 0;">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="padding: 12px 0; color: #555; border-bottom: 1px solid #eee;"><i class="bi bi-check-circle-fill" style="color: #4dabff; margin-right: 10px;"></i>5-Page Website Design</li>
-                <li style="padding: 12px 0; color: #555; border-bottom: 1px solid #eee;"><i class="bi bi-check-circle-fill" style="color: #4dabff; margin-right: 10px;"></i>Basic SEO Setup</li>
-                <li style="padding: 12px 0; color: #555; border-bottom: 1px solid #eee;"><i class="bi bi-check-circle-fill" style="color: #4dabff; margin-right: 10px;"></i>Mobile Responsive Design</li>
-                <li style="padding: 12px 0; color: #555; border-bottom: 1px solid #eee;"><i class="bi bi-check-circle-fill" style="color: #4dabff; margin-right: 10px;"></i>Contact Form Integration</li>
-                <li style="padding: 12px 0; color: #555; border-bottom: 1px solid #eee;"><i class="bi bi-check-circle-fill" style="color: #4dabff; margin-right: 10px;"></i>Basic Analytics Setup</li>
-                <li style="padding: 12px 0; color: #555; border-bottom: 1px solid #eee;"><i class="bi bi-check-circle-fill" style="color: #4dabff; margin-right: 10px;"></i>Web Hosting Included</li>
-                <li style="padding: 12px 0; color: #555;"><i class="bi bi-x-circle-fill" style="color: #ea2f65; margin-right: 10px;"></i>Free Domain (1 Year)</li>
+        <div class="dtr-pricing-features">
+            <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>5-Page Website Design</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Basic SEO Setup</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Mobile Responsive Design</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Contact Form Integration</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Basic Analytics Setup</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Web Hosting Included</li>
+                <li class="feature-item"><i class="bi bi-x-circle-fill"></i>Free Domain (1 Year)</li>
             </ul>
         </div>
         <div class="dtr-pricing-footer text-center">
-            <a href="/#contact" class="dtr-btn btn-blue" style="width: 100%;">Get Started</a>
+            <a href="/#contact" class="dtr-btn btn-blue">Get Started</a>
         </div>
     </div>
 </div>
 
 <style>
+.pricing-wrapper {
+    margin: 20px 0;
+}
+
+.dtr-pricing-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dtr-pricing-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.pricing-title {
+    color: #2d1b42;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.dtr-price {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.price-label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #666;
+}
+
+.price-period {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.pricing-description {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.feature-item {
+    padding: 12px 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-item i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.feature-item i.bi-check-circle-fill {
+    color: #4dabff;
+}
+
+.feature-item i.bi-x-circle-fill {
+    color: #ea2f65;
+}
+
 .dtr-btn {
     display: inline-block;
     padding: 12px 30px;
@@ -39,6 +118,9 @@
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
 }
 
 .dtr-btn:hover {
@@ -48,8 +130,21 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.bi {
-    display: inline-block;
-    font-size: 1.1em;
+@media (max-width: 767px) {
+    .dtr-pricing-box {
+        padding: 20px;
+    }
+    
+    .pricing-title {
+        font-size: 20px;
+    }
+    
+    .dtr-price {
+        font-size: 28px;
+    }
+    
+    .feature-item {
+        font-size: 14px;
+    }
 }
 </style> 
