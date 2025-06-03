@@ -728,6 +728,66 @@ select.form-control {
 }
 
 /* Responsive adjustments */
+@media (max-width: 991px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px !important;
+        padding: 15px !important;
+    }
+    
+    .tech-item {
+        min-height: 100px !important;
+    }
+    
+    .tech-item img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+    
+    .tech-item {
+        padding: 8px !important;
+        min-height: 80px !important;
+    }
+    
+    .tech-item img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stack-grid {
+        gap: 8px !important;
+        padding: 8px !important;
+    }
+    
+    .tech-item {
+        padding: 6px !important;
+        min-height: 70px !important;
+    }
+    
+    .tech-item img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* Update hover effect for tech stack items */
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(97, 56, 139, 0.2);
+    background: #e8e0ff !important;
+}
+
+/* Responsive adjustments */
 @media (max-width: 767px) {
     .tech-stack-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -743,13 +803,6 @@ select.form-control {
         width: 60px !important;
         height: 60px !important;
     }
-}
-
-/* Update hover effect for tech stack items */
-.tech-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(97, 56, 139, 0.2);
-    background: #e8e0ff !important;
 }
 
 /* Responsive adjustments */
@@ -1958,3 +2011,4 @@ document.addEventListener('DOMContentLoaded', function() {
  
 </body>
 </html>
+
