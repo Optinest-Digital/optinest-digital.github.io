@@ -720,7 +720,55 @@ select.form-control {
     
 }
 
- 
+/* Add hover effect for tech stack items */
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(97, 56, 139, 0.2);
+    background: #e8e0ff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .tech-item {
+        padding: 15px !important;
+        min-height: 100px !important;
+    }
+    
+    .tech-item img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+/* Update hover effect for tech stack items */
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(97, 56, 139, 0.2);
+    background: #e8e0ff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .tech-item {
+        padding: 15px !important;
+        min-height: 100px !important;
+    }
+    
+    .tech-item img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
 </style>
 </head>
 <body>
@@ -770,7 +818,7 @@ select.form-control {
                          
                             <li> <a class="nav-link" href="#about">About</a> </li>
                             <li> <a class="nav-link" href="#services">Services</a> </li>
-                            <li> <a class="nav-link" href="#portfolio">Works</a> </li>
+                         
                             <li> <a class="nav-link" href="#pricing">Pricing</a> </li>
                             <li> <a class="nav-link" href="#contact">Contact</a> </li>
                              <li> <a class="nav-link" href="/blog">Blog</a> </li> 
@@ -1097,108 +1145,78 @@ select.form-control {
         
         <!-- portfolio section starts
 ================================================== -->
-        <section id="portfolio" class="dtr-section dtr-py-100">
+        <section id="tech" class="dtr-section dtr-py-100">
             <div class="container"> 
                 
                 <!-- heading starts -->
                 <div class="dtr-styled-heading heading-center mb-5">
-                    <h2 class="dtr-section-heading">Our Work</h2>
-                    <p class="text-size-md">Explore our latest digital solutions and success stories</p>
+                    <h2 class="dtr-section-heading">Stack we use</h2>
+                    <p class="text-size-md">Modern technologies powering our digital solutions</p>
                 </div>
                 <!-- heading ends --> 
                 
-                <!-- portfolio filter starts -->
-                <ul class="dtr-filter-nav clearfix">
-                    <li><a class="dtr-filter-all active" data-filter="*" href="#">All Work</a></li>
-                    <li><a data-filter=".filter-web" href="#">Web Design</a></li>
-                    <li><a data-filter=".filter-seo" href="#">SEO</a></li>
-                    <li><a data-filter=".filter-brand" href="#">Branding</a></li>
-                    <li><a data-filter=".filter-ux" href="#">UI/UX</a></li>
-                </ul>
-                <!-- portfolio filter ends --> 
-                
-                <!-- portfolio grid starts -->
-                <div class="dtr-portfolio-grid dtr-portfolio-grid-3col dtr-portfolio-style-2 dtr-rounded-img clearfix"> 
-                    
-                    <!-- portfolio item 1 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-web all">
-                        <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/portfolio/haalda.png" alt="E-commerce Website Design Project" loading="lazy" decoding="async">
-                            <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View E-commerce Website Project" aria-label="View E-commerce Website Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/portfolio/haalda.png"  alt="E-commerce Website Design Project"  title="Enlarge E-commerce Website Project" aria-label="Enlarge E-commerce Website Project"></a> 
+                <!--== row starts ==-->
+                <div class="row justify-content-center"> 
+                    <!-- Technology Stack Grid -->
+                    <div class="col-12">
+                        <div class="tech-stack-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; padding: 20px; max-width: 1200px; margin: 0 auto;">
+                            <!-- First Row -->
+                            <!-- Jekyll -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/jekyll.png" alt="Jekyll" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                            
+                            <!-- GitHub -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/github.png" alt="GitHub" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                            
+                            <!-- PHP -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/php.png" alt="PHP" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                            
+                            <!-- Laravel -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/laravel.png" alt="Laravel" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                            
+                            <!-- Hugo -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/hugo.svg" alt="Hugo" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                        </div>
+
+                        <!-- Second Row -->
+                        <div class="tech-stack-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 20px; max-width: 960px; margin: 0 auto;">
+                            <!-- Ruby -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/ruby.png" alt="Ruby" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                            
+                            <!-- Next.js -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/nextjs.svg" alt="Next.js" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+                            
+                            <!-- WordPress -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/wordpress.png" alt="WordPress" style="width: 80px; height: 80px; object-fit: contain;">
+                            </div>
+
+                            <!-- DecapCMS -->
+                            <div class="tech-item text-center" style="padding: 10px; border-radius: 10px; box-shadow: 0 2px 15px rgba(97, 56, 139, 0.1); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                                <img src="assets/images/tech/decapcms.png" alt="DecapCMS" style="width: 80px; height: 80px; object-fit: contain;">
                             </div>
                         </div>
                     </div>
-                    <!-- portfolio item 1 ends --> 
-                    
-                    <!-- portfolio item 2 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-seo all">
-                        <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/portfolio/edukon.png" alt="Local SEO Optimization Project" loading="lazy" decoding="async">
-                            <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Local SEO Project" aria-label="View Local SEO Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/portfolio/edukon.png"  alt="Local SEO Optimization Project"  title="Enlarge Local SEO Project" aria-label="Enlarge Local SEO Project"></a> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item 2 ends--> 
-                    
-                    <!-- portfolio item 3 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-ux all">
-                        <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/portfolio/proland.png" alt="UI/UX Design Project" loading="lazy" decoding="async">
-                            <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View UI/UX Design Project" aria-label="View UI/UX Design Project"></a> 
-                                <a class="media-zoom popup-gallery" href="aassets/images/portfolio/proland.png"  alt="UI/UX Design Project"  title="Enlarge UI/UX Design Project" aria-label="Enlarge UI/UX Design Project"></a> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item 3 ends --> 
-                    
-                    <!-- portfolio item 4 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-brand all">
-                        <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/portfolio/cleanman.png" alt="Brand Identity Design Project" loading="lazy" decoding="async">
-                            <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Brand Identity Project" aria-label="View Brand Identity Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/portfolio/cleanman.png" alt="Brand Identity Design Project"   title="Enlarge Brand Identity Project" aria-label="Enlarge Brand Identity Project"></a> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item 4 ends --> 
-                    
-                    <!-- portfolio item 5 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-web all">
-                        <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/portfolio/flone.webp" alt="Corporate Website Design Project" loading="lazy" decoding="async">
-                            <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#" title="View Corporate Website Project" aria-label="View Corporate Website Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/portfolio/flone.webp"  alt="Corporate Website Design Project" title="Enlarge Corporate Website Project" aria-label="Enlarge Corporate Website Project"></a> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item 5 ends --> 
-                    
-                    <!-- portfolio item 6 starts -->
-                    <div class="dtr-portfolio-item isotope-item filter-seo all">
-                        <div class="dtr-portfolio-content dual-icons"> 
-                            <img src="assets/images/portfolio/obrien.png" alt="SEO Strategy Project" loading="lazy" decoding="async">
-                            <div class="dtr-portfolio-overlay"> 
-                                <a class="media-link" href="#"  title="View SEO Strategy Project" aria-label="View SEO Strategy Project"></a> 
-                                <a class="media-zoom popup-gallery" href="assets/images/portfolio/obrien.png"  alt="SEO Strategy Project"  title="Enlarge SEO Strategy Project" aria-label="Enlarge SEO Strategy Project"></a> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item 6 ends --> 
-                    
                 </div>
-                <!-- portfolio grid ends --> 
+                <!--== row ends ==--> 
                 
             </div>
         </section>
         <!-- portfolio section ends
-================================================== --> 
+================================================== -->
         
         <!-- cta section starts -->
         <section class="dtr-section parallax dtr-py-100" style="background-image: url(assets/images/background-cta.jpg);" role="img" aria-label="Call to Action Background - Digital Marketing Strategy">
