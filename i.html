@@ -891,7 +891,7 @@ select.form-control {
                          
                             <li> <a class="nav-link" href="#pricing">Pricing</a> </li>
                             <li> <a class="nav-link" href="#contact">Contact</a> </li>
-                             <li> <a class="nav-link" href="/blog">Blog</a> </li> 
+                             <li> <a class="nav-link" href="/#blog">Blog</a> </li> 
                         </ul>
                     </div>
                 </div>
@@ -1443,7 +1443,68 @@ select.form-control {
         </section>
         <!-- pricing section ends
 ================================================== --> 
+      
         
+ <!-- blog section starts
+================================================== -->
+<section id="blog" class="dtr-section dtr-py-100">
+    <div class="container"> 
+        
+        <!-- heading starts -->
+        <div class="dtr-styled-heading heading-center">
+            <h2>From The Blog</h2>
+            <p>Subheading or information goes here</p>
+        </div>
+        <!-- heading ends --> 
+        
+        <!--== row starts ==-->
+        <div class="row dtr-mt-50"> 
+            
+            {% for post in site.posts limit:3 %}
+            <div class="col-12 col-md-4"> 
+                <!-- blog item starts -->
+                <div class="dtr-blog-item"> 
+                    <!-- image -->
+                    <div class="dtr-post-img">
+                        {% if post.image %}
+                        <img 
+                            src="{{ post.image }}" 
+                            alt="{{ post.title }}" 
+                            loading="lazy"
+                            >
+                            
+                        
+                        {% endif %}
+                        {% if post.categories and post.categories.size > 0 %}
+                        <span class="dtr-category bg-blue color-white">{{ post.categories[0] }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="dtr-post-content">
+                        <ul class="dtr-blog-meta color-grey">
+                            <li>{{ post.date | date: "%B %d, %Y" }}</li>
+                            {% if post.author %}
+                            <li>by {{ post.author }}</li>
+                            {% endif %}
+                        </ul>
+                        <h5>{{ post.title }}</h5>
+                       
+                        <a href="{{ post.url }}" class="dtr-read-more">Continue Reading</a>
+                    </div>
+                </div>
+                <!-- blog item ends --> 
+            </div>
+            {% endfor %}
+            
+        </div>
+        <!--== row ends ==--> 
+        
+    </div>
+</section>
+<!-- blog section ends
+================================================== --> 
+
+
+ 
         <!-- contact section starts
 ================================================== -->
         <section id="contact" class="dtr-section dtr-py-100 bg-light-blue">
