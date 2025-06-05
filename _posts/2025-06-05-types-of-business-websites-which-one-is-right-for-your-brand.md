@@ -80,7 +80,7 @@ A blog-focused site is built around regularly publishing articles, tips, guides,
 
 -   Thought leaders, educators, and influencers
     
--   Businesses investing in [SEO(/seo/)/content marketing
+-   Businesses investing in [SEO](/seo/)/content marketing
     
 -   Affiliate marketers
     
