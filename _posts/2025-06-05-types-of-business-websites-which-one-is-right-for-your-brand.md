@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Types of Business Websites: Which One Is Right for Your Brand?"
-tags: sticky
+tags: featured
 toc: "true"
 image: /assets/images/blog/types-of-business-websites.svg
 categories:
