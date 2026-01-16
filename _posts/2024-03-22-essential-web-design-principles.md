@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "Essential Web Design Principles for Creating Engaging Websites"
-categories: [Web Design, UX]
+title: Essential Web Design Principles for Creating Engaging Websites
+tags: sticky
+toc: "true"
 image: /assets/images/blog/design-principles.png
+categories:
+  - Web Design
+  - UX
 author: admin
-toc: true
 ---
 
 Creating an engaging and effective website requires understanding and implementing fundamental web design principles. Let's explore the key principles that make websites both beautiful and functional.
