@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Essential Web Design Principles for Creating Engaging Websites
-tags: sticky
+tags: featured
 toc: "true"
 image: /assets/images/blog/design-principles.png
 categories:
