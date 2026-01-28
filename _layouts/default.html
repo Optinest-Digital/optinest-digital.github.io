@@ -62,6 +62,48 @@
     footer a:hover {
         color: #4dabff !important;
     }
+
+    /* Sticky social icons */
+    .sticky-social {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 999;
+        display: flex;
+        gap: 12px;
+        padding: 10px 14px;
+        background: #fff;
+        border-radius: 999px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        border: 1px solid #eee;
+    }
+    .sticky-social a {
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+    .sticky-social a:hover {
+        transform: scale(1.15);
+    }
+    .sticky-social .bi {
+        font-size: 1.25rem;
+    }
+    .sticky-social-twitter { color: #1DA1F2 !important; }
+    .sticky-social-twitter:hover { color: #0c85d9 !important; }
+    .sticky-social-facebook { color: #1877F2 !important; }
+    .sticky-social-facebook:hover { color: #0d5fcf !important; }
+    .sticky-social-instagram { color: #E4405F !important; }
+    .sticky-social-instagram:hover { color: #c62d4a !important; }
+    @media (max-width: 575px) {
+        .sticky-social {
+            bottom: 16px;
+            right: 16px;
+            padding: 8px 12px;
+            gap: 10px;
+        }
+        .sticky-social .bi {
+            font-size: 1.1rem;
+        }
+    }
         /* Logo styles */
 .dtr-logo,
 .logo-default,
@@ -324,38 +366,9 @@
     </script>
 
     <!-- Footer -->
-    <footer class="bg-white border-top p-4 text-muted">
+    <footer class="bg-white  p-4 text-muted">
         <div class="container">
-            <div class="row">
-                <!-- Left Column -->
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="d-flex align-items-center mb-3">
-                <a class="navbar-brand logo-default" href="/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{site.name}}"></a>
-                    </div>
-                  
-                    
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-md-6">
-                    <div class="row">
-                        <!-- Services -->
-                        <div class="col-6 mb-4 mb-md-0">
-                            <p class="small mb-3">{{site.description}}</p>
-                        </div>
-                        <!-- Company -->
-                        <div class="col-6">
-                          
-                            <div class="d-flex gap-3">
-                                <a href="https://twitter.com/optinestdigital" class="text-muted" target="_blank"><i class="bi bi-twitter"></i></a>
-                                <a href="https://facebook.com/optinestdigital" class="text-muted" target="_blank"><i class="bi bi-facebook"></i></a>
-        
-                                <a href="https://instagram.com/optinestdigital" class="text-muted" target="_blank"><i class="bi bi-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+             
 
             <!-- Copyright -->
             <div class="row mt-4 pt-3 border-top">
@@ -366,7 +379,12 @@
         </div>
     </footer>
 
- 
+    <!-- Sticky social icons -->
+    <div class="sticky-social" aria-label="Social links">
+        <a class="sticky-social-twitter" href="https://twitter.com/optinestdigital" target="_blank" rel="noopener" title="Twitter"><i class="bi bi-twitter"></i></a>
+        <a class="sticky-social-facebook" href="https://facebook.com/optinestdigital" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a class="sticky-social-instagram" href="https://instagram.com/optinestdigital" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
 
     {% include tracking-footer.html %}
 

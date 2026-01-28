@@ -1,11 +1,7 @@
 ---
 title: "Web Design Blog"
 layout: default
- 
-pagination:
-    enabled: true
 description: "Boutique digital agency specializing in high-performance websites and smart SEO strategies. Building optimized digital nests for businesses to thrive online."
-permalink: /
 ---
 
 
@@ -172,13 +168,51 @@ permalink: /
         
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
         
-
         {% for post in paginator.posts %}
-        
+          {% assign show_in_all_stories = true %}
+          {% if page.url == "/" or page.url == "/index.html" %}
+            {% if forloop.index <= 4 %}
+              {% assign show_in_all_stories = false %}
+            {% endif %}
+          {% endif %}
+          {% if show_in_all_stories %}
             {% include main-loop-card.html %}
-        
+          {% endif %}
         {% endfor %}
-       
+
+        {% if paginator.total_pages > 1 %}
+        <nav class="mt-5 mb-4" aria-label="Blog pagination">
+            <ul class="pagination justify-content-center flex-wrap">
+                {% if paginator.previous_page %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                {% endif %}
+                {% for page_num in (1..paginator.total_pages) %}
+                    {% if page_num == paginator.page %}
+                    <li class="page-item active"><span class="page-link">{{ page_num }}</span></li>
+                    {% elsif page_num == 1 %}
+                    <li class="page-item"><a class="page-link" href="{{ '/' | relative_url }}">1</a></li>
+                    {% else %}
+                    <li class="page-item"><a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page_num }}">{{ page_num }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if paginator.next_page %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Next</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">Next</span>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
         
     </div>
     
